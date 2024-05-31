@@ -1,0 +1,6 @@
+Package: placeholder
+Type: Book
+Title: LearnIt::R plateforme pédagogique pour l'apprentissage de R
+Version: 0.1.0
+Imports: bookdown
+Remotes: rstudio/bookdown

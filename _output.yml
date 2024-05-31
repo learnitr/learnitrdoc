@@ -1,0 +1,26 @@
+bookdown::gitbook:
+  #dev: svglite
+  highlight: kate
+  css: style.css
+  split_by: section
+  config:
+    toc:
+      collapse: subsection
+      before: |
+        <li><a href="./">LearnIt::R Documentation</a></li>
+      after: |
+        <li><a href="https://github.com/learnitr">LearnIt::R sur GitHub</a></li>
+        <li><a href="https://learnitr.r-universe.dev">Univers R LearnIt::R</a></li>
+        <br/>
+        <li><a href="http://wp.sciviews.org">Exemple de cours</a></li>
+        <li><a href="https://github.com/BioDataScience-Course">Cours (site GitHub)</a></li>
+    edit: https://github.com/learnitr/learnitrdoc/edit/main/%s
+    view: https://github.com/learnitr/learnitrdoc/blob/main/%s
+    download: ["pdf", "epub"]
+bookdown::pdf_book:
+  includes:
+    in_header: preamble.tex
+  latex_engine: xelatex
+  citation_package: natbib
+bookdown::epub_book:
+  stylesheet: style.css

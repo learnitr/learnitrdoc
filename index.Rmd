@@ -1,0 +1,65 @@
+--- 
+title: "LearnIt::R plateforme pédagogique pour l'apprentissage de R"
+author: "Philippe Grosjean & Guyliann Engels"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+output:
+  bookdown::gitbook:
+    info: yes
+    includes:
+      in_header: header.html
+      after_body: footer.html
+  bookdown::pdf_book:
+    includes:
+      in_header: preamble.tex
+    latex_engine: xelatex
+    citation_package: natbib
+    number_sections: yes
+    fig_caption: yes
+    keep_tex: no
+  bookdown::epub_book:
+    stylesheet: style.css
+    number_sections: yes
+    fig_caption: yes
+documentclass: book
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+github-repo: learnitr/learnitrdoc
+url: 'https\://learnitr.github.io/learnitrdoc/'
+description: "Documentation pour les outils pédagogiques LearnIt::R."
+cover-image: "images/learnitr_800.png"
+---
+
+# Préambule {-}
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(comment = "#", fig.align = "center")
+# Automatically create a bib database for R packages
+knitr::write_bib(c(.packages(), 'bookdown', 'knitr', 'rmarkdown'), 'packages.bib')
+```
+
+```{block2, type="warning"}
+
+**Cet ouvrage est en cours d'écriture. Plusieurs chapitres doivent encore être écrits ou remaniés. Un version anglaise doit également être rédigée.** Cependant, les informations qu'il contient sont déjà utilisables pour mettre en place certains des outils documentés ici. N'hésitez pas à nous contacter ([Philippe Grosjean](mailto:Philippe.Grosjean@umons.ac.be) ou [Guyliann Engels](mailto:Guyliann.Engels@umons.ac.be)) pour plus d'information ou pour discuter de l'intégration de tel ou tel outil dans vos propres cours.
+
+```
+
+![](images/learnitr_800.png)
+
+Cet ouvrage détaille les outils qui composent la **plateforme pédagogique LearnIt::R** spécifique pour l'apprentissage de R, des statistiques et de la science des données en général. Il est dérivé de notes relatives au développement, à la maintenance et à la création de contenu sur notre plateforme autour du package R {learnitdown} que nous avons créé à l'Université de Mons en Belgique pour nos [cours de Science des Données Biologiques](https://wp.sciviews.org). Désolé, donc, si vous y lirez de temps en temps des informations qui ne sont utiles **que** dans le cadre spécifiquement de ces cours. Notre objectif, en cours de réalisation, est de migrer progressivement cet ouvrage et les outils qu'il décrit vers un usage plus large pour permettre de déployer une plateforme pédagogique similaire dans un autre contexte...
+
+![](images/front-cover.png)
+
+_Le matériel dans cet ouvrage est distribué sous licence [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr)._
+
+<details>
+<summary>Détails concernant le système utilisé pour compiler ce bookdown...</summary>
+
+##### Information système {-}
+
+```{r}
+sessioninfo::session_info()
+```
+
+</details>

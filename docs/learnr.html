@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapitre 8 Tutoriels learnrs | LearnIt::R plateforme pédagogique pour l’apprentissage de R</title>
+  <meta name="description" content="Documentation pour les outils pédagogiques LearnIt::R." />
+  <meta name="generator" content="bookdown 0.33 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapitre 8 Tutoriels learnrs | LearnIt::R plateforme pédagogique pour l’apprentissage de R" />
+  <meta property="og:type" content="book" />
+  <meta property="og:image" content="https://learnitr.github.io/learnitrdoc//images/learnitr_800.png" />
+  <meta property="og:description" content="Documentation pour les outils pédagogiques LearnIt::R." />
+  <meta name="github-repo" content="learnitr/learnitrdoc" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapitre 8 Tutoriels learnrs | LearnIt::R plateforme pédagogique pour l’apprentissage de R" />
+  
+  <meta name="twitter:description" content="Documentation pour les outils pédagogiques LearnIt::R." />
+  <meta name="twitter:image" content="https://learnitr.github.io/learnitrdoc//images/learnitr_800.png" />
+
+<meta name="author" content="Philippe Grosjean &amp; Guyliann Engels" />
+
+
+<meta name="date" content="2024-05-31" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="contenu-h5p-dans-bookdown.html"/>
+<link rel="next" href="shiny.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+<!-- Hide/show certain divs according to URL (UMONS or noinstitution) -->
+<script>
+// Parse the URL parameter
+function getParameterByName(name, url) {
+  if (!url) url = window.location.href;
+  name = name.replace(/[\[\]]/g, "\\$&");
+  var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+    results = regex.exec(url);
+  if (!results) return null;
+  if (!results[2]) return '';
+  return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+// Collect parameters and store their values (as passed by Moodle)
+//var email       = getParameterByName('email');
+//var id          = getParameterByName('id');
+//var name        = getParameterByName('name');
+//var surname     = getParameterByName('surname');
+var institution = getParameterByName('institution');
+//var course      = getParameterByName('course');
+//var ref         = getParameterByName('ref');
+
+function showUMONS() {
+  var elems = document.getElementsByClassName('UMONS');
+  for (i = 0; i < elems.length; i++) {
+    var elem = elems[i];
+    elem.style.display = 'block';
+  }
+  var elems = document.getElementsByClassName('noinstitution');
+  for (i = 0; i < elems.length; i++) {
+    var elem = elems[i];
+    elem.style.display = 'none';
+  }
+}
+
+function hideUMONS() {
+  var elems = document.getElementsByClassName('UMONS');
+  for (i = 0; i < elems.length; i++) {
+    var elem = elems[i];
+    elem.style.display = 'none';
+  }
+  var elems = document.getElementsByClassName('noinstitution');
+  for (i = 0; i < elems.length; i++) {
+    var elem = elems[i];
+    elem.style.display = 'block';
+  }
+}
+
+function processParameters() {
+  if (institution == 'UMONS') {
+    showUMONS();
+  } else {
+    hideUMONS();
+  }
+  // Process other parameters too here...
+}
+
+window.onload = processParameters;
+</script>
+
+<!-- Show/hide R output as details -->
+<script>
+(function() {
+  var codes = document.querySelectorAll('pre:not([class])');
+  var code, i, d, s, p;
+  for (i = 0; i < codes.length; i++) {
+    code = codes[i];
+    p = code.parentNode;
+    d = document.createElement('details');
+    s = document.createElement('summary');
+    s.innerText = 'Details';
+    // <details><summary>Details</summary></details>
+    d.appendChild(s);
+    // move the code into <details>
+    p.replaceChild(d, code);
+    d.appendChild(code);
+  }
+})();
+</script>
+
+<!-- Pass URL arguments to iframe 'app' (embedded shiny app) & 'h5p' -->
+<script>
+var params = window.location.toString().split('?')[1];
+// Detect if we have the Sepia or Night theme
+if (document.getElementsByClassName('color-theme-1')) {
+  if (params === undefined) {
+    params = "theme=Sepia";
+  } else {
+    params = params + '&theme=Sepia';
+  }
+}
+if (document.getElementsByClassName('color-theme-22')) {
+  if (params === undefined) {
+    params = "theme=Night";
+  } else {
+    params = params + '&theme=Night';
+  }
+}
+
+if (params !== undefined) {
+  var apps = document.getElementsByClassName('app');
+  for (i = 0; i < apps.length; i++) {
+    var appitem = apps[i];
+    appitem.src = appitem.src + '?' + params;
+  }
+
+  var h5ps = document.getElementsByClassName('h5p');
+  for (i = 0; i < h5ps.length; i++) {
+    var h5pitem = h5ps[i];
+    h5pitem.src = h5pitem.src + '&' + params;
+  }
+}
+</script>
+
+<!-- Launch the app on click with URL parameters + theme -->
+<script>
+launchApp = function(id, src) {
+  var params = window.location.toString().split('?')[1];
+  // Detect if we have the Sepia or Night theme
+  if (document.getElementsByClassName('color-theme-1')[0]) {
+    if (params === undefined) {
+      params = "theme=Sepia";
+    } else {
+      params = params + '&theme=Sepia';
+    }
+  }
+  if (document.getElementsByClassName('color-theme-2')[0]) {
+    if (params === undefined) {
+      params = "theme=Night";
+    } else {
+      params = params + '&theme=Night';
+    }
+  }
+  if (params !== undefined) {
+    src = src + '?' + params;
+  }
+  var img = document.getElementById('img' + id);
+  var app = document.getElementById(id);
+  app.src = src;
+  app.style.display='block';
+  img.style.display='none';
+}
+</script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    background-color: #ffffff;
+    color: #a0a0a0;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #a0a0a0;  padding-left: 4px; }
+div.sourceCode
+  { color: #1f1c1b; background-color: #ffffff; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span { color: #1f1c1b; } /* Normal */
+code span.al { color: #bf0303; background-color: #f7e6e6; font-weight: bold; } /* Alert */
+code span.an { color: #ca60ca; } /* Annotation */
+code span.at { color: #0057ae; } /* Attribute */
+code span.bn { color: #b08000; } /* BaseN */
+code span.bu { color: #644a9b; font-weight: bold; } /* BuiltIn */
+code span.cf { color: #1f1c1b; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #924c9d; } /* Char */
+code span.cn { color: #aa5500; } /* Constant */
+code span.co { color: #898887; } /* Comment */
+code span.cv { color: #0095ff; } /* CommentVar */
+code span.do { color: #607880; } /* Documentation */
+code span.dt { color: #0057ae; } /* DataType */
+code span.dv { color: #b08000; } /* DecVal */
+code span.er { color: #bf0303; text-decoration: underline; } /* Error */
+code span.ex { color: #0095ff; font-weight: bold; } /* Extension */
+code span.fl { color: #b08000; } /* Float */
+code span.fu { color: #644a9b; } /* Function */
+code span.im { color: #ff5500; } /* Import */
+code span.in { color: #b08000; } /* Information */
+code span.kw { color: #1f1c1b; font-weight: bold; } /* Keyword */
+code span.op { color: #1f1c1b; } /* Operator */
+code span.ot { color: #006e28; } /* Other */
+code span.pp { color: #006e28; } /* Preprocessor */
+code span.re { color: #0057ae; background-color: #e0e9f8; } /* RegionMarker */
+code span.sc { color: #3daee9; } /* SpecialChar */
+code span.ss { color: #ff5500; } /* SpecialString */
+code span.st { color: #bf0303; } /* String */
+code span.va { color: #0057ae; } /* Variable */
+code span.vs { color: #bf0303; } /* VerbatimString */
+code span.wa { color: #bf0303; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">LearnIt::R Documentation</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Préambule</a></li>
+<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="apprentissage.html"><a href="apprentissage.html"><i class="fa fa-check"></i><b>1.1</b> Apprentissage</a></li>
+<li class="chapter" data-level="1.2" data-path="organisation-de-la-matière.html"><a href="organisation-de-la-matière.html"><i class="fa fa-check"></i><b>1.2</b> Organisation de la matière</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="organisation-de-la-matière.html"><a href="organisation-de-la-matière.html#découpage"><i class="fa fa-check"></i><b>1.2.1</b> Découpage</a></li>
+<li class="chapter" data-level="1.2.2" data-path="organisation-de-la-matière.html"><a href="organisation-de-la-matière.html#quatre-niveaux-de-difficulté"><i class="fa fa-check"></i><b>1.2.2</b> Quatre niveaux de difficulté</a></li>
+<li class="chapter" data-level="1.2.3" data-path="organisation-de-la-matière.html"><a href="organisation-de-la-matière.html#timing"><i class="fa fa-check"></i><b>1.2.3</b> Timing</a></li>
+<li class="chapter" data-level="1.2.4" data-path="organisation-de-la-matière.html"><a href="organisation-de-la-matière.html#suivi"><i class="fa fa-check"></i><b>1.2.4</b> Suivi</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="innovation-pédagogique.html"><a href="innovation-pédagogique.html"><i class="fa fa-check"></i><b>1.3</b> Innovation pédagogique</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="innovation-pédagogique.html"><a href="innovation-pédagogique.html#différents-types-de-classes-inversées"><i class="fa fa-check"></i><b>1.3.1</b> Différents types de classes inversées</a></li>
+<li class="chapter" data-level="1.3.2" data-path="innovation-pédagogique.html"><a href="innovation-pédagogique.html#contextualiserdécontextualiser"><i class="fa fa-check"></i><b>1.3.2</b> Contextualiser/décontextualiser</a></li>
+<li class="chapter" data-level="1.3.3" data-path="innovation-pédagogique.html"><a href="innovation-pédagogique.html#classe-renversée"><i class="fa fa-check"></i><b>1.3.3</b> Classe renversée</a></li>
+<li class="chapter" data-level="1.3.4" data-path="innovation-pédagogique.html"><a href="innovation-pédagogique.html#timing-et-rythme"><i class="fa fa-check"></i><b>1.3.4</b> Timing et rythme</a></li>
+<li class="chapter" data-level="1.3.5" data-path="innovation-pédagogique.html"><a href="innovation-pédagogique.html#explication-implication"><i class="fa fa-check"></i><b>1.3.5</b> Explication, implication</a></li>
+<li class="chapter" data-level="1.3.6" data-path="innovation-pédagogique.html"><a href="innovation-pédagogique.html#enseignement-basé-sur-les-objectifs"><i class="fa fa-check"></i><b>1.3.6</b> Enseignement basé sur les objectifs</a></li>
+<li class="chapter" data-level="1.3.7" data-path="innovation-pédagogique.html"><a href="innovation-pédagogique.html#attention-à-la-formulation"><i class="fa fa-check"></i><b>1.3.7</b> Attention à la formulation</a></li>
+<li class="chapter" data-level="1.3.8" data-path="innovation-pédagogique.html"><a href="innovation-pédagogique.html#effets-psychologiques-néfastes"><i class="fa fa-check"></i><b>1.3.8</b> Effets psychologiques néfastes</a></li>
+<li class="chapter" data-level="1.3.9" data-path="innovation-pédagogique.html"><a href="innovation-pédagogique.html#teaching-tech-together"><i class="fa fa-check"></i><b>1.3.9</b> Teaching tech together</a></li>
+<li class="chapter" data-level="1.3.10" data-path="innovation-pédagogique.html"><a href="innovation-pédagogique.html#mort-par-powerpoint"><i class="fa fa-check"></i><b>1.3.10</b> Mort par PowerPoint</a></li>
+<li class="chapter" data-level="1.3.11" data-path="innovation-pédagogique.html"><a href="innovation-pédagogique.html#enseigner-les-statistiques-comme-les-mathématiques"><i class="fa fa-check"></i><b>1.3.11</b> Enseigner les statistiques comme les mathématiques</a></li>
+<li class="chapter" data-level="1.3.12" data-path="innovation-pédagogique.html"><a href="innovation-pédagogique.html#gamification-de-lenseignement"><i class="fa fa-check"></i><b>1.3.12</b> “Gamification” de l’enseignement</a></li>
+<li class="chapter" data-level="1.3.13" data-path="innovation-pédagogique.html"><a href="innovation-pédagogique.html#let-them-eat-the-cake"><i class="fa fa-check"></i><b>1.3.13</b> Let them eat the cake</a></li>
+<li class="chapter" data-level="1.3.14" data-path="innovation-pédagogique.html"><a href="innovation-pédagogique.html#differents-type-de-documents"><i class="fa fa-check"></i><b>1.3.14</b> Differents type de documents</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="general.html"><a href="general.html"><i class="fa fa-check"></i><b>2</b> Organisation générale</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="rgpd-et-droit-dauteur.html"><a href="rgpd-et-droit-dauteur.html"><i class="fa fa-check"></i><b>2.1</b> RGPD et droit d’auteur</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="rgpd-et-droit-dauteur.html"><a href="rgpd-et-droit-dauteur.html#rgpd"><i class="fa fa-check"></i><b>2.1.1</b> RGPD</a></li>
+<li class="chapter" data-level="2.1.2" data-path="rgpd-et-droit-dauteur.html"><a href="rgpd-et-droit-dauteur.html#droit-dauteur-et-licence"><i class="fa fa-check"></i><b>2.1.2</b> Droit d’auteur et licence</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="git.html"><a href="git.html"><i class="fa fa-check"></i><b>3</b> Git &amp; GitHub</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="installation-git-et-cie.html"><a href="installation-git-et-cie.html"><i class="fa fa-check"></i><b>3.1</b> Installation Git et cie</a></li>
+<li class="chapter" data-level="3.2" data-path="biodatascience-course.html"><a href="biodatascience-course.html"><i class="fa fa-check"></i><b>3.2</b> BioDataScience-Course</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="biodatascience-course.html"><a href="biodatascience-course.html#convention-de-noms"><i class="fa fa-check"></i><b>3.2.1</b> Convention de noms</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="github-classroom.html"><a href="github-classroom.html"><i class="fa fa-check"></i><b>3.3</b> GitHub Classroom</a></li>
+<li class="chapter" data-level="3.4" data-path="astuces-git-et-github.html"><a href="astuces-git-et-github.html"><i class="fa fa-check"></i><b>3.4</b> Astuces Git et GitHub</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="lrs.html"><a href="lrs.html"><i class="fa fa-check"></i><b>4</b> Learning record store</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="notre-lrs.html"><a href="notre-lrs.html"><i class="fa fa-check"></i><b>4.1</b> Notre “LRS”</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="notre-lrs.html"><a href="notre-lrs.html#vue-générale"><i class="fa fa-check"></i><b>4.1.1</b> Vue générale</a></li>
+<li class="chapter" data-level="4.1.2" data-path="notre-lrs.html"><a href="notre-lrs.html#mongodb-atlas"><i class="fa fa-check"></i><b>4.1.2</b> MongoDB ATLAS</a></li>
+<li class="chapter" data-level="4.1.3" data-path="notre-lrs.html"><a href="notre-lrs.html#serveur-mongodb-local-associé-à-rsconnect"><i class="fa fa-check"></i><b>4.1.3</b> Serveur MongoDB local associé à RSConnect</a></li>
+<li class="chapter" data-level="4.1.4" data-path="notre-lrs.html"><a href="notre-lrs.html#serveur-local-macos-ou-windows"><i class="fa fa-check"></i><b>4.1.4</b> Serveur local MacOS ou Windows</a></li>
+<li class="chapter" data-level="4.1.5" data-path="notre-lrs.html"><a href="notre-lrs.html#mise-à-jour-de-mongodb"><i class="fa fa-check"></i><b>4.1.5</b> Mise-à-jour de MongoDB</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="learning-analytics-platform.html"><a href="learning-analytics-platform.html"><i class="fa fa-check"></i><b>4.2</b> Learning Analytics Platform</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="wordpress.html"><a href="wordpress.html"><i class="fa fa-check"></i><b>5</b> Wordpress</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="authentification-des-étudiants.html"><a href="authentification-des-étudiants.html"><i class="fa fa-check"></i><b>5.1</b> Authentification des étudiants</a></li>
+<li class="chapter" data-level="5.2" data-path="installation-wordpress.html"><a href="installation-wordpress.html"><i class="fa fa-check"></i><b>5.2</b> Installation Wordpress</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="installation-wordpress.html"><a href="installation-wordpress.html#plugins-wordpress"><i class="fa fa-check"></i><b>5.2.1</b> Plugins Wordpress</a></li>
+<li class="chapter" data-level="5.2.2" data-path="installation-wordpress.html"><a href="installation-wordpress.html#thème-du-site"><i class="fa fa-check"></i><b>5.2.2</b> Thème du site</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="configuration-serveur-et-git.html"><a href="configuration-serveur-et-git.html"><i class="fa fa-check"></i><b>5.3</b> Configuration serveur et git</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="configuration-serveur-et-git.html"><a href="configuration-serveur-et-git.html#ajout-de-mongodb-pour-php"><i class="fa fa-check"></i><b>5.3.1</b> Ajout de mongodb pour PHP</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="agencement-du-site.html"><a href="agencement-du-site.html"><i class="fa fa-check"></i><b>5.4</b> Agencement du site</a>
+<ul>
+<li class="chapter" data-level="5.4.1" data-path="agencement-du-site.html"><a href="agencement-du-site.html#tableau-de-bord"><i class="fa fa-check"></i><b>5.4.1</b> Tableau de bord</a></li>
+<li class="chapter" data-level="5.4.2" data-path="agencement-du-site.html"><a href="agencement-du-site.html#gestion-des-événements-xapi"><i class="fa fa-check"></i><b>5.4.2</b> Gestion des événements xAPI</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="var-context.html"><a href="var-context.html"><i class="fa fa-check"></i><b>5.5</b> Variables contextuelles</a></li>
+<li class="chapter" data-level="5.6" data-path="redirection-durl-diframe-bookdown.html"><a href="redirection-durl-diframe-bookdown.html"><i class="fa fa-check"></i><b>5.6</b> Redirection d’URL d’iframe bookdown</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="h5p.html"><a href="h5p.html"><i class="fa fa-check"></i><b>6</b> H5P</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="installation-de-h5p.html"><a href="installation-de-h5p.html"><i class="fa fa-check"></i><b>6.1</b> Installation de H5P</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="installation-de-h5p.html"><a href="installation-de-h5p.html#installation-du-plugin-h5p"><i class="fa fa-check"></i><b>6.1.1</b> Installation du plugin H5P</a></li>
+<li class="chapter" data-level="6.1.2" data-path="installation-de-h5p.html"><a href="installation-de-h5p.html#configuration-de-h5p"><i class="fa fa-check"></i><b>6.1.2</b> Configuration de H5P</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="enregistrement-h5p-xapi.html"><a href="enregistrement-h5p-xapi.html"><i class="fa fa-check"></i><b>6.2</b> Enregistrement H5P xAPI</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="enregistrement-h5p-xapi.html"><a href="enregistrement-h5p-xapi.html#h5pxapikatchu"><i class="fa fa-check"></i><b>6.2.1</b> H5PxAPIkatchu</a></li>
+<li class="chapter" data-level="6.2.2" data-path="enregistrement-h5p-xapi.html"><a href="enregistrement-h5p-xapi.html#wp-h5p-xapi-et-lrs"><i class="fa fa-check"></i><b>6.2.2</b> wp-h5p-xapi et LRS</a></li>
+<li class="chapter" data-level="6.2.3" data-path="enregistrement-h5p-xapi.html"><a href="enregistrement-h5p-xapi.html#autres-plugins-h5p"><i class="fa fa-check"></i><b>6.2.3</b> Autres plugins H5P</a></li>
+<li class="chapter" data-level="6.2.4" data-path="enregistrement-h5p-xapi.html"><a href="enregistrement-h5p-xapi.html#solution-finale-choisie"><i class="fa fa-check"></i><b>6.2.4</b> Solution finale choisie</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="gestion-des-contenus-h5p.html"><a href="gestion-des-contenus-h5p.html"><i class="fa fa-check"></i><b>6.3</b> Gestion des contenus H5P</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="gestion-des-contenus-h5p.html"><a href="gestion-des-contenus-h5p.html#backup-h5p"><i class="fa fa-check"></i><b>6.3.1</b> Backup H5P</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="quelques-contenus-h5p-utiles.html"><a href="quelques-contenus-h5p-utiles.html"><i class="fa fa-check"></i><b>6.4</b> Quelques contenus H5P utiles</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="quelques-contenus-h5p-utiles.html"><a href="quelques-contenus-h5p-utiles.html#apprentissage-du-code-r"><i class="fa fa-check"></i><b>6.4.1</b> Apprentissage du code R</a></li>
+<li class="chapter" data-level="6.4.2" data-path="quelques-contenus-h5p-utiles.html"><a href="quelques-contenus-h5p-utiles.html#apprentissage-des-graphiques"><i class="fa fa-check"></i><b>6.4.2</b> Apprentissage des graphiques</a></li>
+<li class="chapter" data-level="6.4.3" data-path="quelques-contenus-h5p-utiles.html"><a href="quelques-contenus-h5p-utiles.html#explications-générales"><i class="fa fa-check"></i><b>6.4.3</b> Explications générales</a></li>
+<li class="chapter" data-level="6.4.4" data-path="quelques-contenus-h5p-utiles.html"><a href="quelques-contenus-h5p-utiles.html#autoévaluation"><i class="fa fa-check"></i><b>6.4.4</b> Autoévaluation</a></li>
+<li class="chapter" data-level="6.4.5" data-path="quelques-contenus-h5p-utiles.html"><a href="quelques-contenus-h5p-utiles.html#take-home-message"><i class="fa fa-check"></i><b>6.4.5</b> “Take home message”</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="bookdown.html"><a href="bookdown.html"><i class="fa fa-check"></i><b>7</b> Bookdown &amp; learnitdown</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="création-dun-bookdownlearnitdown.html"><a href="création-dun-bookdownlearnitdown.html"><i class="fa fa-check"></i><b>7.1</b> Création d’un bookdown/learnitdown</a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="création-dun-bookdownlearnitdown.html"><a href="création-dun-bookdownlearnitdown.html#readme.md"><i class="fa fa-check"></i><b>7.1.1</b> README.md</a></li>
+<li class="chapter" data-level="7.1.2" data-path="création-dun-bookdownlearnitdown.html"><a href="création-dun-bookdownlearnitdown.html#bookdown.yml"><i class="fa fa-check"></i><b>7.1.2</b> _bookdown.yml</a></li>
+<li class="chapter" data-level="7.1.3" data-path="création-dun-bookdownlearnitdown.html"><a href="création-dun-bookdownlearnitdown.html#output.yml"><i class="fa fa-check"></i><b>7.1.3</b> _output.yml</a></li>
+<li class="chapter" data-level="7.1.4" data-path="création-dun-bookdownlearnitdown.html"><a href="création-dun-bookdownlearnitdown.html#index.html"><i class="fa fa-check"></i><b>7.1.4</b> index.html</a></li>
+<li class="chapter" data-level="7.1.5" data-path="création-dun-bookdownlearnitdown.html"><a href="création-dun-bookdownlearnitdown.html#header.html-header0.html"><i class="fa fa-check"></i><b>7.1.5</b> header.html &amp; header0.html</a></li>
+<li class="chapter" data-level="7.1.6" data-path="création-dun-bookdownlearnitdown.html"><a href="création-dun-bookdownlearnitdown.html#footer.html"><i class="fa fa-check"></i><b>7.1.6</b> footer.html</a></li>
+<li class="chapter" data-level="7.1.7" data-path="création-dun-bookdownlearnitdown.html"><a href="création-dun-bookdownlearnitdown.html#style.css-style0.css"><i class="fa fa-check"></i><b>7.1.7</b> style.css &amp; style0.css</a></li>
+<li class="chapter" data-level="7.1.8" data-path="création-dun-bookdownlearnitdown.html"><a href="création-dun-bookdownlearnitdown.html#setup.r"><i class="fa fa-check"></i><b>7.1.8</b> setup.R</a></li>
+<li class="chapter" data-level="7.1.9" data-path="création-dun-bookdownlearnitdown.html"><a href="création-dun-bookdownlearnitdown.html#contenu"><i class="fa fa-check"></i><b>7.1.9</b> Contenu</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="intégration-dans-wordpress.html"><a href="intégration-dans-wordpress.html"><i class="fa fa-check"></i><b>7.2</b> Intégration dans Wordpress</a></li>
+<li class="chapter" data-level="7.3" data-path="contenu-h5p-dans-bookdown.html"><a href="contenu-h5p-dans-bookdown.html"><i class="fa fa-check"></i><b>7.3</b> Contenu H5P dans bookdown</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="learnr.html"><a href="learnr.html"><i class="fa fa-check"></i><b>8</b> Tutoriels learnrs</a></li>
+<li class="chapter" data-level="9" data-path="shiny.html"><a href="shiny.html"><i class="fa fa-check"></i><b>9</b> Shiny</a></li>
+<li class="chapter" data-level="10" data-path="moodle.html"><a href="moodle.html"><i class="fa fa-check"></i><b>10</b> Moodle</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="gestion-des-cours.html"><a href="gestion-des-cours.html"><i class="fa fa-check"></i><b>10.1</b> Gestion des cours</a></li>
+<li class="chapter" data-level="10.2" data-path="badges.html"><a href="badges.html"><i class="fa fa-check"></i><b>10.2</b> Badges</a></li>
+<li class="chapter" data-level="10.3" data-path="notes.html"><a href="notes.html"><i class="fa fa-check"></i><b>10.3</b> Notes</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="videos.html"><a href="videos.html"><i class="fa fa-check"></i><b>11</b> Vidéos</a></li>
+<li class="chapter" data-level="12" data-path="wooclap.html"><a href="wooclap.html"><i class="fa fa-check"></i><b>12</b> Wooclap</a></li>
+<li class="chapter" data-level="13" data-path="rsconnect.html"><a href="rsconnect.html"><i class="fa fa-check"></i><b>13</b> RStudio Connect</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="installation-de-sdd.umons.ac.html"><a href="installation-de-sdd.umons.ac.html"><i class="fa fa-check"></i><b>13.1</b> Installation de sdd.umons.ac.be</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="progression.html"><a href="progression.html"><i class="fa fa-check"></i><b>14</b> Rapport de progression</a>
+<ul>
+<li class="chapter" data-level="14.1" data-path="présentation-générale.html"><a href="présentation-générale.html"><i class="fa fa-check"></i><b>14.1</b> Présentation générale</a></li>
+<li class="chapter" data-level="14.2" data-path="les-données.html"><a href="les-données.html"><i class="fa fa-check"></i><b>14.2</b> Les données</a>
+<ul>
+<li class="chapter" data-level="14.2.1" data-path="les-données.html"><a href="les-données.html#base-interne"><i class="fa fa-check"></i><b>14.2.1</b> Base interne</a></li>
+<li class="chapter" data-level="14.2.2" data-path="les-données.html"><a href="les-données.html#base-externe"><i class="fa fa-check"></i><b>14.2.2</b> Base externe</a></li>
+<li class="chapter" data-level="14.2.3" data-path="les-données.html"><a href="les-données.html#gestion-des-utilisateurs"><i class="fa fa-check"></i><b>14.2.3</b> Gestion des utilisateurs</a></li>
+<li class="chapter" data-level="14.2.4" data-path="les-données.html"><a href="les-données.html#format-des-données"><i class="fa fa-check"></i><b>14.2.4</b> Format des données</a></li>
+</ul></li>
+</ul></li>
+<li class="appendix"><span><b>Appendices</b></span></li>
+<li class="chapter" data-level="A" data-path="installation.html"><a href="installation.html"><i class="fa fa-check"></i><b>A</b> Installation</a>
+<ul>
+<li class="chapter" data-level="A.1" data-path="mise-à-jour-de-mongodb-1.html"><a href="mise-à-jour-de-mongodb-1.html"><i class="fa fa-check"></i><b>A.1</b> Mise à jour de MongoDB</a></li>
+</ul></li>
+<li class="chapter" data-level="B" data-path="maintenance.html"><a href="maintenance.html"><i class="fa fa-check"></i><b>B</b> Maintenance</a>
+<ul>
+<li class="chapter" data-level="B.1" data-path="maintenance-régulière.html"><a href="maintenance-régulière.html"><i class="fa fa-check"></i><b>B.1</b> Maintenance régulière</a></li>
+<li class="chapter" data-level="B.2" data-path="nettoyage-à-la-fin-de-chaque-cours.html"><a href="nettoyage-à-la-fin-de-chaque-cours.html"><i class="fa fa-check"></i><b>B.2</b> Nettoyage à la fin de chaque cours</a></li>
+</ul></li>
+<li class="chapter" data-level="C" data-path="anonymisation.html"><a href="anonymisation.html"><i class="fa fa-check"></i><b>C</b> Anonymisation des données</a></li>
+<li class="chapter" data-level="" data-path="références.html"><a href="références.html"><i class="fa fa-check"></i>Références</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/learnitr">LearnIt::R sur GitHub</a></li>
+<li><a href="https://learnitr.r-universe.dev">Univers R LearnIt::R</a></li>
+<br/>
+<li><a href="http://wp.sciviews.org">Exemple de cours</a></li>
+<li><a href="https://github.com/BioDataScience-Course">Cours (site GitHub)</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">LearnIt::R plateforme pédagogique pour l’apprentissage de R</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="learnr" class="section level1 hasAnchor" number="8">
+<h1><span class="header-section-number">Chapitre 8</span> Tutoriels learnrs<a href="learnr.html#learnr" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>TODO: place learnr stuff here…</p>
+
+</div>
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+/*(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://sddb.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();*/
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="contenu-h5p-dans-bookdown.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="shiny.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/learnitr/learnitrdoc/edit/main/08-Learnr.Rmd",
+"text": "Editer"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": "https://github.com/learnitr/learnitrdoc/blob/main/08-Learnr.Rmd",
+"text": null
+},
+"download": ["LearnItR.pdf", "LearnItR.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
