@@ -2,185 +2,161 @@
 
 
 
-Chaque section couvre un outil en particuliers, avec la section \@ref(general) qui présente la façon dont les différents outils sont assemblés pour réaliser notre environnement de travail pour les cours de **Science des Données Biologiques** à l'UMONS. La suite de cette introduction présente l'organisation générale des cours et justifie les choix technologiques qui sont détaillés dans les chapitres suivants par rapport à nos objectifs pédagogiques.
+Chaque chapitre couvre un outil, avec le chapitre \@ref(general) qui présente la façon dont les différents outils sont assemblés pour implémenter l'ensemble de la plateforme pédagogique LearnIt::R. La suite de cette introduction explique les choix effectués pour la plateforme et son utilisation dans le cadre du cours de [science des données biologiques](htps://wp.sciviews.org) à l'[Université de Mons](https://web.umons.ac.be/fr/). Ces choix visent un but prioritaire : l'apprentissage **progressif** et efficace de R et de la science des données.
+
+Si vous recherchez un outil en particuliers, vous pouvez passer ce chapitre sans problème. Si vous êtes intéressé•e par les justification pédagogiques qui sous-tendent la plateforme, vous trouverez des éléments de réflexion dans la présente section.
+
+-   La démarche personnelle qui a mené à cette plateforme est d'abord expliquée dans la section \@ref(experience).
+
+-   Les éléments importants relatifs à l'apprentissage, tels que les psychologues expérimentalistes et les neuroscientifiques nous les expliquent sont détaillés dans la section \@ref(apprentissage).
+
+-   Quelques aspects qui nous paraissent importants de pédagogie et de psycho-pédagogie sont ensuite résumés dans la section \@ref(innovation).
+
+-   Enfin, la scénarisation, le timing et le mode d'évaluation adoptés sont expliqués à la section \@ref(organisation) par rapport à nos objectifs pédagogiques. Les outils nécessaires sont cité dans ce contexte.
+
+## Retour d'expérience {#experience}
+
+La plateforme pédagogique LearnIt::R n'a pas été conçue hors contexte. Au contraire, c'est le fruit d'une expérience d'enseignement des statistiques depuis plus de 20 ans à des étudiants en formation universitaire en biologie. À l'Université de Mons (UMONS dans le Hainaut, en Belgique), nous enseignons l'analyse statistique de données biologiques depuis la seconde année (Licence en France, Bachelier en Belgique) jusqu'à la dernière année du Master. Nous abordons donc tous les aspects depuis les base jusqu'aux notions les plus avancées.
+
+\BeginKnitrBlock{note}<div class="note">
+Les outils LearnIt::R sont utilisables dans un contexte bien plus vaste que celui décrit ici : formations diverses en présentiel (formation d'entreprise, en haute école...) ou en distanciel (MOOC, tutoriels en ligne...). Le contexte universitaire dans lequel ils ont été développés permet, néanmoins, de mieux comprendre l'architecture de la plateforme complète.
+
+De même, cette plateforme est utilisable pour enseigner bien d'autres matières que la science des données à des biologistes, bien entendu. Sa grande force est tout de même de faire la part belle au langage R. Mais elle est parfaitement adaptable pour enseigner, par exemple, Python, Julia, ou même, une matière qui ne nécessite pas l'apprentissage d'un langage de programmation.
+</div>\EndKnitrBlock{note}
+
+### Cursus universitaire belge
+
+Dans cet ouvrage, nous utiliserons la dénomination belge pour les cursus universitaires. Voici une présentation succincte pour les lecteurs des autres pays ou ceux qui ne sont pas familiers avec les études universitaires. Il est important de connaître cette terminologie pour la suite de cette section.
+
+Un parcours universitaire belge classique suit les prescriptions européennes. Il est composé d'un **premier cycle** de trois années de **Bachelier**, suivi de deux ans de **Master** en **second cycle**, éventuellement prolongé d'un **troisième cycle** sous forme d'une thèse de **doctorat**.
+
+Une année universitaire est appelée **année académique**. Elle commence début septembre avec un **premier quadrimestre** (13 semaines dont 12 de cours et des examens en janvier). Le **second quadrimestre** est également composé de 13 semaines d'activités dont 12 semaines de cours qui se terminent vers la mi-mai. Une à deux semaines de "**blocus**" où les étudiants se préparent pour les examens, précède la **première session d'examens** de juin. Enfin, une seconde période de blocus précède la **seconde session d'examens** d’août qui clôture l'année académique. Comme les années académiques sont à cheval sur deux années civiles, on parlera de l'année académique 2023-2024, par exemple, pour celle débutant en septembre 2023 et se terminant fin août 2024.
+
+Une année académique est composée d'une série de matières qui peuvent être soit obligatoires, soit à option. Ces matières sont constitués d'exposés plutôt théoriques en amphithéâtres réalisés par les **professeurs** (les **cours ex cathedra**, ou **cours théoriques**, dans d'autres pays on parlera de cours magistraux), accompagnés éventuellement de séances plus pratiques d'**exercices** ou de **travaux pratiques**, généralement dispensés par un ou plusieurs **assistants**. En Belgique, les assistants "classiques" sont diplômés de Master et prestent leurs enseignements à mi-temps. Ils réalisent en parallèle un travail de recherche en vue de présenter une thèse de doctorat pendant l'autre mi-temps, et ce, sur une durée de six ans.
+
+Chaque matière est reprise comme une **Unité d'Enseignement** (UE), décomposée en une ou plusieurs **Activités d'Apprentissage** (AA), elles-mêmes constituées d'un certain nombre d'heures de cours, de séances d'exercices, de travaux pratique ou autres (par exemple, des excursions ou des stages). En fonction du volume horaire de travail total estimé pour l'étudiant, un nombre de **crédits**, encore appelés **ECTS** (pour *"[European Credit Transfer and Accumulation System](https://education.ec.europa.eu/fr/education-levels/higher-education/inclusive-and-connected-higher-education/european-credit-transfer-and-accumulation-system)"*) est attribué à chaque UE et chaque AA. Un crédit ECTS correspond à une charge de travail de 25h à 30h pour l'étudiant. C'est une définition imposée à tous les états membres de la Communauté Européenne.
+
+Une année académique belge est constituée de matières totalisant **60 crédits ECTS**. Le Bachelier compte donc 180 ECTS au total et le Master en deux ans 120 ECTS. Comme exemple, voyez ici le programme de cours du [Bachelier en Biologie](https://webcontent.umons.ac.be/web/fr/pde/2023-2024/cursus/BSB1.htm) à l'UMONS durant l'année académique 2023-2024. Vous pouvez y repérer l'UE de "science des données biologiques I : visualisation et inférence" en **bloc** 2 (c'est à dire, en seconde année du Bachelier), ainsi que l'UE de "science des données II : analyse et modélisation" en bloc 3 dont il sera question ci-dessous. Vous noterez que ces deux UE *n'ont aucune heure de cours théoriques* (colonne HT). Toutes les heures en présentiel (70h et 60h, respectivement) sont des HTPE ou heures de travaux pratiques encadrés. Nous y reviendrons. Ces UE correspondent à, respectivement 6 et 5 crédits ECTS et se répartissent sur les deux quadrimestres. Bien que ce ne soit pas une règle absolue, les différentes UE sont plutôt enseignées en parallèle tout au long d'un ou des deux quadrimestres, avec des séances de 2h ou de 4h disséminées à l'horaire tout au long des 12 ou des 24 semaines de cours.
+
+### Evolution de notre approche pédagogique
+
+La formation en science des données biologiques telle qu'enseignée en 2023-2024 n'a plus rien à voir avec la formation en biostatistique de 2003-2004. En voici l'évolution, et surtout, les raisons qui en ont motivé les changements :
+
+-   Cours théoriques et séances d'exercices à volume horaire égal. Les cours de biostatistiques étaient constitués initialement de cours ex cathedra avec support de type PowerPoint pour autant d'heures que d'exercices. Ces derniers étaient réalisés sur ordinateurs avec le logiciel R. Les étudiants soumettaient un rapport de leurs analyses au format Word. Ce rapport était coté et la partie théorique était évaluée indépendamment lors d'un examen oral en session. Constatation : l'objectif pour des biologistes étant plus la capacité à réaliser des analyses statistiques de données biologiques que de connaissances théoriques en statistiques, nous avions la volonté de privilégier les séances d'exercices.
+
+-   Même mode d'enseignement, mais volume horaire de 1 pour 2 entre cours théoriques et séances d'exercices. Il en résulte une partie théorique raccourcie, avec notamment moins de développements mathématiques et plus de données biologiques réelles analysées avec R par les étudiants sur les ordinateurs. Constatation : les étudiants restent réfractaires à la partie théorique, mais s'investissent plus dans les séances pratiques. Ils ne s'intéressent à la théorie qu'après avoir constaté l'intérêt dans le cadre du travail d'un biologiste sur base des cas concrets traités durant les séances d'exercices. C'est le problème de l'œuf et de la poule. Il faut une base théorique minimale pour aborder les exercices, mais nos étudiants ne s'intéressent à la théorie qu'après avoir fait les exercices.
+
+-   Même mode d'enseignement et volume horaire que ci-dessus, mais répartition différente dans le temps (les séances de cours et d'exercices étaient totalement découplées jusqu'ici). Une séance "composite" est constituée d'un partie théorique avec démonstration immédiate sur un cas concret. Les étudiant effectuent les exercices directement par la suite. Tant la démonstration plus théorique que l'application pratique se font dans la salle informatique. Les étudiants peuvent donc exécuter les scripts R de la démonstration sur leurs ordinateurs. Les parties "cours théoriques" sont donc moins passives de la part des étudiants. Constatation : intégration des deux séances est bénéfique, mais le cours théorique en amont reste une partie où les étudiants sont les moins attentifs.
+
+-   Suite à notre intérêt pour les techniques pédagogiques alternatives, et notamment les classes inversées et les enseignement hybrides où une partie du travail est réalisé par l'étudiant à domicile avant les séances, nous sommes repartis d'une page blanche. La même année, nous avons décidé d'élargir la matière au delà des biostatistiques en transformant les anciennes UE de biostatistiques en UE de science des données où nous abordons aussi plus en détails le stockage et la manipulation des données, ainsi que la présentation des résultats et l'esprit critique statistique. Une nouvelle UE est ajoutée en Master 2 et les volumes horaires et ECTS des autres UE sont augmentés pour atteindre cet objectif. Il n'y a plus du tout d'heures de cours théoriques. Toutes les séances en présentiel deviennent des heures d'exercices encadrés, ainsi que de coaching pour répondre à leurs questions sur la matière théorique ou la réalisation de leurs analyses. La présence à ces séances devient obligatoire. La matière est divisée en 30 modules dispensés une semaine sur deux pour assurer l'apprentissage progressif et sur la durée. Le contenu est réécrit en [bookdown](https://bookdown.org) pour être accessible en ligne (<https://wp.sciviews.org>). Les étudiants doivent lire le chapitre correspondant et réaliser des tutoriel [learnr](https://rstudio.github.io/learnr/) avant la première séance du module. Les exercices se font maintenant avec R, RStudio et GitHub pour gérer les dépôts des projets des étudiants. Le format des rapports passe à R Markdown. Il n'y a plus d'examen théorique, uniquement des projets cotés. Constatation : l'approche progressive en différents modules et l'évaluation continue sont bien utiles. Les tutoriels learnr sont très appréciés. Mais seule une petite fraction des étudiants prépare la matière à l'avance. Les autres réalisent les tutoriels learnrs ou lisent le cours en ligne en classe. Ils ne passent pas assez de temps à poser des questions et à réaliser leurs analyses en séances. Ensuite, ils bâclent généralement leurs rapports pour les finir chez eux avant la deadline. Une enquête auprès des étudiants montre que le cours en ligne n'est pas suffisant pour appréhender efficacement la matière chez eux avant les séances.
+
+-   Les séances sont mieux scénarisées et le timing défini plus clairement. Des exercices sont rajoutés dans le cours en ligne ([H5P](https://h5p.org) et application interactives [Shiny](https://shiny.posit.co)) pour vérifier l'auto-apprentissage des étudiants et leur permettre de déterminer s'ils ont bien compris les différents concepts. Les tutortiels learnrs sont complétés de suggestions à l'aide du package [gradethis](https://rstudio.github.io/gradethis/articles/gradethis.html). Une base de données MongoDB est mise en place comme LRS ("[learning record store](https://edusign.com/fr/blog/quest-ce-que-le-lrs-ou-learning-record-store/)") de fortune et du code est créé pour collecter les traces de l'activité des étudiants dans les exercices H5P, Shiny et learnr (c'est le point de départ du package [learnitdown](https://github.com/learnitr/learnitdown) de la plateforme LearnIt::R). Des points sont attribués (5 à 10% de la note finale selon les années) à la résolution de ces exercices. Constatation : le cours en ligne agrémenté d'exercices d'auto-évaluation avec suggestions automatisées pour corriger les erreurs, notamment dans le code R des tutoriels learnrs est une formule bien plus efficace pour l'approche classe inversée. Les points attribués à la résolution de ces exercices incite fortement les étudiants à les réaliser avec un taux de participation aux exercices en augmentation. La préparation est bien meilleure, mais encore perfectible. Un trop grand nombre d'étudiants ne préparent toujours pas suffisamment à l'avance.
+
+-   Un rapport de progression dans les exercices destiné aux étudiants et une section récapitulative des différents exercices à la fin de chaque chapitre du cours en ligne sont rajoutés (voir par exemple [ici](https://wp.sciviews.org/sdd-umons/?iframe=wp.sciviews.org/sdd-umons-2023/r%25C3%25A9capitulatif-des-exercices-1.html)). Le rapport de progression individuel s'appuie sur les données collectées dans le LRS et est écrit en R et en Shiny. Il deviendra plus tard le package [learnitprogress](https://github.com/learnitr/learnitprogress) de la plateforme LearnIt::R. Des fonctions sont rajoutées dans le package learnitdown pour automatiser la création de la section récapitulative et encore mieux intégrer les exercices H5P, Shiny et learnr dans le cours. Constatation : le taux de participation aux exercices atteint des niveaux inespérés (plus de 90% et certaines années jusqu'à 98% des exercices réalisés par les étudiants en moyenne). Des difficultés deviennent plus apparentes dans la transition entre théorie et pratique maintenant que les outils ad hoc sont en place pour la partie plus théorique.
+
+-   Mise en place de projets GitHub individuels guidés (voir un exemple [ici](https://github.com/BioDataScience-Course/A09Ia_ttest) et [ici](https://github.com/BioDataScience-Course/A09Ia_ttest/blob/master/seaweed_notebook.qmd)). Des projets en groupes de deux à quatre étudiants *non guidés* forment toujours le niveau de difficulté ultime. Les projets individuels guidés ont de nombreuses instructions et une batterie de tests basés sur le package [testthat](https://testthat.r-lib.org) qui permet aux étudiants de vérifier par eux-mêmes s'il ont obtenu la bonne réponse et de leur faire des suggestions dans le cas contraire (feedback immédiat et détaillé). L'interprétation des résultats se fait en sélectionnant les bonnes phrases dans une section à choix multiple dans le document R Markdown ou Quarto. Cela leur montre comment rédiger leur interprétation et ce à quoi il faut faire attention à ce niveau-là (ils devront rédiger leur interprétation par eux-mêmes ensuite dans les projets de groupe). Les projets sont corrigés selon une grille critériée remplie de manière semi-automatique. Du code R est écrit pour gérer tout cela. Ce code se concrétise finalement par le package [learnitgrid](https://github.com/learnitr/learnitgrid) de la plateforme LearnIt::R. Constatation : la transition entre théorie et pratique est plus douce. Nous avons maintenant quatre niveaux de difficulté croissante dans les exercices (H5P et Shiny dans le cours = niveau 1, tutoriels learnrs = niveau 2, projets GitHub individuels cadrés = niveau 3, projets GitHub en groupe libres = niveau 4). L'apprentissage est plus progressif et plus homogène au niveau de la classe. Des différences temporelles importantes s'observent cependant toujours au sein de la classe entre les étudiants qui respectent le timing proposé et ceux qui font tout à la dernière minute avant les deadlines. Cela pose problème pour la bonne progression dans les travaux de groupes.
+
+-   Un outil d'analyse des traces d'apprentissages des étudiants telles que récoltées dans notre LRS est écrit en Shiny (il deviendra le package [learnitdashboard](https://github.com/learnitr/learnitdashboard) de la plateforme LearnIt::R). Il nous permettra de repérer plus facilement les difficultés restantes et d'y remédier à l'avenir. La scénarisation des séances est encore revue en séparant clairement le travail dans les projets individuels durant une première séance et les travaux de groupe lors d'une seconde séance. Une courte interrogation écrite sur la matière du module, y compris le projet individuel en début de seconde séance vient forcer les étudiants à mieux respecter le timing. Ces dernières modifications feront l'objet d'une réévaluation l'année prochaine. Une pondération plus judicieuse entre exercices, les projets individuels, les projets de groupe et les interrogations permettra une notation la plus adéquate possible de l'acquis de chaque étudiant.
+
+Un aspect important à noter ici, c'est que notre approche pédagogique n'a pas été élaborée d'un seul coup et sur des bases uniquement théoriques de pédagogie. Nous avons observé et amélioré année après année notre méthode. Nous avons inclus des outils pédagogiques et logiciels nouveaux pour nous (ou les avons programmés nous-mêmes s'il n'existaient pas) *très progressivement* sur un intervalle de vingt années, et surtout durant les six dernières. Nous ne retenons au final que ce qui permet une amélioration significative de l'apprentissage. Faites-en de même : incluez vos changements de manière très progressive en vous assurant de bien maîtriser les nouveaux outils ou les nouvelles techniques *avant* de les inclure dans vos approches pédagogiques. Les étudiants ne sont pas des cobaye ! Méfiez-vous de ce que vous conseillent les techno-pédagogues et n'adoptez que les techniques et les outils qui *vous* donnent de bons résultats dans le contexte particuliers de *vos cours*.
+
+Ceci dit, si une approche empirique de vos enseignements est utile comme nous, nous l'avons privilégiée, la science a tout de même bien progressé pour décrypter les mécanismes de l'apprentissage. La section suivante reprend diverses notions issues de tels travaux qu'il est utile de connaître pour améliorer votre façon d'enseigner.
 
 ## Apprentissage
 
-Les neuroscientifiques et les psychologues ont fait beaucoup de progrès ces derniers temps pour comprendre comment le cerveau humain apprend. Ces découvertes ont des retombées importantes au niveau de la pédagogie. Il est donc utile de s'y attarder un peu dans le but de dégager les stratégies d'apprentissage gagnantes (et celles qui sont perdantes). Ensuite sur cette base, nous pourrons mettre en place les outils pédagogiques qui optimiseront l'apprentissage de la science des données en biologie à l'UMONS.
+Les neuroscientifiques et les psychologues ont fait beaucoup de progrès ces derniers temps pour comprendre comment le cerveau humain apprend. Ces découvertes ont des retombées importantes au niveau de la pédagogie. Il est donc utile de s'y attarder un peu dans le but de dégager les stratégies d'apprentissage gagnantes (et celles qui sont perdantes).
 
 Le schéma suivant résume comment l'apprentissage se fait dans notre cerveau.
 
-![Mécasinsmes menant à l'apprentissage.](images/introduction/learning.png)
+![Mécanismes menant à l'apprentissage.](images/introduction/learning.png)
 
-- Nos organes des sens sont noyés en permanence dans un flux d'informations. Il est impossible de toutes les traiter avec la même attention. Ainsi, un tri est réalisé très tôt et (presque) inconscient. Tout ce qui n'est pas conservé est bien entendu perdu. Les critères qui motivent le tri de l'information considérée comme utile sont la **motivation** et l'**intérêt**. Par exemple, donner une longue explication à des étudiants *avant* d'avoir suscité leur motivation ou leur intérêt est contre-productif, car cette information sera filtrée et éliminée très tôt sans même être traitée\ ! C'est le coup classique\ : s'arrêter en pleine explication et demander à un étudiant au hasard, ou à un étudiant manifestement peu concentré ce qu'on vient de dire... et il est incapable de répéter ce qui vient d'être dit\ ! Donc, arriver à cette situation *est en partie de la faute du professeur*. Il faut qu'il prenne soin de susciter l'intérêt et/ou la motivation *avant* de donner des explications compliquées. Cela peut-être par une phrase du genre\ : **attention, ce que je vais vous expliquer maintenant vous servira pour faire X ou Y plus tard...** ou **soyez bien attentifs, la procédure suivante est cruciale pour la réussite de l'exercice...**. Cela est également valable dans le matériel pédagogique où il faut bien préciser les objectifs en début de section (et que ces objectifs fassent écho -motivation ou intérêt- dans la tête des étudiants).
+-   Nos organes des sens sont noyés en permanence dans un flux d'informations. Il est impossible de toutes les traiter avec la même attention. Ainsi, un tri est réalisé très tôt et de manière (presque) inconsciente. Tout ce qui n'est pas conservé est bien entendu perdu. Les critères qui motivent le tri de l'information considérée comme utile sont la **motivation** et l'**intérêt**. Par exemple, donner une longue explication à des étudiants *avant* d'avoir suscité leur motivation ou leur intérêt est contre-productif, car cette information sera filtrée et éliminée très tôt sans même être traitée ! C'est le coup classique : s'arrêter en pleine explication et demander à un étudiant au hasard, ou à un étudiant manifestement peu concentré ce qu'on vient de dire... et il est incapable de le répéter ! Donc, arriver à cette situation *est en partie de la faute du professeur*. Il faut qu'il prenne soin de susciter l'intérêt et/ou la motivation *avant* de donner des explications compliquées. Cela peut-être par une phrase du genre : **attention, ce que je vais vous expliquer maintenant vous servira pour faire X ou Y plus tard...** ou **soyez bien attentifs, la procédure suivante est cruciale pour la réussite de l'exercice...**. Cela est également valable dans le matériel pédagogique où il faut bien préciser les objectifs en début de section (et que ces objectifs fassent écho -motivation ou intérêt- dans la tête des étudiants).
 
 \BeginKnitrBlock{note}<div class="note">
-Ce qui n'est pas perçu comme "utile" par l'étudiant au moment où cela est formulé est *immédiatement* oublié... C'est ce processus de tri de l'information pertinente qui en est responsable\ !
+Ce qui n'est pas perçu comme "utile" par l'étudiant au moment où cela est formulé est *immédiatement* oublié... C'est ce processus de tri de l'information pertinente qui en est responsable !
 </div>\EndKnitrBlock{note}
 
-- Une fois le filtre du tri franchi, l'information à traiter arrive dans la mémoire de travail à court terme. Cette mémoire permet un traitement rapide l'information, **mais elle est limitée\ !** Selon les individus et/ou les circonstances, elle ne dépasse pas l'équivalent de 7-9 cases maximum. Il vaut mieux même coinsidérer **cinq cases** disponibles. Chaque case est capable d'accueillir une information à traiter. Cela signifie qu'il faut éviter d'amener trop de difficultés à la fois. si le problème est complexe et nécessite l'assimilation de nombreuses nouvelles notions, il faut alors découper le problème en plusieurs étapes plus simples. Il faut aussi faire attention qu'un certain nombre de ces cases peuvent se remplir par des éléments parasites. Par exemple, un étudiant qui doit installer un logiciel sur l'ordinateur de la salle de TP, mais se bat avec l'écran de login parce qu'il ne l'entre pas correctement, ou parce qu'il n'arrive pas à retrouver son mot de passe va concentrer son attention et une partie de son "espace de travail" à résoudre ce problème de login. Ensuite, l'espace de travail utilisé ne sera pas directement réutilisable pour la tâche désirée (installation du logiciel), et l'étudiant va se sentir débordé par les informations et en conclura qu'il est nul en informatique. Si le même étudiant avait pu se logger directement sans problèmes, il n'éprouverait peut-être pas de telles difficultés.
+-   Une fois le filtre du tri franchi, l'information à traiter arrive dans la mémoire de travail à court terme. Cette mémoire permet un traitement rapide de l'information, **mais elle est limitée !** Selon les individus et/ou les circonstances, elle ne dépasse pas l'équivalent de 7-9 "cases" maximum. Il vaut mieux même considérer **cinq cases** disponibles. Chaque case est capable d'accueillir une information à traiter. Cela signifie qu'il faut éviter d'amener trop de difficultés à la fois. si le problème est complexe et nécessite l'assimilation de nombreuses nouvelles notions, il faut alors découper le problème en plusieurs étapes plus simples. Il faut aussi faire attention qu'un certain nombre de ces cases peuvent se remplir par des éléments parasites. Par exemple, un étudiant qui doit installer un logiciel sur son ordinateur, mais qui se bat avec l'écran de login parce qu'il ne l'entre pas correctement, ou parce qu'il n'arrive pas à retrouver son mot de passe, va concentrer son attention et une partie de son "espace de travail" à résoudre ce problème de login. Ensuite, l'espace de travail utilisé ne sera pas directement réutilisable pour la tâche désirée (installation du logiciel). L'étudiant va se sentir débordé par les informations et en conclura qu'il est nul en informatique. Si le même étudiant avait pu se logger directement sans problèmes, il n'éprouverait peut-être pas de telles difficultés.
 
 \BeginKnitrBlock{note}<div class="note">
 Il faut toujours garder à l'esprit la taille très limitée de l'espace de travail dans notre cerveau, et ne jamais amener trop de notions nouvelles et/ou difficiles d'un coup. Il faut aussi apprendre à identifier les situations où les étudiants sont saturés d'information. Dans les deux cas, il faut décomposer alors le problème en étapes successives plus simples et attaquer étape par étape.
 </div>\EndKnitrBlock{note}
 
-- Si l'information arrive dans l'espace de travail du cerveau de l'étudiant, ce n'est pas encore gagné pour autant. Il faut en effet bien évidemment qu'il soit capable de traiter le problème. S'il est dans une impasse, tout s'arrête-là\ ! **Donc, il faut adapter le niveau de difficulté aux connaissances et au potentiel de l'étudiant.** La difficulté ici, c'est qu'une classe est hétérogène. Donc, le niveau de difficulté acceptable n'est pas le même pour tous. Varier le matériel pédagogique de niveau de difficulté différent permet de résoudre ce casse-tête, mais c'est aussi crucial pour l'apprentissage pour une autre raison (voir ci-dessous).
+-   Si l'information arrive dans l'espace de travail du cerveau de l'étudiant, ce n'est pas encore gagné pour autant. Il faut en effet bien évidemment qu'il soit capable de traiter le problème. S'il est dans une impasse, tout s'arrête-là ! **Donc, il faut adapter le niveau de difficulté aux connaissances et au potentiel de l'étudiant.** La difficulté ici, c'est qu'une classe est hétérogène. Donc, le niveau de difficulté acceptable n'est pas le même pour tous. Varier le matériel pédagogique et proposer des exercices de niveaux de difficulté différents permet de résoudre ce casse-tête, mais c'est aussi crucial pour l'apprentissage pour une autre raison (voir ci-dessous).
 
-- Une fois l'information traitée, elle ne mène pas nécessairement à un *apprentissage* pour autant. Notre cerveau a évolué au cours du temps pour économiser ses ressources. Ainsi, ce qui est trop facile à traiter ne mérite pas d'être appris. En effet, on est logiquement capable de refaire le même raisonnement facilement si la situation se représente. Donc, notre cerveau va éviter de *mémoriser* des éléments qui paraissent trop simples (le verbe "paraître" est important, car il fait intervenir une sensation.... qui peut être erronée et faire alors perdre la possibilité d'apprendre un concept important).
+-   Une fois l'information traitée, elle ne mène pas nécessairement à un *apprentissage* pour autant. Notre cerveau a évolué au cours du temps pour économiser ses ressources. Ainsi, ce qui est trop facile à traiter ne mérite pas d'être appris. En effet, dans ce cas on est capable de refaire le même raisonnement facilement si la situation se représente. Donc, notre cerveau va éviter de *mémoriser* des éléments qui paraissent trop simples (le verbe "paraître" est important, car il fait intervenir une sensation.... qui peut être erronée et faire alors perdre la possibilité d'apprendre un concept important).
 
-- Ainsi une des conditions nécessaires pour que le concept étudié soit transféré dans la mémoire à long terme est qu'il soit raisonnablement difficile (sinon, il ne sera pas digne d'être mémorisé), mais pas trop (si l'étudiant ne peut pas résoudre le problème auquel il fait face, il ne peut rien mémoriser d'utile bien évidemment).
+-   Ainsi une des conditions nécessaires pour que le concept étudié soit transféré dans la mémoire à long terme est qu'il soit raisonnablement difficile (sinon, il ne sera pas digne d'être mémorisé), mais pas trop (si l'étudiant ne peut pas résoudre le problème auquel il fait face, il ne peut rien mémoriser d'utile bien évidemment).
 
 \BeginKnitrBlock{note}<div class="note">
-Adapter le niveau de difficulté des activités proposées est à la fois complexe (à cause de l'hétérogénéité des classes) et **indispensable** pour que le mécanisme d'apprentissage s'enclenche. Une façon d'arriver à un niveau de difficulté adéquat, ni trop simple, ni trop difficile, consiste à reporter partiellement cette tâche sur l'étudiant lui-même. Si l'étudiant devient (partiellement) responsable de son processus d'apprentissage, il pourra ajuster de lui-même son niveau de difficulté.
+Adapter le niveau de difficulté des activités proposées est à la fois complexe (à cause de l'hétérogénéité des classes) et **indispensable** pour que le mécanisme d'apprentissage s'enclenche. Une façon d'arriver à un niveau de difficulté adéquat, ni trop simple, ni trop difficile, consiste à reporter partiellement cette tâche sur l'étudiant lui-même. Si l'étudiant devient (partiellement) responsable de son processus d'apprentissage, il pourra ajuster partiellement de lui-même le niveau de difficulté (choix des exercices, de leur ordre, de leur timing, avoir recours à l'entre-aide...)
 
 Une approche complémentaire indispensable consiste à varier le niveau de difficulté des exercices proposés autour d'un même concept. Les étudiants les moins performants apprendront avec les exercices les plus simples, même s'ils bloqueront probablement sur les cas les plus complexes. D'un autre côté, le génie survolera ces exercices simples sans rien apprendre, mais s'attardera de manière utile sur les exercices plus difficiles, et c'est là qu'il apprendra le mieux.
 </div>\EndKnitrBlock{note}
 
-- Une autre condition indispensable pour que le mécanisme d'apprentissage s'enclenche, c'est d'être **actif**. Or, écouter un professeur déblatérer sa matière devant un grand auditoire, visionner une vidéo, et parfois même, lire un long texte continu, ce n'est **pas** être actif. L'information "glisse". On dit quelle "entre par une oreille et ressort par l'autre". Et c'est vraiment pratiquement comme cela que cela se passe\ : le mécanisme d'apprentissage n'est pas activé. Par contre si l'étudiant fait quelque chose pendant ce temps-là, quand il est actif, alors il apprend. Le paradoxe, c'est que l'activité ne doit pas nécessairement être liée à la matière à apprendre. Par exemple, un parent qui cherche à aider son enfant pour apprendre ses devoirs en répétant avec lui sera énervé si l'enfant joue à un jeu vidéo en même temps... Pourtant, c'est l'enfant qui a raison\ : il est actif (sur son jeu), donc il apprend (sa matière)\ ! Ce n'est pas logique, mais ainsi fonctionne notre cerveau.
+-   Une autre condition indispensable pour que le mécanisme d'apprentissage s'enclenche, c'est d'être **actif**. Or, écouter un professeur déblatérer sa matière devant un grand auditoire, visionner une vidéo, et parfois même, lire un long texte continu, ce n'est **pas** être actif. L'information "glisse". On dit quelle "entre par une oreille et ressort par l'autre". Et c'est vraiment pratiquement comme cela que cela se passe : le mécanisme d'apprentissage n'est pas activé. Par contre si l'étudiant fait quelque chose pendant ce temps-là, quand il est actif, alors il apprend. Le paradoxe, c'est que l'activité ne doit pas nécessairement être liée à la matière à apprendre. Par exemple, un parent qui cherche à aider son enfant pour apprendre ses devoirs en répétant avec lui sera énervé si l'enfant joue à un jeu vidéo en même temps... Pourtant, c'est l'enfant qui a raison : il est actif (sur son jeu), donc il apprend (sa matière) ! Ce n'est pas logique, mais ainsi fonctionne notre cerveau.
 
 \BeginKnitrBlock{note}<div class="note">
-La pédagogie active vise à activer ce mécanisme d'apprentissage par l'activité autant qu'elle reporte la responsabilité de choix de difficulté et de mécanisme d'apprentissage sur l'étudiant lui-même qui doit développer une certaine autonomie pour mettre en place les conditions qui font que, pour lui, l'apprentissage sera optimal. Les enseignants doivent encourager cela. Certains psychopédagogues modernes sont très critiques sur l'enseignement via les grands cours ex-catédras en Université, et disent que c'est la meilleure méthode pour que la matière passe directement du PowerPoint du prof à la feuille de notes de l'étudiant sans passer par le cerveau du professeur, ni par celui de l'étudiant. **Le mécanisme d'apprentissage est pratiquement inexistant ici, et c'est plus tard, en remettant de l'ordre dans ses notes _de manière active_ que l'étudiant apprendra véritablement la matière.**
+La pédagogie active vise à activer ce mécanisme d'apprentissage par l'activité autant qu'elle reporte la responsabilité de choix de difficulté et de mécanisme d'apprentissage sur l'étudiant lui-même qui doit développer une certaine autonomie pour mettre en place les conditions qui font que, pour lui, l'apprentissage sera optimal. Les enseignants doivent encourager cela. Certains psychopédagogues modernes sont très critiques sur l'enseignement via les grands cours ex cathedras en université. Certains disent que c'est la meilleure méthode pour que la matière passe directement du PowerPoint du prof à la feuille de notes de l'étudiant sans passer par le cerveau du professeur, ni par celui de l'étudiant. **Le mécanisme d'apprentissage est pratiquement inexistant ici, et c'est plus tard, en remettant de l'ordre dans ses notes _de manière active_ que l'étudiant apprendra véritablement la matière.**
 </div>\EndKnitrBlock{note}
 
-- Un dernier point important pour l'apprentissage est la **répétition**. Pour qu'un concept s'imprime durablement dans le cerveau, il faut que les connexions synaptiques soient activées et réactivées *plusieurs fois*. Ceci est un concept connu depuis longtemps en pédagogie, mais qui est parfois mal appliqué. Car si cette répétition est monotone, elle est ennuyeuse. Et alors, la motivation et l'intérêt de l'étudiant sont en chute libre... au point que l'information répétée peut très bien ne plus passer la première barrière du tri. Dans ce cas, la répétition ne sera plus d'aucun effet bénéfique.
+-   Un dernier point important pour l'apprentissage est la **répétition**. Pour qu'un concept s'imprime durablement dans le cerveau, il faut que les connexions synaptiques soient activées et réactivées *plusieurs fois*. Ceci est un concept connu depuis longtemps en pédagogie, mais qui est parfois mal appliqué. Car si cette répétition est monotone, elle est ennuyeuse. Et alors, la motivation et l'intérêt de l'étudiant sont en chute libre... au point que l'information répétée peut très bien ne plus passer la première barrière du tri. Dans ce cas, la répétition ne sera plus d'aucun effet bénéfique.
 
 \BeginKnitrBlock{note}<div class="note">
-Il faut répéter les concepts pour qu'ils s'ancrent durablement dans le cerveau des apprenants. Mais cette répétition ne doit pas être monotone. Donc, il faut multiplier les méthodes de transmission du concept. Le multimédia permet de varier (texte, image, son). On peut aussi diversifier les exercices, approcher de manière ludique par le jeu, inventer des challenges, etc. **Donc, cette répétiton passe encore une fois par la diversité du matériel pédagogique fourni à l'étudiant autour d'un même concept.**
+Il faut répéter les concepts pour qu'ils s'ancrent durablement dans le cerveau des apprenants. Mais cette répétition ne doit pas être monotone. Donc, il faut multiplier les méthodes de transmission du concept. Le multimédia permet de varier (texte, image, son). On peut aussi diversifier les exercices, approcher de manière ludique, inventer des challenges, etc. **Donc, cette répétiton passe encore une fois par la diversité du matériel pédagogique fourni à l'étudiant autour d'un même concept.**
 </div>\EndKnitrBlock{note}
 
-Un leitmotiv, on le voit très clairement ici, qui ressort de tout ceci est qu'il faut **diversifier le matériel pédagogique** autant que possible. C'est notre objectif dans le cours de science des données, et c'est pour cela que nous ne nous limitons pas à un syllabus qui contient du texte et des images statiques, accompagné de PowerPoints qui contiennent aussi du texte et des images statiques (ou pire, des "animations" qui n'apportent rien à l'apprentissage... la fameuse [mort par PowerPoint](https://openclassrooms.com/fr/courses/3013891-ameliorez-limpact-de-vos-presentations/4172811-evitez-la-mort-par-powerpoint)). Nous voulons aussi proposer des vidéos, du contenu interactif, des exercices présentés sous différentes formes, etc. Pour y arriver, nous devons intégrer des outils comme H5P, learnr et des applications Shiny. Nous verrons comment dans les chapitres suivants.
+Un leitmotiv, on le voit très clairement ici, qui ressort de tout ceci est qu'il faut **diversifier le matériel pédagogique** autant que possible. C'est notre objectif dans la plateforme pédagogique LearnIt:RR, et c'est pour cela que nous proposons de nombreux outils différents qui ne ressemblent pas du tout à un syllabus qui contient du texte et des images statiques, accompagné de PowerPoints qui contiennent aussi du texte et des images statiques (ou pire, des "animations" qui n'apportent rien à l'apprentissage... la fameuse [mort par PowerPoint](https://openclassrooms.com/fr/courses/3013891-ameliorez-limpact-de-vos-presentations/4172811-evitez-la-mort-par-powerpoint)).
 
+Il n'y a pas que les psychologues et les spécialistes du cerveau qui ont fait des progrès dans la compréhension des mécanismes d'apprentissage. Les techno-pédagogues ont aussi développé des nouvelles techniques et d'autres outils pour mieux apprendre. C'est l'innovation pédagogique dont nous allons reprendre certains éléments dans la section suivante qui nous ont paru importants dans l'élaboration de la plateforme pédagogique LearnIt::R.
 
-## Organisation de la matière
+## Innovation pédagogique {#innovation}
 
-Le découpage de la matière dans les cours de science des données, ainsi que le timing sont importants pour obtenir un **travail en continu des étudiants tout au long de l'année** qui est une autre règle majeure pour un apprentissage efficace et durable. Voici quelques idées à développer pour assurer cet apprentissage progressif et continu.
-
-### Découpage
-
-- **Module** Nous avons entre 6 et 12 modules selon les cours. Chaque module demande entre 10 et 15h de travail dont 6h en présentiel. Il s'étale sur une semaine (minimum). Un timing classique est\ : 3h de préparation à domicile, présentiel de 2 ou 4h, travail à nouveau à domicile 1h, présentiel de 4 ou 2h, et enfin, travail à domicile 2h pour finaliser le tout. Au niveau de chaque module, on précise les objectifs, et en fin de module, il faut un bilan avec auto-évaluation pour que l'étudiant puisse vérifier qu'il ait bien compris les concepts abordés de lui-même (ex.\ : summary de H5P)
-
-- **Capsule** Un ensemble plus restreint d'items à apprendre (généralement un ou deux items max). Section du bookdown et/ou vidéo avec des exercices H5P/learnr niveau I entrelacés. Préciser également l'objectif et faire un mini-bilan à la fin de la capsule.
-
-- **Tâche** Item d'apprentissage unique lié à un et un seul matériel pédagogique (sous-section bookdown, présentation H5P, mini-learnr, très courte vidéo ou gif animé).
-
-- **Activité** Exercice réalisé par l'étudiant. Inclus dans les items précédents.
-
-### Quatre niveaux de difficulté
-
-Au fil de l'élaboration de notre matériel pédagogique diversifié, nous avons observé que certains formats sont plus adaptés pour des niveaux de difficulté plus simples, et d'autres pour des tâches plus complexes. Par exemple, des petits widgets H5P simples sont utiles pour garder l'étudiant actif au milieu de la lecture d'un texte un peu long, autant qu'ils permettent à l'étudiant d'auto-évaluer s'il a bien compris. Par contre, les jeux de données à analyser soi-même avec des directives minimalistes dans des assignations GitHub Classroom sont d'un niveau de difficulté nettement plus élevé. Au final, nous définissons quatre niveaux de difficulté croissants, et nous leurs associons des matériels et des objectifs différents. **L'idéal est de balayer un même concept au travers de matériel appartenant chaque fois à l'un de ces quatre niveaux de difficulté pour assurer la gradation de difficulté et la répétition non monotone des concepts, facteurs clés d'un apprentissage actif réussi.**
-
-#### Niveau 1
-
-Exercices simples directement inclus dans le bookdown.
-
-- Objectif\ : rendre l'étudiant actif et lui permettre une auto-évaluation de la compréhension correcte des concepts en direct.
-- Type\ : H5P, learnr avec 1 ou 2 exercices, applications Shiny simples directement intégrés dans le bookdown.
-- Code R\ : pas d'écriture de code directement, éventuellement utiliser des widgets H5P du genre remplir les blancs dans du code à partir d'une liste de fragments, indiquer si un code présenté est correct ou non, s'il effectue un traitement donné ou pas (question true/false), ...
-- Lieu\ : travail à domicile.
-- Suivi de l'utilisation des outils dans le rapport de progression.
-
-#### Niveau 2
-
-Auto-évaluation des principes théoriques à semi-pratiques par l'étudiant via des learnrs comportant plusieurs questions.
-
-- Objectif\ : pouvoir vérifier ses acquis, faire un bilan de progression en auto-évaluation.
-- Type\ :  learnrs exécutés soit dans le bookdown, soit dans RStudio, à voir...
-- Code R\ : écriture minimale de code via des exercices guidés.
-- Lieu\ : travail à domicile et/ou en présentiel.
-- Suivi avec acquisition de badges. Les évaluations plus "théoriques" passent aussi par des learnrs. Question\ : évaluation en fin d'AA pendant la période d'examen, ou évaluation en continu\ ?
-
-#### Niveau 3
-
-Exercices GitHub (ClassRoom) encadrés.
-
-- Objectif\ : effectuer une transition douce vers l'application pratique des concepts. Résolution d'exemples fortement guidés.
-- Type\ :  projets RStudio avec fichiers partiellement remplis, tâches bien précises et nombreux commentaires d'aide dans les fichiers "template" fournis.
-- Code R\ : écriture de code par rapport à un résultat attendu bien cadré et spécifié. Essentiellement carnet de notes, mais d'autres formes (rapport, présentation, article, …) peuvent également être abordées brièvement à ce stade.
-- Lieu\ : travail en présentiel essentiellement en individuel.
-- Évaluation et retour de temps en temps via l'inspection des dépôts GitHub des étudiants. Historique du travail de chaque étudiant via Git. Retour important ici (s'astreindre à visualiser quelques dépôts chaque semaine et faire des retours via issues GitHub, mails, ou Discord).
-
-#### Niveau 4
-
-Analyse libre de données avec GitHub (ClassRoom).
-
-- Objectif\ : acquérir un certain degré d'autonomie dans l'analyse des données en pratique.
-- Type\ :  projet RStudio avec instructions réduites au minimum, pas de fichiers partiellement préremplis.
-- Code R\ : écriture de code en fonction des objectifs fixés par l'étudiant lui-même. Il est aussi responsable de l'organisation et de la maintenance de ce code jusqu'à l'aboutissement du projet. Présentation sous forme de carnet de notes, et ensuite sélection des éléments les plus pertinents pour rédiger un rapport qui doit être "présentable" à un panel de lecteurs.
-- Lieu\ : travail en présentiel à compléter à domicile. Travail de groupe (2 ou 4 personnes) préféré.
-- Le ou les rapports font l'objet d'une évaluation détaillée avec grille critériée et sont la base de la note pour la partie pratique. Historique de l'activité via Git. Typiquement, un gros projet qui reprend les notions de plusieurs modules sur un quadrimestre.
-
-
-### Timing
-
-Les différents modules sont placés à l'horaire à des semaines bien définies. L'étudiant doit prendre conscience qu'il a une semaine pour assimiler le contenu du module, tout en lui permettant une certaine flexibilité (aussi pour les étudiants en passerelle qui arrivent plus tard et qui doivent pouvoir rattraper *progressivement*). Éventuellement, pour eux il faudrait pouvoir établir un calendrier adapté.
-
-### Suivi
-
-Voici les éléments que nous (souhaitons) mettre en place pour assurer un apprentissage dans la durée, et le décrochement d'un minimum d'étudiants.
-
-- Calendrier d'achèvement souhaité des modules
-
-- Rapport de progression le plus en temps réel possible. Comparaison à la fois avec le calendrier et avec la progression générale de la classe (motivation).
-
-- Acquisition de badges une fois les modules achevés, après mini-examen de type learnr (motivation).
-
-- Visualiser le calendrier souhaité sur le rapport de progression. Également, visualiser l'avancement global de l'étudiant par rapport à ce qui est attendu.
-
-- Le rapport de progression se bloque si un module est "by-passé" par l'étudiant\ : sa progression dans les modules ultérieurs n'est pas affichée tant qu'il n'a pas terminé le module "by-passé". Cel le force à suivre le parcours de progression module par module. Ceci est surtout important pour SDD I, où les étudiants sont confrontés à une approche pédagogique à laquelle ils ne sont pas habitués, mais à voir pour les autres cours également.
-
-- Obtention des points en fonction de la progression. Aussi, une évaluation du rapport d'analyse niveau IV pour la note de l'AA qui complète la note que l'étudiant obtient. Nous n'aurons donc plus d'examen pendant la session qui ne fait que traduire la capacité de "bachottage" de la matière par l'étudiant, alors que notre objectif est un apprentissage continu, durable et par la pratique autant que possible.
-
-- Possibilité d'obtention de badges "spéciaux", liés à des points bonus\ : pousser et motiver les étudiants dans différentes directions (entre-aide, excellence, esprit d'initiative, ...).
-
-- Émulation par le jeu. Varier les versions. Par exemple, la première équipe qui trouve la réponse a gagné. Aussi les compétitions de type "challenge kaggle" pourraient être réalisées pour la partie modélisation et la partie machine learning. Un jeu de test auxiliaire secret est utilisé par les enseignants pour quantifier la qualité du modèle proposé par les étudiants et permet de réaliser un classement non subjectifs des équipes en compétition. Les étudiants soumettent autant de modèles qu'ils le souhaitent et un classement des équipes est réalisé pour le fun (ou alors, récompenses à la clé sous forme d'un point bonus, de chocotofs, voire de choses plus sérieuses comme une clé USB par exemple).
-
-## Innovation pédagogique
-
-Cette section reprends différents éléments important qui émergent des constatations faites par les enseignants qui se sont lancés dans l'aventure ainsi que des techno-pédagogues... sans chercher forcément un fil conducteur entre ces différentes idées pour l'instant.
+Cette section reprend différents éléments important qui émergent des constatations faites par les enseignants qui se sont lancés dans l'aventure ainsi que des techno-pédagogues... sans chercher forcément un fil conducteur entre ces différentes idées.
 
 ### Différents types de classes inversées
 
-- Marcel Lebrun de l'UCL présente les différents types de classes inversées dans la vidéo suivante\ :
+-   Marcel Lebrun de l'Université Catholique de Louvain présente les différents types de classes inversées dans la vidéo suivante :
 
 <iframe src="https://www.youtube.com/embed/U8J24T-eY0U" width="672" height="400px" data-external="1"></iframe>
 
-À côté de l'approche traditionnelle cours ex-cathédras qui présentent la théorie suivis de séances d'exercices ou TP qui mettent en pratique, il y a\ :
+À côté de l'approche traditionnelle cours ex cathedras qui présentent la théorie suivis de séances d'exercices ou TP qui mettent en pratique, il y a :
 
-- la **classe inversée** "traditionnelle" (type 1 selon lui) où les étudiants apprennent la matière à la maison et font les devoirs en classe. Cela reste la théorie d'abord et l'application ensuite. De même, la matière reste imposée par l'enseignant.
+-   la **classe inversée** "traditionnelle" (type 1 selon lui) où les étudiants apprennent la matière à la maison et font les devoirs en classe. Cela reste la théorie d'abord et l'application ensuite. De même, la matière reste imposée par l'enseignant.
 
-- la **classe renversée** (type 2 dans sa classification). Ici, ce sont les étudiants qui élaborent le matériel pédagogique et le prof est un facilitateur. On explore le contexte d'abord pour définir quoi étudier, et on réalise une analyse et une synthèse ensuite.
+-   la **classe renversée** (type 2 dans sa classification). Ici, ce sont les étudiants qui élaborent le matériel pédagogique et le prof est un facilitateur. On explore le contexte d'abord pour définir quoi étudier, et on réalise une analyse et une synthèse ensuite.
 
-- la classe inversée de type 3 mélange les deux dans un processus itératif de contextualisation -> décontextualisation -> recontextualisation.
+-   la classe inversée de type 3 mélange les deux dans un processus itératif de contextualisation -\> décontextualisation -\> recontextualisation.
 
 \BeginKnitrBlock{note}<div class="note">
-Il n'y a pas qu'un seul type de classe inversée. On pezut renverser les lieux sans toucher au processus (type 1), mais on peut aussi changer les rôles avec la classe renversée où ce sont les étudiants qui élaborent et expliquent le cours au prof (classe renversée). Bienb sûr, on peut aussi panacher les deux avec d'autres parties en forme plus classique cours ex-cathédras suivis d'exercices.
+Il n'y a pas qu'un seul type de classe inversée. On peut renverser les lieux sans toucher au processus (type 1), mais on peut aussi changer les rôles avec la classe renversée où ce sont les étudiants qui élaborent et expliquent le cours au prof (classe renversée). Bien sûr, on peut aussi panacher les deux avec d'autres parties en forme plus classique cours ex cathedras suivis d'exercices.
 </div>\EndKnitrBlock{note}
 
-Les différents types de classes inversées peuvent se définir par rapport aux savoirs (qui apporte l'info, le prof ou les élèves\ ?), et par rapport aux rôles (qui est actif, le prof ou les élèves\ ?)
+Les différents types de classes inversées peuvent se définir par rapport aux savoirs (qui apporte l'info, le prof ou les élèves ?), et par rapport aux rôles (qui est actif, le prof ou les élèves ?)
 
 ### Contextualiser/décontextualiser
 
 Dans son exposé (voir ci-dessus), Marcel Lebrun fait remarquer que l'enseignement classique expliquer *d'abord* la théorie et passe *ensuite* aux applications. La théorie est une **décontextualisation** du savoir, tandis que les problèmes et applications pratiques en sont une **contextualisation**. Il fait remarquer que cela inverse le processus naturel hors classe, ou l'humain rencontre un problème (le contexte) et cherche à le résoudre en l'étudiant et en cherchant à la généraliser pour ne plus le rencontrer, ou du moins y réagir plus efficacement s'il se reproduit (décontextualisation). L'enseignement traditionnel et les classes inversées de type 1 travaillent donc dans le mauvais ordre, alors que la classe renversée part bien du contexte pour décontextualiser ensuite. Au sein du matériel pédagogique, nous pouvons décider de partir de la théorie vers les applications, ou bien, de partir d'un problème concret et de raisonner à son sujet pour aboutir à de la théorie. Il semble que cette dernière approche soit plus efficace.
 
 \BeginKnitrBlock{note}<div class="note">
-L'esprit uhmain part d'un contexte pour ensuite généraliser (décontextualiser). L'enseignement classique, en présentant la théorie avant les applications inverse ce processus (décontextualisation avant contextualisation). De nombreux indicateurs montrent que ce n'est pas une bonne idée. Donc, l'innovation pédagogique cherche aussi à renverser l'ordre dans le flux d'apprentissage.
+L'esprit humain part d'un contexte pour ensuite généraliser (décontextualiser). L'enseignement classique, en présentant la théorie avant les applications inverse ce processus (décontextualisation avant contextualisation). De nombreux indicateurs montrent que ce n'est pas une bonne idée. Donc, l'innovation pédagogique cherche aussi à renverser l'ordre dans le flux d'apprentissage.
 </div>\EndKnitrBlock{note}
 
 ### Classe renversée
 
-L'approche sous forme de classe renversée est donc la forme la plus extrême. Jean-Charles Cailliez de l'Université de Lille présente ce concept dans la vidéo TEDx suivante\ :
+L'approche sous forme de classe renversée est donc la forme la plus extrême. Jean-Charles Cailliez de l'Université de Lille présente ce concept dans la vidéo TEDx suivante :
 
 <iframe src="https://www.youtube.com/embed/KMAONv3BPhs" width="672" height="400px" data-external="1"></iframe>
 
-Il ne faut pas copier son système, mais en reprendre des éléments et l'adapter au cours à la personnalité de l'enseignant, ...En tous cas, lui va très loin puisque ce sont les étudiants qui font tout (définir la matière, préparer le cours, l'exposer au prof, préparer les questions de devoirs et d'examens). Le prof fait les devoirs que les étudiants lui donne et offre ainsi un feedback sur la qualité du travail par cet intermédiaire. Il utilise notamment les QCM inversés\ : les étudiants produisent les question, le prof répond, les étudiants corrigent. Si la question est bien posée, le prof répond bien. Si elle est mal posée, le prof fait semblant de répondre n'importe quoi pour bien faire comprendre que la question est débile ou mal posée. Il utilise aussi le QCM "intelligent"\ : il ne suffit pas de dire quelles sont les bonnes réponses, mais il faut aussi justifier pourquoi les autres sont fausses pour avoir des points. Au début du cours, chaque équipe crée un tel QCM (5 questions). Ensuite les QCM passent à l'équipe suivante qui y répond. Enfin, les réponses sont données à une troisième équipe qui corrige (3min à chaque fois, suivi d'une petite discussion).
+Il ne faut pas copier son système, mais en reprendre des éléments et l'adapter au cours à la personnalité de l'enseignant, ...En tous cas, lui va très loin puisque ce sont les étudiants qui font tout (définir la matière, préparer le cours, l'exposer au professeur, préparer les questions de devoirs et d'examens). Le professeur fait les devoirs que les étudiants lui donne et offre ainsi un feedback sur la qualité du travail par cet intermédiaire. Il utilise notamment les QCM (questionnaires à choix multiple) inversés : les étudiants produisent les question, le prof répond, les étudiants corrigent. Si la question est bien posée, le professeur répond bien. Si elle est mal posée, le professeur fait semblant de répondre n'importe quoi pour bien faire comprendre que la question est mal posée. Il utilise aussi le QCM "intelligent" : il ne suffit pas de dire quelles sont les bonnes réponses, mais il faut aussi justifier pourquoi les autres sont fausses pour avoir des points. Au début du cours, chaque équipe crée un tel QCM (cinq questions). Ensuite les QCM passent à l'équipe suivante qui y répond. Enfin, les réponses sont données à une troisième équipe qui corrige (3min à chaque fois, suivi d'une petite discussion).
 
-Cette approche permet aussi de mettre en œuvre le principe suivant\ : "enseigner est la meilleure façon d'apprendre." Elle est aussi mise en œuvre par Sébastien Bette à l'UMONS. Voir aussi les vidéos suivantes\ :
+Cette approche permet aussi de mettre en œuvre le principe suivant : "enseigner est la meilleure façon d'apprendre." Elle est aussi mise en œuvre par Sébastien Bette à l'Université de Mons. Voir aussi les vidéos suivantes :
 
-- Intervention de Jean-Jacques Cailliez.
+-   Intervention de Jean-Jacques Cailliez.
 
 <iframe src="https://www.youtube.com/embed/FtesVo3U4v0" width="672" height="400px" data-external="1"></iframe>
 
-- Intervention de Sébastien Bette.
+-   Intervention de Sébastien Bette.
 
 <iframe src="https://www.youtube.com/embed/CAXfg7PbRdY" width="672" height="400px" data-external="1"></iframe>
 
@@ -190,49 +166,47 @@ Questions croisées aux deux intervenants.
 
 #### Intelligence collective
 
-François Taddei parle de la mobilisation de l'intelligence collective au service de nouvelles formes d'apprentissage ici\ :
+François Taddei parle de la mobilisation de l'intelligence collective au service de nouvelles formes d'apprentissage ici :
 
 <iframe src="https://www.youtube.com/embed/Ckp4AvvhZ_A" width="672" height="400px" data-external="1"></iframe>
 
 Parmi les points importants de l'innovation pédagogique est l'utilisation de l'intelligence collective. Jean-Jacques Cailliez (voir ci-dessus) fait travailler les étudiants par groupes de six (considéré comme la meilleure taille de groupe). Par contre, c'est lui qui crée les groupes. Après un test d'évaluation qui lui permet de déterminer qui est fort, moyen ou faible, il mets un fort, et un faible systématiquement dans chaque groupe. Ensuite, il demande que les étudiants s'attribuent à chacun un rôle au sein du groupe pour éviter que certains ne fassent rien. Au fil du temps, les responsabilités changent, mais ceci est important pour impliquer tout le monde dès le début. Si un ou plusieurs étudiants ne font rien au sein du groupe, cela plombe l'ambiance puisqu'il y a une partie de la note qui est commune à tout le groupe et ceux qui travaillent se sentent lésés.
 
-La mobilisation de l'intelligence collective passe par la prise de conscience qu'il y a plus dans plusieurs cerveaux que dans un seul et que le travail réalisé à plusieurs est *toujours* de meilleur qualité qu'isolé.
+La mobilisation de l'intelligence collective passe par la prise de conscience qu'il y a plus dans plusieurs cerveaux que dans un seul et que le travail réalisé à plusieurs est *toujours* de meilleur qualité qu'isolé. De plus, le travail de groupe imprime une toute autre dynamique à l'apprentissage et permet de le varier.
 
-De plus, le travail de groupe imprime une toute autre dynamique à l'apprentissage et permet de le varier.
-
-François parle de la société apprenante comme d'un tout. Il dit que la ségrégation entre apprentissage à l'école, développement de nouveaux savoirs par le recherche et utilisation du savoir ailleurs est artificielle. L'apprentissage est partout et ne se limite pas à l'école. C'est la société apprenante.
+François Taddei parle de la société apprenante comme d'un tout. Il dit que la ségrégation entre apprentissage à l'école, développement de nouveaux savoirs par le recherche et utilisation du savoir ailleurs est artificielle. L'apprentissage est partout et ne se limite pas à l'école. C'est la société apprenante.
 
 Il considère que l'enseignement doit aussi apprendre à apprendre en individuel et en collectif, afin de pouvoir remobiliser plus tard cette capacité sur le terrain. Il faut apprendre tout au long de sa vie car le monde est en évolution permanente. La capacité à se réinventer n'est pas facile à développer et est intimidante. Donc, si on peut la développer dans un cadre bienveillant qu'est l'école, c'est mieux. Dans ce cadre il y a moins d'enjeux, et donc, de pressions. Cela permet d'offrir le **droit à l'erreur**. C'est en faisant des erreurs et en se relevant de ces erreurs qu'on peut progresser le plus.
 
-Face aux MOOC, les universités et écoles ont un défit à relever. Quelle valeur ajoutée proposent-elles face aux MOOC déshumanisés\ ? C'est une réelle réflexion à avoir. Le défit suivant après le couplage de la recherche et de l'enseignement, c'est de faire de la recherche sur la formation afin de se réinventer en permanence toujours vers de meilleures méthodes d'apprentissage.
+Concernant les MOOC ("*Massive Open Online Course*"), les universités et écoles ont un défit à relever. Quelle valeur ajoutée proposent-elles face aux MOOC déshumanisés ? C'est une réelle réflexion à avoir. Le défit suivant après le couplage de la recherche et de l'enseignement, c'est de faire de la recherche sur la formation afin de se réinventer en permanence toujours vers de meilleures méthodes d'apprentissage.
 
 ### Timing et rythme
 
-Jean-Jacques Cailliez insiste aussi fortement sur l'organisation d'une séance de cours qui doit être **varié et comporter des surprises** afin d'éviter la monotonie et l'ennui des étudiants. Même la meilleure innovation pédagogique, si elle est appliquée de manière répétitive finit par devenir ennuyeuse. Il consacre les 10 à 15 premières minutes du cours avec une forte présence où il propose à chaque fois un petit exercice différent (surprise). Ensuite seulement, les étudiants sont autonomes. A la fin, il clôture souvent par un petit questionnaire où les étudiants donnent leur avis (voir point suivant).
+Jean-Jacques Cailliez insiste aussi fortement sur l'organisation d'une séance de cours qui doit être **variée et comporter des surprises** afin d'éviter la monotonie et l'ennui des étudiants. Même la meilleure innovation pédagogique, si elle est appliquée de manière répétitive finit par devenir ennuyeuse. Il consacre les 10 à 15 premières minutes du cours avec une forte présence où il propose à chaque fois un petit exercice différent (surprise). Ensuite seulement, les étudiants sont autonomes. A la fin, il clôture souvent par un petit questionnaire où les étudiants donnent leur avis (voir point suivant).
 
 ### Explication, implication
 
 L'innovation pédagogique suppose d'autres méthodes d'enseignement qui impliquent que les étudiants doivent *faire un effort pour s'y adapter.* Ils ne sont pas prêts à le faire spontanément et il faut s'attendre à des réticences voire des barrages importants de leur part. Il est donc vital d'**expliquer** et d'**impliquer**.
 
-Avant de modifier la façon dont est cours est donnée, il est vital d'en informer les étudiants. Une séance de une ou deux heures qui explique les méthodes qui seront utilisées et qui les **justifient** avant les cours proprement dit permet de préparer les étudiants aux nouvelles pratiques et aide à leurs acceptations.
+Avant de modifier la façon dont un enseignement est dispensé, il est vital d'en informer les étudiants. Une séance de une ou deux heures qui explique les méthodes qui seront utilisées et qui les **justifient** avant les cours proprement dits permet de préparer les étudiants aux nouvelles pratiques et aide à leurs acceptations.
 
-Nous pouvons même aller plus loin en leur expliquant que c'est une expérience et que leur avis est crucial (et ensuite leur demander d'indiquer régulièrement deux points positifs et deux points négatifs à chacun pour les impliquer réellement dans le processus). Le implication est encore plus fortement sollicité si, après l'exposé expliquant ce qu'on compte faire, on leur **laisse le choix de le faire ou non**. On les fait voter et on ne tenete l'expérience que si une majorité est en faveur du changement (mais il faut alors être prêt à laisser tomber).
+Nous pouvons même aller plus loin en leur expliquant que c'est une expérience et que leur avis est crucial (et ensuite leur demander d'indiquer régulièrement deux points positifs et deux points négatifs à chacun pour les impliquer réellement dans le processus). L'implication est encore plus fortement sollicité si, après l'exposé expliquant ce qu'on compte faire, on leur **laisse le choix de le faire ou non**. On les fait voter et on ne tente l'"expérience" que si une majorité est en faveur du changement (mais il faut alors être prêt à laisser tomber).
 
-Aussi, pour les mêmes raisons, il faut être attentif à apporter des innovations de manière graduelle. Le grand coup de pied dans la fourmilière est rarement une bonne approche en matière d'innovation pédagogique\ !
+Aussi, pour les mêmes raisons, il faut être attentif à apporter des innovations de manière graduelle. Le grand coup de pied dans la fourmilière est rarement une bonne approche en matière d'innovation pédagogique !
 
-Quoi qu'il en soit, on ne peut pas contenter tout le monde. Il faut s'attendre en général à 10-15% de mécontents, quel que soit le choix réalisé. Les bons élèves de la classe dans le système traditionnel (les "bachotteurs") se retrouvent en général moins bien dans un système d'innovation poussée telle que la classe renversée. Du coup, ils ont tendance à critiquer négativement l'innovation et demande pour revenir à un système plus classique.
+Quoi qu'il en soit, on ne peut pas contenter tout le monde. Il faut s'attendre en général à 10-15% de mécontents, quel que soit le choix réalisé. Les bons élèves de la classe dans le système traditionnel (les "bachotteurs") se retrouvent en général moins bien dans un système d'innovation poussée telle que la classe renversée. Du coup, ils ont tendance à critiquer négativement l'innovation et sont demandeurs pour revenir à un système plus classique.
 
 ### Enseignement basé sur les objectifs
 
-L'enseignement basé sur les objectifs définit *d'abord* les objectifs d'apprentissage et les savoir à acquérir, les concepts à maîtriser. Ensuite, le cours et le matériel pédagogique sont construits progressivement autour des notions clés qui auront été dégagées. Il est possible d'écrire des exercices et des questions pour mettre en pratique et (auto-)évaluer l'acquisition des concepts. Ensuite la partie théorique vient chapeauter le tout sans se perdre dans des digressions inutiles par rapport aux objectifs. 
+L'enseignement basé sur les objectifs définit *d'abord* les objectifs d'apprentissage et les savoir à acquérir, les concepts à maîtriser. Ensuite, le cours et le matériel pédagogique sont construits progressivement autour des notions clés qui auront été dégagées. Il est possible d'écrire des exercices et des questions pour mettre en pratique et (auto-)évaluer l'acquisition des concepts. Ensuite la partie théorique vient chapeauter le tout sans se perdre dans des digressions inutiles par rapport aux objectifs.
 
 \BeginKnitrBlock{note}<div class="note">
-Le leitmotiv de l'enseignezment basé sur les objectifs consiste à définir précisément les objectifs d'abord, et ensuite à rester focaliser sur ces objectifs tout au long de l'élaboration du matériel pédagogique et du cours.
+L'enseignement basé sur les objectifs consiste à définir précisément les objectifs d'abord, et ensuite à rester focalisé sur ces objectifs tout au long de l'élaboration du matériel pédagogique et du cours.
 </div>\EndKnitrBlock{note}
 
 ### Attention à la formulation
 
-On a tous tendance à utiliser des tournure comme "il suffit de ...", "cela se fait facilement comme ceci...". Parfois ces tournures sont utilisées pour minimiser la difficulté, ou parce que cela semble effectivement facile pour l'enseignant... qui a oublié les années d'expérience derrière lui qui ont rendu cela facile. Par contre, l'étudiant qui trouve cela difficile se sentira dévalorisé par cette formulation. Il faut donc éviter ce genre de tournure de phrase\ : rester neutre, et c'est éventuellement l'étudiant lui-même qui en conclura que c'est facile... ou non.
+On a tous tendance à utiliser des tournure comme "il suffit de ...", "cela se fait facilement comme ceci...". Parfois ces tournures sont utilisées pour minimiser la difficulté, ou parce que cela semble effectivement facile pour l'enseignant... qui a oublié les années d'expérience derrière lui qui ont rendu cela facile pour lui. Par contre, l'étudiant qui trouve cela difficile se sentira dévalorisé par cette formulation. Il faut donc éviter ce genre de tournure de phrase : rester neutre, et c'est éventuellement l'étudiant lui-même qui en conclura que c'est facile... ou non.
 
 ### Effets psychologiques néfastes
 
@@ -240,32 +214,32 @@ Les enseignants doivent tenir compte également de la psychologie, et en particu
 
 <iframe src="https://www.youtube.com/embed/9vJRopau0g0" width="672" height="400px" data-external="1"></iframe>
 
-Le jeu Super Mario est très addictif, parce que le joueur est focalisé sur l'objectif à atteindre (terminer le jeu et sauver la princesse). Cela le détourne des nombreuses embûches qui parsèment le jeu. Au final, l'utilisateur ne fait qu'appuyer successivement sur une série de six boutons (sur la manette de jeu), et présenté autrement, on réalise à quel point la même action peut être perçue négativement. Mark présente six boutons et explique qu'il faudra les appuyer selon une séquence précise... très longue et pendant plus d'une heure pour passer un test. Vu comme cela, cela parait infaisable et totalement rébarbatif... pourtant c'est exactement ce qu'on fait dans le jeu Super Mario qui est pourtant, au contraire, addictif.
+Le jeu Super Mario est très addictif, parce que le joueur est focalisé sur l'objectif à atteindre (terminer le jeu et sauver la princesse). Cela le détourne des nombreuses embûches qui parsèment le jeu. Au final, l'utilisateur ne fait qu'appuyer successivement sur une série de six boutons (sur la manette de jeu), et présenté autrement, on réalise à quel point la même action peut être perçue négativement. Mark présente six boutons et explique qu'il faudra les appuyer selon une séquence précise... très longue et pendant plus d'une heure pour passer un test. Vu comme cela, cela parait infaisable et totalement rébarbatif... pourtant c'est exactement ce qu'on fait dans le jeu Super Mario qui est, au contraire, addictif.
 
-Il transpose cela aux problèmes de la vie quotidienne. Si on se focalise sur le problème qu'on a juste en face de soi, on est vite tenté d'abandonner. Si au contraire, on se focalise sur un but lointain, mais enviable, les différentes embûches qui se présentent sur notre chemin sont plus facilement traitées. C'est donc l'état d'esprit psychologique qui est le plus important pour déterminer si on laisse tomber et perds, ou si on va de l'avant et réussi. **Il y a ici matière à réflexion profonde pour les enseignants, afin de motiver leurs étudiants.**
+Il transpose cela aux problèmes de la vie quotidienne. Si on se focalise sur le problème qu'on a juste en face de soi, on est vite tenté d'abandonner. Si au contraire, on se focalise sur un but lointain, mais enviable, les différentes embûches qui se présentent sur notre chemin sont plus facilement traitées. C'est donc l'état d'esprit qui est le plus important pour déterminer si on laisse tomber et perds, ou si on va de l'avant et réussi. **Il y a ici matière à réflexion profonde pour les enseignants, afin de motiver leurs étudiants.**
 
-Mark a aussi étudié le cas d'un problème à résoudre soumis à Internet avec un grand nombre de réponses obtenues, qui permettent d'étudier la motivation vers le succès de manière statistique. Il a comparé deux sous-population (même question, mais avec une variante subtile). Le premier groupe reçoit 200 points fictifs dès qu'il réussit, quel que soit le nombre d'essais pour y arriver. Le second groupe "perds" cinq points fictifs à chaque tentative infructueuse. Le premier groupe réussi plus souvent et avec une moyenne de 12 tentatives, par rapport à la moyenne de 5 tentatives pour le second groupe. En absolu, la pénalité est très faible et purement fictive (pas de perte d'argent ou autre conséquence quelconque dans la vie réelle). Cependant, la simple idée de "perdre" quelque chose influence profondément les utilisateurs.
+Mark a aussi étudié le cas d'un problème à résoudre soumis à Internet avec un grand nombre de réponses obtenues. Il permettent d'étudier la motivation vers le succès de manière statistique. Il a comparé deux sous-populations (même question, mais avec une variante subtile). Le premier groupe reçoit 200 points fictifs dès qu'il réussit, quel que soit le nombre d'essais pour y arriver. Le second groupe "perd" cinq points fictifs à chaque tentative infructueuse. Le premier groupe réussi plus souvent et avec une moyenne de 12 tentatives, par rapport à la moyenne de 5 tentatives pour le second groupe. En absolu, la pénalité est très faible et purement fictive (pas de perte d'argent ou autre conséquence quelconque dans la vie réelle). Cependant, la simple idée de "perdre" quelque chose influence profondément les utilisateurs.
 
 \BeginKnitrBlock{note}<div class="note">Les aspects psychologiques clés autour de la motivation qui fait qu'on résoud un problème ou qu'on le laisse tomber sont cruciaux. L'effet Super Mario montre que la façon dont le problème est présenté, et le but lointain qu'on vise ou non ont un profond impact sur la motivation. De même, l'idée de perdre quelque chose à chaque tentative infructueuse, aussi infime soit cette perte, a un impact non négligeable sur la motivation.
 
-Donc, préciser et rappeler les buts ultimes (vous serez de bons sicentifiques des données dans votre carrière) aide à surmonter les petites difficultés du quotidien. De même, nous devons éviter des cotations qui sanctionnent les étudiantsd via des pertes de points, et promouvoir l'émulation par le gain de points à chaque fois que l'étudiant progress, au contraire.</div>\EndKnitrBlock{note}
+Donc, préciser et rappeler les buts ultimes (vous serez de bons sicentifiques des données dans votre carrière) aide à surmonter les petites difficultés du quotidien. De même, nous devons éviter des cotations qui sanctionnent les étudiants par la perte de points, et promouvoir l'émulation par le gain de points à chaque fois que l'étudiant progresse, au contraire.</div>\EndKnitrBlock{note}
 
 ### Teaching tech together
 
-Dans [son ouvrage](https://teachtogether.tech/en/index.html), Greg Wilson pose un très grand nombre de principes qui fonctionnent bien pour l'enseignement de matières techniques. Au tout début, il définit dix règles\ :
+Dans [son ouvrage](https://teachtogether.tech/en/index.html), Greg Wilson pose un très grand nombre de principes qui fonctionnent bien pour l'enseignement de matières techniques. Au tout début, il définit dix règles :
 
-1. Be kind: all else is details.
-2. Remember that you are not your learners…
-3. …that most people would rather fail than change…
-4. …and that ninety percent of magic consists of knowing one extra thing.
-5. Never teach alone.
-6. Never hesitate to sacrifice truth for clarity.
-7. Make every mistake a lesson.
-8. Remember that no lesson survives first contact with learners…
-9. …that every lesson is too short for the teacher and too long for the learner…
+1.  Be kind: all else is details.
+2.  Remember that you are not your learners…
+3.  …that most people would rather fail than change…
+4.  …and that ninety percent of magic consists of knowing one extra thing.
+5.  Never teach alone.
+6.  Never hesitate to sacrifice truth for clarity.
+7.  Make every mistake a lesson.
+8.  Remember that no lesson survives first contact with learners…
+9.  …that every lesson is too short for the teacher and too long for the learner…
 10. …and that nobody will be more excited about the lesson than you are.
 
-Il y a énormément plus de choses intéressantes dans cet ouvrage, et il faudra prendre le temps de les étudier et digérer plus à fond plus tard\ !
+Il y a énormément plus de choses intéressantes dans cet ouvrage, et il faudra prendre le temps de les étudier et digérer plus à fond plus tard !
 
 ### Mort par PowerPoint
 
@@ -273,35 +247,35 @@ La présentation de type PowerPoint est partout et les enseignants ne peuvent pl
 
 <iframe src="https://www.youtube.com/embed/Iwpi1Lm6dFo" width="672" height="400px" data-external="1"></iframe>
 
-Quelques conseils pour améliorer sa présentation PowerPoint ici\ :
+Quelques conseils pour améliorer sa présentation PowerPoint ici :
 
 <iframe src="https://www.youtube.com/embed/-U_HN7H8n8E" width="672" height="400px" data-external="1"></iframe>
 
-Don McMillan est un humoriste qui réussit à faire passer le message d'une manière hilarante ici\ :
+Don McMillan est un humoriste qui réussit à faire passer le message d'une manière hilarante ici :
 
 <iframe src="https://www.youtube.com/embed/KbSPPFYxx3o" width="672" height="400px" data-external="1"></iframe>
 
 ### Enseigner les statistiques comme les mathématiques
 
-Douglas Andrews dans [the big mistake: teaching stat as though it were math](https://community.amstat.org/discussions/blogs/blogviewer?BlogKey=784e55b4-cb6c-499a-a2da-391e548d36b2) met en évidence le fait que les cours d'introduction aux statistiques qui sont trop orientés vers le côté mathématique éloigne les étudiants de l'essence même des statistiques et les font fuir. Au contraire, le côté appliqué des statistiques doit plutôt être mis en avant dans les cours introductifs.
+Douglas Andrews dans [the big mistake: teaching stat as though it were math](https://community.amstat.org/discussions/blogs/blogviewer?BlogKey=784e55b4-cb6c-499a-a2da-391e548d36b2) met en évidence le fait que les cours d'introduction aux statistiques qui sont trop orientés vers le côté mathématique éloignent les étudiants de l'essence même des statistiques et les font fuir. Au contraire, le côté appliqué des statistiques doit plutôt être mis en avant dans les cours introductifs.
 
-La vidéo suivante caricature les interactions entre un biologiste et un statisticien. Ceci montre l'importance de former des personnes capables de faire le lien entre les deux disciplines\ : les scientifiques des données ayant un "background" en biologie.
+La vidéo suivante caricature les interactions entre un biologiste et un statisticien. Ceci montre l'importance de former des personnes capables de faire le lien entre les deux disciplines : les scientifiques des données ayant un "background" en biologie.
 
 <iframe src="https://www.youtube.com/embed/Hz1fyhVOjr4" width="672" height="400px" data-external="1"></iframe>
 
-### "Gamification" de l'enseignement
+### Ludification de l'enseignement
 
-L'apprentissage par le jeu est une approche intéressante et motivante. Le système de **badges** que l'on gagne en progressant offre des récompenses pour l'effort fourni. Il existe d'autres façon de rendre l'apprentissage plus ludique... et en la matière il faut essayer d'être imaginatif. Concernant la science des données, voici quelques pistes\ :
+L'apprentissage par le jeu est une approche intéressante et motivante. Le système de **badges** que l'on gagne en progressant offre des récompenses pour l'effort fourni. Il existe d'autres façon de rendre l'apprentissage plus ludique... et en la matière il faut essayer d'être imaginatif. Concernant la science des données, voici quelques pistes :
 
-- **challenges**\ : les étudiants doivent répondre à un problème par équipe et soumettent des solutions à ce problème. La qualité des solution peut être quantifiée (ex\ : en machine learning, diverses métriques sont utilisables pour évaluer un classifieur). Un ranking est établit et affiché en temps réel. Cet exercice est très motivant et permet également de vérifier les acquis dans un exercice sommatif général.
+-   **challenges** : les étudiants doivent répondre à un problème par équipe et soumettent des solutions à ce problème. La qualité des solution peut être quantifiée (ex : en machine learning, diverses métriques sont utilisables pour évaluer un classifieur). Un ranking est établit et affiché en temps réel. Cet exercice est très motivant et permet également de vérifier les acquis dans un exercice sommatif général.
 
-- **course de relais**\ : un jeu de données à analyser, équipes de 4 (1h) ou 6 (1h30). Chaque étudiant a 1/4h pour travailler sur un dépôt GitHub puis fait un commit et passe le dépôt au suivant. Au bout du temps écoulé, nous évaluons le travail.
+-   **course de relais** : un jeu de données à analyser, équipes de 4 (1h) ou 6 (1h30). Chaque étudiant a 1/4h pour travailler sur un dépôt GitHub puis fait un commit et passe le dépôt au suivant. Au bout du temps écoulé, le travail est évalué.
 
-- **ping pong**\ : par exemple concernant la réalisation de graphiques. Par deux (ou deux binômes) qui s'opposent. On commence avec `chart(data= ..., ... ~...)` pour poser le problème (un jeu de données et des variables à utiliser). Le premier doit ajouter une instruction, puis le second, et ainsi de suite. Celui qui perd a soit ajouté une mauvaise instruction, soit le graphique est fini et il n'y a plus rien à rajouter (ou le délais max est écoulé et l'étudiant n'a rien pu rajouter).
+-   **ping pong** : par exemple concernant la réalisation de graphiques. Par deux (ou deux binômes) qui s'opposent. On commence avec un chunk vide dans un document R Markdown ou Quarto pour poser le problème (avec un jeu de données à disposition). Le premier doit ajouter une instruction, puis le second, et ainsi de suite. Celui qui perd a soit ajouté une mauvaise instruction, soit l'analyse est terminée et il n'y a plus rien à rajouter (ou le délais max est écoulé et l'étudiant n'a rien pu rajouter).
 
-- **correction contre la montre**\ : deux équipes s'affrontent. Chacune encode du code correct dans une app Shiny et propose une version avec une erreur cachée à l'autre équipe. Les corrections sont soumises à quelque chose comme `gradethis::grade_code()` ou des outils de testing qui comparent deux versions de code, la réponse soumise par rapport à la version correcte. La première équipe qui trouve l'erreur a gagné.
+-   **correction contre la montre** : deux équipes s'affrontent. Chacune encode du code correct dans une app Shiny et propose une version avec une erreur cachée à l'autre équipe. Les corrections sont soumises à quelque chose comme `gradethis::grade_code()` ou des outils de testing qui comparent deux versions de code, la réponse soumise par rapport à la version correcte. La première équipe qui trouve l'erreur a gagné.
 
-- **quoi d'autre\ ?** ...
+-   **quoi d'autre ?** ...
 
 ### Let them eat the cake
 
@@ -311,9 +285,9 @@ Le tout début d'un cours (la première heure, voire même les 10 premières min
 
 Dans [documentation types](https://third-bit.com/2019/08/08/documentation-types/) Gregory Wilson propose une classification des différents types de documents en fonction du public et du but visé par le document.
 
-- Le *novice* n'a pas encore de modèle mental du domaine. Il ne sait pas ce qu'il ignore et ne connait pas le jargon.
-- L'*utilisateur compétent* possède un modèle mental du domaine. Il peut exécuter des tâches routinières, peut trouver l'information et est capable de déterminer si ce qu'on lui présente est la solution à son problème ou non.
-- L'*expert* a une vision dense et richement connectée du domaine. Il est capables de résoudre de nombreux problèmes facilement.
+-   Le *novice* n'a pas encore de modèle mental du domaine. Il ne sait pas ce qu'il ignore et ne connait pas le jargon.
+-   L'*utilisateur compétent* possède un modèle mental du domaine. Il peut exécuter des tâches routinières, peut trouver l'information et est capable de déterminer si ce qu'on lui présente est la solution à son problème ou non.
+-   L'*expert* a une vision dense et richement connectée du domaine. Il est capables de résoudre de nombreux problèmes facilement.
 
 Le graphique suivant, [tiré du blog de Gregory Wilson](https://third-bit.com/2019/08/08/documentation-types/) présente différents types de documentations en fonction des connaissances générales (axe X) *versus* les connaissances spécifiques sur la question posée (axe Y). Les flèches indiquent dans quelle direction la documentation amène cet utilisateur. Les types de documentations repris dans le schéma sont décrits plus en détails dans le blog d'origine.
 
@@ -321,18 +295,103 @@ Le graphique suivant, [tiré du blog de Gregory Wilson](https://third-bit.com/20
 
 Il faut noter que des documents de type **livre** ou **vignette** ne sont pas inclus dans le diagramme car en réalité, ce sont des documents composites qui contiennent généralement plusieurs sections apparentées à l'un des types repris dans le diagramme. L'**aide-mémoire** est un type particulier de documentation de référence synthétisée en une ou deux pages. Enfin les **bloc-notes informatiques** (comme le R Notebook) sont caractérisés par l'inclusion de code exécutable directement dans le document, mais à part cela, ils peuvent être de n'importe quel autre type.
 
-Par rapport à l'enseignement de la science des données, ce sont les trois types qui visent le novice qui nous intéressent en premier\ :
+Par rapport à l'enseignement de la science des données, ce sont les trois types qui visent le novice qui nous intéressent en premier :
 
-- Le **tutoriel** correspond au type de document à privilégier dans notre matériel pédagogique. Son objectif est de **construire un modèle mental du domaine** ainsi qu'à acquérir quelques compétences de bases permettant de progresser et devenir un utilisateur compétent.
+-   Le **tutoriel** correspond au type de document à privilégier dans notre matériel pédagogique. Son objectif est de **construire un modèle mental du domaine** ainsi qu'à acquérir quelques compétences de bases permettant de progresser et devenir un utilisateur compétent.
 
-- L'**overview** (vue d'ensemble) peut être un webinaire, un premier cours, un "elevator pitch", du matériel de marketing, ... Il informe essentiellement de l'existence de quelque chose, mais sans apporter de compétences supplémentaires (l'utilisation n'apprend pas à résoudre des problèmes). Par rapport au schéma d'apprentissage, ce type de document est utile (et même indispensable) pour éveiller l'intérêt et donc, pour capter l'attention de l'étudiant.
+-   L'**overview** (vue d'ensemble) peut être un webinaire, un premier cours, un "elevator pitch", du matériel de marketing... Il informe essentiellement de l'existence de quelque chose, mais sans apporter de compétences supplémentaires (l'utilisation n'apprend pas à résoudre des problèmes). Par rapport au schéma d'apprentissage, ce type de document est utile (et même indispensable) pour éveiller l'intérêt et donc, pour capter l'attention de l'étudiant.
 
-- Le **how-to** (guide pratique) est une recette étape par étape pour résoudre un problème particulier. Il n'est pas nécessaire de comprendre le pourquoi pour pouvoir l'utiliser. Par contre, c'est le type de documentation qui permettra de résoudre un problème particulier le plus vite possible, mais ne change rien aux connaissances générales du domaine de l'utilisateur.
+-   Le **how-to** (guide pratique) est une recette étape par étape pour résoudre un problème particulier. Il n'est pas nécessaire de comprendre le pourquoi pour pouvoir l'utiliser. Par contre, c'est le type de documentation qui permettra de résoudre un problème particulier le plus vite possible, mais ne change rien aux connaissances générales du domaine de l'utilisateur.
 
-Nous voyons donc que les vues d'ensembles et les guides pratiques sont à réserver à des situation particulières\ : éveil de l'intérêt en début de cours ou de module pour les premiers, résoudre rapidement un problème pour pouvoir passer à autre chose pour les seconds (par exemple\ : installer le logiciel requis le plus vite possible pour pouvoir se concentrer sur les exercices ensuite). Sinon globalement, le matériel pédagogique doit se structurer essentiellement comme un tutoriel.
+Nous voyons donc que les vues d'ensemble et les guides pratiques sont à réserver à des situation particulières : éveil de l'intérêt en début de cours ou de module pour les premiers, résoudre rapidement un problème pour pouvoir passer à autre chose pour les seconds (par exemple : installer le logiciel requis le plus vite possible pour pouvoir se concentrer sur les exercices ensuite). Sinon globalement, le matériel pédagogique doit se structurer essentiellement comme un tutoriel.
 
-Cependant, il ne faut pas négliger non plus de la documentation complémentaire qui sera utile lorsque l'étudiant deviendra compétent\ : le matériel de **référence** (dont les aides-mémoires, foires aux questions, cartes mentales, aides en ligne des fonctions de R) et les résolutions de cas (**worked examples** dont les check-listes et les snippets font partie). En effet, une fois qu'il a assimilé les notions, le document de type tutoriel qu'il a utilisé jusqu'ici ne présente *pas* l'information d'une manière telle qu'elle soit facile à retrouver. Les points importants sont trop délayés (développement étape par étape, mélange d'exemples et de théorie, etc.). Donc, il faut *résumer* les notions importantes dans des documents de référence également fournis aux étudiants et leur apprendre à les utiliser et à passer des uns (tutoriels) aux autres (références). **Fournir seulement un syllabus bien construit comme un tutoriel ne suffit pas car le novice devenu utilisateur compétent à son usage se retrouve alors face à un document qui est inadapté comme documentation de référence.** Une approche à expérimenter serait de faire élaborer (au moins partiellement) le matériel de référence par les étudiants. Ceci va dans le sens de la pédagogie active et du concept de classe renversée, mais tout en guidant plus fortement la matière à étudier puisqu'on part d'un syllabus/tutoriel qui cadre le travail.
+Cependant, il ne faut pas négliger non plus de la documentation complémentaire qui sera utile lorsque l'étudiant deviendra compétent : le matériel de **référence** (dont les aides-mémoires, foires aux questions, cartes mentales, aides en ligne des fonctions de R) et les résolutions de cas (**worked examples** dont les check-listes et les snippets font partie). En effet, une fois qu'il a assimilé les notions, le document de type tutoriel qu'il a utilisé jusqu'ici ne présente *pas* l'information d'une manière telle qu'elle soit facile à retrouver. Les points importants sont trop délayés (développement étape par étape, mélange d'exemples et de théorie, etc.). Donc, il faut *résumer* les notions importantes dans des documents de référence également fournis aux étudiants et leur apprendre à les utiliser et à passer des uns (tutoriels) aux autres (références). **Fournir seulement un syllabus bien construit comme un tutoriel ne suffit pas car le novice devenu utilisateur compétent à son usage se retrouve alors face à un document qui est inadapté comme documentation de référence.** Une approche à expérimenter serait de faire élaborer (au moins partiellement) le matériel de référence par les étudiants. Ceci va dans le sens de la pédagogie active et du concept de classe renversée, mais tout en guidant plus fortement la matière à étudier puisqu'on part d'un syllabus/tutoriel qui cadre le travail.
 
-La scénarisation du cours est importante, mais également la scénarisation du matériel pédagogique. Un point de vue qui paraît essentiel ici est de bien définir le type de documentation pour chaque partie d'un chapitre *avant* de l'écrire et ensuite de se tenir au style et aux objectifs relatifs à ce type de documentation. L'illustration suivante est une tentative de scénarisation d'un module en fonction de quatre **types de documents**, présentés ici en couleurs différentes. Ceci semble complémentaire à la définition du contenu en terme de **notions à enseigner** et d'**acquis d'apprentissage** visés par le module qui définissent *quoi* enseigner, alors que la présentation par types de documents indique *comment* l'enseigner. 
+La scénarisation du cours est importante, mais également la scénarisation du matériel pédagogique. Un point de vue qui paraît essentiel ici est de bien définir le type de documentation pour chaque partie d'un chapitre *avant* de l'écrire et ensuite de se tenir au style et aux objectifs relatifs à ce type de documentation. L'illustration suivante est une tentative de scénarisation d'un module en fonction de quatre **types de documents**, présentés ici en couleurs différentes. Ceci semble complémentaire à la définition du contenu en terme de **notions à enseigner** et d'**acquis d'apprentissage** visés par le module qui définissent *quoi* enseigner, alors que la présentation par types de documents indique *comment* l'enseigner.
 
 ![](images/introduction/doctypes_scenario.png)
+
+## Organisation de la matière {#organisation}
+
+Le découpage de la matière dans les cours de science des données, ainsi que le timing sont importants pour obtenir un **travail sur la durée des étudiants tout au long de l'année** qui est une autre règle majeure pour un apprentissage efficace et durable. Voici quelques idées à développer pour assurer cet apprentissage progressif et continu.
+
+### Découpage
+
+-   **Module** Nous avons entre 6 et 12 modules selon les cours. Chaque module demande entre 10 et 15h de travail dont 6h en présentiel. Il s'étale sur une semaine (minimum). Un timing classique est : 3h de préparation à domicile, présentiel de 2 ou 4h, travail à nouveau à domicile 1h, présentiel de 4 ou 2h, et enfin, travail à domicile 2h pour finaliser le tout. Au niveau de chaque module, on précise les objectifs, et en fin de module, il faut un bilan avec auto-évaluation pour que l'étudiant puisse vérifier qu'il ait bien compris les concepts abordés de lui-même (ex. : summary de H5P)
+
+-   **Capsule** Un ensemble plus restreint d'items à apprendre (généralement un ou deux items max). Section du bookdown et/ou vidéo avec des exercices H5P/learnr niveau I entrelacés. Préciser également l'objectif et faire un mini-bilan à la fin de la capsule.
+
+-   **Tâche** Item d'apprentissage unique lié à un et un seul matériel pédagogique (sous-section bookdown, présentation H5P, mini-learnr, très courte vidéo ou gif animé).
+
+-   **Activité** Exercice réalisé par l'étudiant. Inclus dans les items précédents.
+
+### Quatre niveaux de difficulté
+
+Au fil de l'élaboration de notre matériel pédagogique diversifié, nous avons observé que certains formats sont plus adaptés pour des niveaux de difficulté plus simples, et d'autres pour des tâches plus complexes. Par exemple, des petits widgets H5P simples sont utiles pour garder l'étudiant actif au milieu de la lecture d'un texte un peu long, autant qu'ils permettent à l'étudiant d'auto-évaluer s'il a bien compris. Par contre, les jeux de données à analyser soi-même avec des directives minimalistes dans des projets GitHub en groupe sont d'un niveau de difficulté nettement plus élevé. Au final, nous définissons quatre niveaux de difficulté croissants, et nous leurs associons des matériels et des objectifs différents. **L'idéal est de balayer un même concept au travers de matériel appartenant chaque fois à l'un de ces quatre niveaux de difficulté pour assurer la gradation de difficulté et la répétition non monotone des concepts, facteurs clés d'un apprentissage actif réussi.**
+
+#### Niveau 1
+
+Exercices simples directement inclus dans le bookdown.
+
+-   Objectif : rendre l'étudiant actif et lui permettre une auto-évaluation de la compréhension correcte des concepts en direct.
+-   Type : H5P, learnr avec 1 ou 2 exercices, applications Shiny simples directement intégrés dans le bookdown.
+-   Code R : pas d'écriture de code directement, éventuellement utiliser des widgets H5P du genre remplir les blancs dans du code à partir d'une liste de fragments, indiquer si un code présenté est correct ou non, s'il effectue un traitement donné ou pas (question true/false), ...
+-   Lieu : travail à domicile.
+-   Suivi de l'utilisation des outils dans le rapport de progression.
+
+#### Niveau 2
+
+Auto-évaluation des principes théoriques à semi-pratiques par l'étudiant via des learnrs comportant plusieurs questions.
+
+-   Objectif : pouvoir vérifier ses acquis, faire un bilan de progression en auto-évaluation.
+-   Type : learnrs exécutés soit dans le bookdown, soit dans RStudio, à voir...
+-   Code R : écriture minimale de code via des exercices guidés.
+-   Lieu : travail à domicile et/ou en présentiel.
+-   Suivi avec acquisition de badges. Les évaluations plus "théoriques" passent aussi par des learnrs. Question : évaluation en fin d'AA pendant la période d'examen, ou évaluation en continu ?
+
+#### Niveau 3
+
+Projets GitHub individuels cadrés.
+
+-   Objectif : effectuer une transition douce vers l'application pratique des concepts. Analyse de données réelles fortement guidée.
+-   Type : projets RStudio avec fichiers partiellement remplis, tâches bien précises et nombreux commentaires d'aide dans les fichiers "template" fournis.
+-   Code R : écriture de code par rapport à un résultat attendu bien cadré et spécifié. Essentiellement carnet de notes, mais d'autres formes (rapport, présentation, article…) peuvent également être abordées brièvement à ce stade.
+-   Utilisation d'une batterie de tests pour que l'étudiant puisse avoir un retour immédiat sur ce qu'il a réalisé correctement ou non, et dans ce derniers, avoir des conseils pour corriger ses erreurs.
+-   Évaluation par grille critériée remplie de manière semi-automatique en s'appuyant sur les mêmes tests que ci-dessus.
+-   Lieu : travail en présentiel essentiellement en individuel.
+-   Évaluation et retour de temps en temps via l'inspection des dépôts GitHub des étudiants. Historique du travail de chaque étudiant via Git. Retour important ici (s'astreindre à visualiser quelques dépôts chaque semaine et faire des retours via issues GitHub, mails, ou Discord).
+
+#### Niveau 4
+
+Analyse libre de données dans des projets GitHub en groupe.
+
+-   Objectif : acquérir un certain degré d'autonomie dans l'analyse des données en pratique.
+-   Type : projet RStudio avec instructions réduites au minimum, pas de fichiers partiellement préremplis.
+-   Code R : écriture de code en fonction des objectifs fixés par l'étudiant lui-même. Il est aussi responsable de l'organisation et de la maintenance de ce code jusqu'à l'aboutissement du projet. Présentation sous forme de carnet de notes, et ensuite sélection des éléments les plus pertinents pour rédiger un rapport qui doit être "présentable" à un panel de lecteurs.
+-   Travail par groupe de deux ou quatre étudiants pour mobiliser l'*intelligence collective* et permettre aux étudiants plus faibles de \^progresser grâce aux apports des plus forts dans le groupe.
+-   Lieu : travail en présentiel à compléter à domicile.
+-   Le ou les rapports font l'objet d'une évaluation détaillée avec grille critériée et sont la base de la note pour la partie pratique. Historique de l'activité via Git. Typiquement, un gros projet qui reprend les notions de plusieurs modules sur un quadrimestre.
+
+### Timing
+
+Les différents modules sont placés à l'horaire à des semaines bien définies. L'étudiant doit prendre conscience qu'il a une semaine pour assimiler le contenu du module, tout en lui permettant une certaine flexibilité (aussi pour les étudiants en passerelle qui arrivent plus tard et qui doivent pouvoir rattraper *progressivement*). Éventuellement, pour eux il faudrait pouvoir établir un calendrier adapté.
+
+### Suivi
+
+Voici les éléments que nous souhaitons mettre en place pour assurer un apprentissage dans la durée, et le décrochement d'un minimum d'étudiants.
+
+-   Calendrier d'achèvement souhaité des modules
+
+-   Rapport de progression le plus en temps réel possible. Comparaison à la fois avec le calendrier et avec la progression générale de la classe (motivation).
+
+-   Acquisition de badges une fois les modules achevés, après mini-examen de type learnr (motivation).
+
+-   Visualiser le calendrier souhaité sur le rapport de progression. Également, visualiser l'avancement global de l'étudiant par rapport à ce qui est attendu.
+
+-   Le rapport de progression se bloque si un module est "by-passé" par l'étudiant : sa progression dans les modules ultérieurs n'est pas affichée tant qu'il n'a pas terminé le module "by-passé". Cel le force à suivre le parcours de progression module par module. Ceci est surtout important pour SDD I, où les étudiants sont confrontés à une approche pédagogique à laquelle ils ne sont pas habitués, mais à voir pour les autres cours également.
+
+-   Obtention des points en fonction de la progression. Aussi, une évaluation du rapport d'analyse niveau IV pour la note de l'AA qui complète la note que l'étudiant obtient. Nous n'aurons donc plus d'examen pendant la session qui ne fait que traduire la capacité de "bachottage" de la matière par l'étudiant, alors que notre objectif est un apprentissage continu, durable et par la pratique autant que possible.
+
+-   Possibilité d'obtention de badges "spéciaux", liés à des points bonus : pousser et motiver les étudiants dans différentes directions (entre-aide, excellence, esprit d'initiative, ...).
+
+-   Émulation par le jeu. Varier les versions. Par exemple, la première équipe qui trouve la réponse a gagné. Aussi les compétitions de type "challenge kaggle" pourraient être réalisées pour la partie modélisation et la partie machine learning. Un jeu de test auxiliaire secret est utilisé par les enseignants pour quantifier la qualité du modèle proposé par les étudiants et permet de réaliser un classement non subjectifs des équipes en compétition. Les étudiants soumettent autant de modèles qu'ils le souhaitent et un classement des équipes est réalisé pour le fun (ou alors, récompenses à la clé sous forme d'un point bonus, de chocotofs, voire de choses plus sérieuses comme une clé USB par exemple).
