@@ -12,7 +12,7 @@ Les outils qui peuvent être mis en place sont\ :
 
 La vidéo suivante explique d'ailleurs pourquoi le coercitif ne fonctionne pas bien et pourquoi il faut plutôt **valoriser le travail effectué** plutôt que de punir s'il n'est pas fait. Il faut aussi **une récompense immédiate**, et favoriser l'**émulation individuelle** (se dépasser soi-même), et **de groupe** (se comparer à la progression générale de la classe).
 
-<iframe src="https://www.youtube.com/embed/xp0O2vi8DX4" width="672" height="400px" data-external="1"></iframe>
+<a href="https://www.youtube.com/embed/xp0O2vi8DX4" target="_blank"><img src="14-Progression_files/figure-epub3/unnamed-chunk-2-1.png" style="display: block; margin: auto;" /></a>
 
 Les aides et encouragements au travail que nous avons mis en place de manière utile sont\ :
 

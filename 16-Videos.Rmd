@@ -1,3 +1,5 @@
+# (PART) More tools {.unnumbered}
+
 # Vidéos {#videos}
 
 ```{r setup, include=FALSE, echo=FALSE, message=FALSE, results='hide'}
@@ -5,4 +7,4 @@ knitr::opts_chunk$set(comment = '#', fig.align = "center")
 #SciViews::R
 ```
 
-...
+TODO: expliquer ici les outils pour la création de vidéos et l'intégration à la plateforme LearnIt::R.

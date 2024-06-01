@@ -4,11 +4,13 @@
 knitr::opts_chunk$set(comment = "#", fig.align = "center")
 ```
 
-Chaque chapitre couvre un outil, avec le chapitre \@ref(general) qui présente la façon dont les différents outils sont assemblés pour implémenter l'ensemble de la plateforme pédagogique LearnIt::R. La suite de cette introduction explique les choix effectués pour la plateforme et son utilisation dans le cadre du cours de [science des données biologiques](htps://wp.sciviews.org) à l'[Université de Mons](https://web.umons.ac.be/fr/). Ces choix visent un but prioritaire : l'apprentissage **progressif** et efficace de R et de la science des données.
+Chaque chapitre couvre un outil, avec le chapitre \@ref(general) qui présente la façon dont les différents outils sont assemblés pour implémenter l'ensemble de la plateforme pédagogique LearnIt::R et le chapitre \@ref(r) qui détaille les différentes façons de configurer un environnement logiciel pour les étudiants et les enseignants. La suite de cette introduction explique les choix effectués pour la plateforme et son utilisation dans le cadre du cours de [science des données biologiques](htps://wp.sciviews.org) à l'[Université de Mons](https://web.umons.ac.be/fr/). Ces choix visent un but prioritaire : l'apprentissage **progressif** et efficace de R et de la science des données.
 
-Si vous recherchez un outil en particuliers, vous pouvez passer ce chapitre sans problème. Si vous êtes intéressé•e par les justification pédagogiques qui sous-tendent la plateforme, vous trouverez des éléments de réflexion dans la présente section.
+Si vous recherchez un outil en particuliers, vous pouvez passer ce chapitre sans problème. Si vous êtes intéressé•e par les justification pédagogiques qui sous-tendent la plateforme, vous trouverez des éléments de réflexion dans les section du présent chapitre.
 
--   La démarche personnelle qui a mené à cette plateforme est d'abord expliquée dans la section \@ref(experience).
+**TODO: retravailler tout cela pour le rendre plus concis et mettre les éléments importants relatifs à l'utilisation de la plateforme LearnIt::R en avant.**
+
+-   La démarche personnelle des auteurs qui a mené à cette plateforme est d'abord expliquée dans la section \@ref(experience).
 
 -   Les éléments importants relatifs à l'apprentissage, tels que les psychologues expérimentalistes et les neuroscientifiques nous les expliquent sont détaillés dans la section \@ref(apprentissage).
 

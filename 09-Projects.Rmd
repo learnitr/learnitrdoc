@@ -1,0 +1,8 @@
+# Projets GitHub Classroom {#projets}
+
+```{r setup, include=FALSE, echo=FALSE, message=FALSE, results='hide'}
+knitr::opts_chunk$set(comment = '#', fig.align = "center")
+#SciViews::R
+```
+
+TODO: décrire ici la gestion des projets GitHub et {learnitgrid}.

@@ -2,11 +2,13 @@
 
 
 
-Chaque chapitre couvre un outil, avec le chapitre \@ref(general) qui présente la façon dont les différents outils sont assemblés pour implémenter l'ensemble de la plateforme pédagogique LearnIt::R. La suite de cette introduction explique les choix effectués pour la plateforme et son utilisation dans le cadre du cours de [science des données biologiques](htps://wp.sciviews.org) à l'[Université de Mons](https://web.umons.ac.be/fr/). Ces choix visent un but prioritaire : l'apprentissage **progressif** et efficace de R et de la science des données.
+Chaque chapitre couvre un outil, avec le chapitre \@ref(general) qui présente la façon dont les différents outils sont assemblés pour implémenter l'ensemble de la plateforme pédagogique LearnIt::R et le chapitre \@ref(r) qui détaille les différentes façons de configurer un environnement logiciel pour les étudiants et les enseignants. La suite de cette introduction explique les choix effectués pour la plateforme et son utilisation dans le cadre du cours de [science des données biologiques](htps://wp.sciviews.org) à l'[Université de Mons](https://web.umons.ac.be/fr/). Ces choix visent un but prioritaire : l'apprentissage **progressif** et efficace de R et de la science des données.
 
-Si vous recherchez un outil en particuliers, vous pouvez passer ce chapitre sans problème. Si vous êtes intéressé•e par les justification pédagogiques qui sous-tendent la plateforme, vous trouverez des éléments de réflexion dans la présente section.
+Si vous recherchez un outil en particuliers, vous pouvez passer ce chapitre sans problème. Si vous êtes intéressé•e par les justification pédagogiques qui sous-tendent la plateforme, vous trouverez des éléments de réflexion dans les section du présent chapitre.
 
--   La démarche personnelle qui a mené à cette plateforme est d'abord expliquée dans la section \@ref(experience).
+**TODO: retravailler tout cela pour le rendre plus concis et mettre les éléments importants relatifs à l'utilisation de la plateforme LearnIt::R en avant.**
+
+-   La démarche personnelle des auteurs qui a mené à cette plateforme est d'abord expliquée dans la section \@ref(experience).
 
 -   Les éléments importants relatifs à l'apprentissage, tels que les psychologues expérimentalistes et les neuroscientifiques nous les expliquent sont détaillés dans la section \@ref(apprentissage).
 
@@ -118,7 +120,7 @@ Cette section reprend différents éléments important qui émergent des constat
 
 -   Marcel Lebrun de l'Université Catholique de Louvain présente les différents types de classes inversées dans la vidéo suivante :
 
-<iframe src="https://www.youtube.com/embed/U8J24T-eY0U" width="672" height="400px" data-external="1"></iframe>
+<a href="https://www.youtube.com/embed/U8J24T-eY0U" target="_blank"><img src="01-Introduction_files/figure-epub3/unnamed-chunk-7-1.png" style="display: block; margin: auto;" /></a>
 
 À côté de l'approche traditionnelle cours ex cathedras qui présentent la théorie suivis de séances d'exercices ou TP qui mettent en pratique, il y a :
 
@@ -146,7 +148,7 @@ L'esprit humain part d'un contexte pour ensuite généraliser (décontextualiser
 
 L'approche sous forme de classe renversée est donc la forme la plus extrême. Jean-Charles Cailliez de l'Université de Lille présente ce concept dans la vidéo TEDx suivante :
 
-<iframe src="https://www.youtube.com/embed/KMAONv3BPhs" width="672" height="400px" data-external="1"></iframe>
+<a href="https://www.youtube.com/embed/KMAONv3BPhs" target="_blank"><img src="01-Introduction_files/figure-epub3/unnamed-chunk-10-1.png" style="display: block; margin: auto;" /></a>
 
 Il ne faut pas copier son système, mais en reprendre des éléments et l'adapter au cours à la personnalité de l'enseignant, ...En tous cas, lui va très loin puisque ce sont les étudiants qui font tout (définir la matière, préparer le cours, l'exposer au professeur, préparer les questions de devoirs et d'examens). Le professeur fait les devoirs que les étudiants lui donne et offre ainsi un feedback sur la qualité du travail par cet intermédiaire. Il utilise notamment les QCM (questionnaires à choix multiple) inversés : les étudiants produisent les question, le prof répond, les étudiants corrigent. Si la question est bien posée, le professeur répond bien. Si elle est mal posée, le professeur fait semblant de répondre n'importe quoi pour bien faire comprendre que la question est mal posée. Il utilise aussi le QCM "intelligent" : il ne suffit pas de dire quelles sont les bonnes réponses, mais il faut aussi justifier pourquoi les autres sont fausses pour avoir des points. Au début du cours, chaque équipe crée un tel QCM (cinq questions). Ensuite les QCM passent à l'équipe suivante qui y répond. Enfin, les réponses sont données à une troisième équipe qui corrige (3min à chaque fois, suivi d'une petite discussion).
 
@@ -154,21 +156,21 @@ Cette approche permet aussi de mettre en œuvre le principe suivant : "enseigne
 
 -   Intervention de Jean-Jacques Cailliez.
 
-<iframe src="https://www.youtube.com/embed/FtesVo3U4v0" width="672" height="400px" data-external="1"></iframe>
+<a href="https://www.youtube.com/embed/FtesVo3U4v0" target="_blank"><img src="01-Introduction_files/figure-epub3/unnamed-chunk-11-1.png" style="display: block; margin: auto;" /></a>
 
 -   Intervention de Sébastien Bette.
 
-<iframe src="https://www.youtube.com/embed/CAXfg7PbRdY" width="672" height="400px" data-external="1"></iframe>
+<a href="https://www.youtube.com/embed/CAXfg7PbRdY" target="_blank"><img src="01-Introduction_files/figure-epub3/unnamed-chunk-12-1.png" style="display: block; margin: auto;" /></a>
 
 Questions croisées aux deux intervenants.
 
-<iframe src="https://www.youtube.com/embed/DIhp6P4HuB8" width="672" height="400px" data-external="1"></iframe>
+<a href="https://www.youtube.com/embed/DIhp6P4HuB8" target="_blank"><img src="01-Introduction_files/figure-epub3/unnamed-chunk-13-1.png" style="display: block; margin: auto;" /></a>
 
 #### Intelligence collective
 
 François Taddei parle de la mobilisation de l'intelligence collective au service de nouvelles formes d'apprentissage ici :
 
-<iframe src="https://www.youtube.com/embed/Ckp4AvvhZ_A" width="672" height="400px" data-external="1"></iframe>
+<a href="https://www.youtube.com/embed/Ckp4AvvhZ_A" target="_blank"><img src="01-Introduction_files/figure-epub3/unnamed-chunk-14-1.png" style="display: block; margin: auto;" /></a>
 
 Parmi les points importants de l'innovation pédagogique est l'utilisation de l'intelligence collective. Jean-Jacques Cailliez (voir ci-dessus) fait travailler les étudiants par groupes de six (considéré comme la meilleure taille de groupe). Par contre, c'est lui qui crée les groupes. Après un test d'évaluation qui lui permet de déterminer qui est fort, moyen ou faible, il mets un fort, et un faible systématiquement dans chaque groupe. Ensuite, il demande que les étudiants s'attribuent à chacun un rôle au sein du groupe pour éviter que certains ne fassent rien. Au fil du temps, les responsabilités changent, mais ceci est important pour impliquer tout le monde dès le début. Si un ou plusieurs étudiants ne font rien au sein du groupe, cela plombe l'ambiance puisqu'il y a une partie de la note qui est commune à tout le groupe et ceux qui travaillent se sentent lésés.
 
@@ -212,7 +214,7 @@ On a tous tendance à utiliser des tournure comme "il suffit de ...", "cela se f
 
 Les enseignants doivent tenir compte également de la psychologie, et en particulier de tout ce qui peut accroître, ou au contraire, impacter la motivation des étudiants. Dans une présentation TEDx, Mark Rober introduit ce qu'il appelle l'"effet Super Mario".
 
-<iframe src="https://www.youtube.com/embed/9vJRopau0g0" width="672" height="400px" data-external="1"></iframe>
+<a href="https://www.youtube.com/embed/9vJRopau0g0" target="_blank"><img src="01-Introduction_files/figure-epub3/unnamed-chunk-16-1.png" style="display: block; margin: auto;" /></a>
 
 Le jeu Super Mario est très addictif, parce que le joueur est focalisé sur l'objectif à atteindre (terminer le jeu et sauver la princesse). Cela le détourne des nombreuses embûches qui parsèment le jeu. Au final, l'utilisateur ne fait qu'appuyer successivement sur une série de six boutons (sur la manette de jeu), et présenté autrement, on réalise à quel point la même action peut être perçue négativement. Mark présente six boutons et explique qu'il faudra les appuyer selon une séquence précise... très longue et pendant plus d'une heure pour passer un test. Vu comme cela, cela parait infaisable et totalement rébarbatif... pourtant c'est exactement ce qu'on fait dans le jeu Super Mario qui est, au contraire, addictif.
 
@@ -245,15 +247,15 @@ Il y a énormément plus de choses intéressantes dans cet ouvrage, et il faudra
 
 La présentation de type PowerPoint est partout et les enseignants ne peuvent plus s'en passer. Cependant, c'est un outil à double tranchant et une mauvaise utilisation de cet outil peut être désastreuse. C'est ce qu'on appelle la "mort par PowerPoint".
 
-<iframe src="https://www.youtube.com/embed/Iwpi1Lm6dFo" width="672" height="400px" data-external="1"></iframe>
+<a href="https://www.youtube.com/embed/Iwpi1Lm6dFo" target="_blank"><img src="01-Introduction_files/figure-epub3/unnamed-chunk-18-1.png" style="display: block; margin: auto;" /></a>
 
 Quelques conseils pour améliorer sa présentation PowerPoint ici :
 
-<iframe src="https://www.youtube.com/embed/-U_HN7H8n8E" width="672" height="400px" data-external="1"></iframe>
+<a href="https://www.youtube.com/embed/-U_HN7H8n8E" target="_blank"><img src="01-Introduction_files/figure-epub3/unnamed-chunk-19-1.png" style="display: block; margin: auto;" /></a>
 
 Don McMillan est un humoriste qui réussit à faire passer le message d'une manière hilarante ici :
 
-<iframe src="https://www.youtube.com/embed/KbSPPFYxx3o" width="672" height="400px" data-external="1"></iframe>
+<a href="https://www.youtube.com/embed/KbSPPFYxx3o" target="_blank"><img src="01-Introduction_files/figure-epub3/unnamed-chunk-20-1.png" style="display: block; margin: auto;" /></a>
 
 ### Enseigner les statistiques comme les mathématiques
 
@@ -261,7 +263,7 @@ Douglas Andrews dans [the big mistake: teaching stat as though it were math](htt
 
 La vidéo suivante caricature les interactions entre un biologiste et un statisticien. Ceci montre l'importance de former des personnes capables de faire le lien entre les deux disciplines : les scientifiques des données ayant un "background" en biologie.
 
-<iframe src="https://www.youtube.com/embed/Hz1fyhVOjr4" width="672" height="400px" data-external="1"></iframe>
+<a href="https://www.youtube.com/embed/Hz1fyhVOjr4" target="_blank"><img src="01-Introduction_files/figure-epub3/unnamed-chunk-21-1.png" style="display: block; margin: auto;" /></a>
 
 ### Ludification de l'enseignement
 

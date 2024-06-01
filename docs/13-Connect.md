@@ -1,4 +1,4 @@
-# RStudio Connect {#rsconnect}
+# Posit Connect {#connect}
 
 
 

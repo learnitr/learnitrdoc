@@ -1,4 +1,4 @@
-# Shiny {#shiny}
+# Applications interactive Shiny {#shiny}
 
 ```{r setup, include=FALSE, echo=FALSE, message=FALSE, results='hide'}
 knitr::opts_chunk$set(comment = '#', fig.align = "center")

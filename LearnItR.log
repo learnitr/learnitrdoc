@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.5.31)  31 MAY 2024 18:46
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.5.31)  1 JUN 2024 13:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -759,11 +759,13 @@ LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
 (Font)              scaled to size 6.99925pt on input line 4.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
 (Font)              scaled to size 4.99947pt on input line 4.
-[3])
+[3] [4])
 \tf@toc=\write4
 \openout4 = `LearnItR.toc'.
 
-[4]
+[5] [6
+
+]
 File: images/block-warning.png Graphic file (type bmp)
 <images/block-warning.png>
 File: images/learnitr_800.png Graphic file (type bmp)
@@ -771,15 +773,13 @@ File: images/learnitr_800.png Graphic file (type bmp)
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[5
-
-]
+[7]
 File: images/front-cover.png Graphic file (type bmp)
 <images/front-cover.png>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[6]
+[8]
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
 (Font)              Font shape `TU/lmtt/b/n' tried instead on input line 234.
 
@@ -797,7 +797,7 @@ Overfull \hbox (33.32704pt too wide) in paragraph at lines 272--272
 []\TU/lmtt/m/n/10 # - Packages -------------------------------------------------------------------[] 
  []
 
-[7]
+[9]
 Overfull \hbox (7.07704pt too wide) in paragraph at lines 272--272
 []\TU/lmtt/m/n/10 #  [2] /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/library[] 
  []
@@ -807,48 +807,45 @@ Overfull \hbox (33.32704pt too wide) in paragraph at lines 272--272
 []\TU/lmtt/m/n/10 # ------------------------------------------------------------------------------[] 
  []
 
-[8]
+[10]
 Chapter 1.
-[9
+[11
 
 ]
 File: images/block-note.png Graphic file (type bmp)
 <images/block-note.png>
-[10] [11] [12] [13]
+[12] [13] [14] [15]
 File: images/introduction/learning.png Graphic file (type bmp)
 <images/introduction/learning.png>
-[14]
+[16]
 File: images/block-note.png Graphic file (type bmp)
 <images/block-note.png>
 File: images/block-note.png Graphic file (type bmp)
 <images/block-note.png>
-[15]
+[17]
 File: images/block-note.png Graphic file (type bmp)
 <images/block-note.png>
 
-Underfull \hbox (badness 2469) in paragraph at lines 392--393
+Underfull \hbox (badness 2469) in paragraph at lines 394--395
 []\TU/lmr/m/n/10 Une autre condition indispensable pour que le mécanisme d’apprentissage
  []
 
 File: images/block-note.png Graphic file (type bmp)
 <images/block-note.png>
-[16]
+[18]
 File: images/block-note.png Graphic file (type bmp)
 <images/block-note.png>
 File: 01-Introduction_files/figure-latex/unnamed-chunk-7-1.pdf Graphic file (type pdf)
 <use 01-Introduction_files/figure-latex/unnamed-chunk-7-1.pdf>
-
-Underfull \vbox (badness 2932) has occurred while \output is active []
-
-[17]
+[19]
 File: images/block-note.png Graphic file (type bmp)
 <images/block-note.png>
-[18]
+[20]
 File: images/block-note.png Graphic file (type bmp)
 <images/block-note.png>
 File: 01-Introduction_files/figure-latex/unnamed-chunk-10-1.pdf Graphic file (type pdf)
 <use 01-Introduction_files/figure-latex/unnamed-chunk-10-1.pdf>
-[19]
+[21]
 File: 01-Introduction_files/figure-latex/unnamed-chunk-11-1.pdf Graphic file (type pdf)
 <use 01-Introduction_files/figure-latex/unnamed-chunk-11-1.pdf>
 File: 01-Introduction_files/figure-latex/unnamed-chunk-12-1.pdf Graphic file (type pdf)
@@ -856,13 +853,13 @@ File: 01-Introduction_files/figure-latex/unnamed-chunk-12-1.pdf Graphic file (ty
 
 Underfull \vbox (badness 4752) has occurred while \output is active []
 
-[20]
+[22]
 File: 01-Introduction_files/figure-latex/unnamed-chunk-13-1.pdf Graphic file (type pdf)
 <use 01-Introduction_files/figure-latex/unnamed-chunk-13-1.pdf>
-[21]
+[23]
 File: 01-Introduction_files/figure-latex/unnamed-chunk-14-1.pdf Graphic file (type pdf)
 <use 01-Introduction_files/figure-latex/unnamed-chunk-14-1.pdf>
-[22] [23]
+[24] [25]
 File: images/block-note.png Graphic file (type bmp)
 <images/block-note.png>
 File: 01-Introduction_files/figure-latex/unnamed-chunk-16-1.pdf Graphic file (type pdf)
@@ -870,7 +867,7 @@ File: 01-Introduction_files/figure-latex/unnamed-chunk-16-1.pdf Graphic file (ty
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[24] [25]
+[26] [27]
 File: images/block-note.png Graphic file (type bmp)
 <images/block-note.png>
 File: 01-Introduction_files/figure-latex/unnamed-chunk-18-1.pdf Graphic file (type pdf)
@@ -878,10 +875,10 @@ File: 01-Introduction_files/figure-latex/unnamed-chunk-18-1.pdf Graphic file (ty
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[26]
+[28]
 File: 01-Introduction_files/figure-latex/unnamed-chunk-19-1.pdf Graphic file (type pdf)
 <use 01-Introduction_files/figure-latex/unnamed-chunk-19-1.pdf>
-[27]
+[29]
 File: 01-Introduction_files/figure-latex/unnamed-chunk-20-1.pdf Graphic file (type pdf)
 <use 01-Introduction_files/figure-latex/unnamed-chunk-20-1.pdf>
 File: 01-Introduction_files/figure-latex/unnamed-chunk-21-1.pdf Graphic file (type pdf)
@@ -889,128 +886,146 @@ File: 01-Introduction_files/figure-latex/unnamed-chunk-21-1.pdf Graphic file (ty
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[28] [29]
+[30] [31]
 File: images/introduction/doctypes.png Graphic file (type bmp)
 <images/introduction/doctypes.png>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[30] [31]
+[32] [33]
 File: images/introduction/doctypes_scenario.png Graphic file (type bmp)
 <images/introduction/doctypes_scenario.png>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[32] [33] [34] [35] [36] [37] [38
+[34] [35] [36] [37] [38] [39] [40
 
 ]
 Chapter 2.
-[39]
-File: images/general/svbox-launcher.png Graphic file (type bmp)
-<images/general/svbox-launcher.png>
-[40] [41]
+[41] [42]
 File: images/block-info.png Graphic file (type bmp)
 <images/block-info.png>
 File: images/general/tools.png Graphic file (type bmp)
 <images/general/tools.png>
-[42] [43] [44] [45] [46
+[43] [44] [45] [46]
+Chapter 3.
+[47
 
 ]
-Chapter 3.
+File: images/general/svbox-launcher.png Graphic file (type bmp)
+<images/general/svbox-launcher.png>
+[48] [49] [50
 
-Overfull \hbox (9.15407pt too wide) in paragraph at lines 897--899
+] [51] [52]
+Chapter 4.
+
+Overfull \hbox (9.15407pt too wide) in paragraph at lines 956--958
 \TU/lmr/m/n/10 comme préfixe pour être plus explicite (ex. : \TU/lmtt/m/n/10 BioDataScience1\TU/lmr/m/n/10 , \TU/lmtt/m/n/10 BioDataScienceData\TU/lmr/m/n/10 ,
  []
 
-[47] [48]
+[53
+
+] [54]
 File: images/block-note.png Graphic file (type bmp)
 <images/block-note.png>
 File: images/git/git-delete-branch.png Graphic file (type bmp)
 <images/git/git-delete-branch.png>
 
-Overfull \hbox (49.07704pt too wide) in paragraph at lines 948--948
+Overfull \hbox (49.07704pt too wide) in paragraph at lines 1007--1007
 []\TU/lmtt/m/n/10 # Si on a quelque chose comme: origin https://github.com/org/repo.git c'est pas bon[] 
  []
 
-[49]
+[55]
 File: images/block-warning.png Graphic file (type bmp)
 <images/block-warning.png>
-[50]
-Chapter 4.
-[51
-
-] [52]
-Overfull \hbox (96.32704pt too wide) in paragraph at lines 1045--1045
-[]\TU/lmtt/m/n/10 mongodump # Possibly restrict with --collection=<col_name> and/or --query='{"x": {"$gt":1}}'[] 
- []
-
-
-Overfull \hbox (33.32704pt too wide) in paragraph at lines 1045--1045
-[]\TU/lmtt/m/n/10 scp econum@sdd.umons.ac.be:/data1/dump/sdd.tar.gz sdd.tar.gz # Enter password...[] 
- []
-
-
-Overfull \hbox (38.57704pt too wide) in paragraph at lines 1045--1045
-[]\TU/lmtt/m/n/10 <path_to>/mongorestore # Of course, the local MongoDB server must be running here[] 
- []
-
-[53] [54] [55] [56
-
-]
+[56]
 Chapter 5.
-File: images/block-note.png Graphic file (type bmp)
-<images/block-note.png>
-[57]
-File: images/wordpress/login-github.png Graphic file (type bmp)
-<images/wordpress/login-github.png>
+[57
 
-LaTeX Warning: Float too large for page by 6.23712pt on input line 1184.
-
-File: images/wordpress/non-enregistre.png Graphic file (type bmp)
-<images/wordpress/non-enregistre.png>
+]
+File: images/bookdown/bookdown-fork1.png Graphic file (type bmp)
+<images/bookdown/bookdown-fork1.png>
+File: images/bookdown/bookdown-fork2.png Graphic file (type bmp)
+<images/bookdown/bookdown-fork2.png>
 [58] [59]
-File: images/wordpress/enregistre.png Graphic file (type bmp)
-<images/wordpress/enregistre.png>
-[60] [61]
+File: images/bookdown/bookdown-create-project.png Graphic file (type bmp)
+<images/bookdown/bookdown-create-project.png>
+
+Underfull \vbox (badness 2042) has occurred while \output is active []
+
+[60]
+Underfull \hbox (badness 3428) in paragraph at lines 1105--1106
+\TU/lmr/m/n/10 certainement adapter les entrées \TU/lmtt/m/n/10 config: toc: before:\TU/lmr/m/n/10 , \TU/lmtt/m/n/10 config: toc: after:\TU/lmr/m/n/10 ,
+ []
+
+[61]
+Overfull \hbox (52.72905pt too wide) in paragraph at lines 1118--1120
+\TU/lmtt/m/n/10 nom_bookdown\TU/lmr/m/n/10 . Dans l’exemple, il s’agit de []\TU/lmtt/m/n/10 https\://wp.sciviews.org/sdd-umons3-2020/[]\TU/lmr/m/n/10 . 
+ []
+
+[62]
 File: images/block-warning.png Graphic file (type bmp)
 <images/block-warning.png>
 
-Overfull \hbox (60.12907pt too wide) in paragraph at lines 1207--1208
-[]\TU/lmr/m/n/10 L’adresse mail utilisée est celle renseignée par Moodle, soit \TU/lmtt/m/n/10 prénom.nom@[student.]umons.ac.be\TU/lmr/m/n/10 .
+Underfull \hbox (badness 1137) in paragraph at lines 1146--1147
+[]\TU/lmr/m/n/10 Nous vons conseillons dans un premier temps de \TU/lmr/m/it/10 ne pas \TU/lmr/m/n/10 modifier la page
  []
 
-[62] [63]
-Underfull \hbox (badness 10000) in paragraph at lines 1252--1254
-\TU/lmtt/m/n/10 lamp0/web/vhosts/wp.sciviews.org/htdocs/wp-content/updraft\TU/lmr/m/n/10 , mais il
+[63]
+File: images/bookdown/bookdown-add-page1.png Graphic file (type bmp)
+<images/bookdown/bookdown-add-page1.png>
+
+Overfull \hbox (101.57704pt too wide) in paragraph at lines 1192--1192
+[]\TU/lmtt/m/n/10 [advanced_iframe  id="bookdown" name="bookdown" src="https://wp.sciviews.org/sdd-umons3-2020"[] 
  []
 
-[64] [65] [66]
-Overfull \hbox (12.32704pt too wide) in paragraph at lines 1366--1366
-[]\TU/lmtt/m/n/10 # Rendre le dossier partagé VirtualBox accessible pour l'utilisateur oxboxes[] 
+
+Overfull \hbox (17.57704pt too wide) in paragraph at lines 1192--1192
+[]\TU/lmtt/m/n/10 width="100%" height="calc(100vh - 50px)" use_shortcode_attributes_only="true"[] 
  []
 
-[67]
-Overfull \hbox (28.07704pt too wide) in paragraph at lines 1399--1399
-[]\TU/lmtt/m/n/10 composer require mongodb/mongodb # Warnings about deprecated composer 1 ignored[] 
+
+Overfull \hbox (64.82704pt too wide) in paragraph at lines 1192--1192
+[]\TU/lmtt/m/n/10 map_parameter_to_url="iframe" add_iframe_url_as_param="same" show_iframe_loader="true"[] 
  []
 
-[68] [69]
-File: images/wordpress/dashboard-user-h5p.png Graphic file (type bmp)
-<images/wordpress/dashboard-user-h5p.png>
-[70]
-File: images/wordpress/h5pxapi.png Graphic file (type bmp)
-<images/wordpress/h5pxapi.png>
 
-Underfull \vbox (badness 1248) has occurred while \output is active []
+Overfull \hbox (38.57704pt too wide) in paragraph at lines 1192--1192
+[]\TU/lmtt/m/n/10 enable_responsive_iframe="true" hide_elements=".tg-site-footer-bar,.entry-footer"[] 
+ []
 
-[71] [72]
-File: images/block-note.png Graphic file (type bmp)
-<images/block-note.png>
-[73] [74]
-Chapter 6.
-[75
+
+Overfull \hbox (22.82704pt too wide) in paragraph at lines 1192--1192
+[]\TU/lmtt/m/n/10 additional_height="100" multi_domain_enabled="false" use_post_message="false"][] 
+ []
+
+File: images/bookdown/bookdown-add-page2.png Graphic file (type bmp)
+<images/bookdown/bookdown-add-page2.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[64]
+File: images/bookdown/bookdown-add-page3.png Graphic file (type bmp)
+<images/bookdown/bookdown-add-page3.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[65] [66]
+File: images/wordpress/h5p-content.png Graphic file (type bmp)
+<images/wordpress/h5p-content.png>
+[67] [68] [69] [70
 
 ]
+Chapter 6.
+[71] [72
+
+]
+Chapter 7.
+[73] [74
+
+]
+Chapter 8.
+[75]
 File: images/h5p/h5p-general.png Graphic file (type bmp)
 <images/h5p/h5p-general.png>
 [76]
@@ -1037,491 +1052,477 @@ File: images/h5p/h5p-new-content3.png Graphic file (type bmp)
 File: images/h5p/h5p-new-content4.png Graphic file (type bmp)
 <images/h5p/h5p-new-content4.png>
 [85] [86] [87] [88] [89] [90]
-Chapter 7.
+Chapter 9.
 [91
 
+] [92
+
+] [93] [94]
+Chapter 10.
+[95
+
+] [96]
+Overfull \hbox (96.32704pt too wide) in paragraph at lines 1758--1758
+[]\TU/lmtt/m/n/10 mongodump # Possibly restrict with --collection=<col_name> and/or --query='{"x": {"$gt":1}}'[] 
+ []
+
+
+Overfull \hbox (33.32704pt too wide) in paragraph at lines 1758--1758
+[]\TU/lmtt/m/n/10 scp econum@sdd.umons.ac.be:/data1/dump/sdd.tar.gz sdd.tar.gz # Enter password...[] 
+ []
+
+
+Overfull \hbox (38.57704pt too wide) in paragraph at lines 1758--1758
+[]\TU/lmtt/m/n/10 <path_to>/mongorestore # Of course, the local MongoDB server must be running here[] 
+ []
+
+[97] [98] [99] [100
+
 ]
-File: images/bookdown/bookdown-fork1.png Graphic file (type bmp)
-<images/bookdown/bookdown-fork1.png>
-File: images/bookdown/bookdown-fork2.png Graphic file (type bmp)
-<images/bookdown/bookdown-fork2.png>
-[92] [93]
-File: images/bookdown/bookdown-create-project.png Graphic file (type bmp)
-<images/bookdown/bookdown-create-project.png>
+Chapter 11.
+File: images/block-note.png Graphic file (type bmp)
+<images/block-note.png>
+[101]
+File: images/wordpress/login-github.png Graphic file (type bmp)
+<images/wordpress/login-github.png>
 
-Underfull \vbox (badness 2042) has occurred while \output is active []
+LaTeX Warning: Float too large for page by 6.23712pt on input line 1905.
 
-[94]
-Underfull \hbox (badness 3428) in paragraph at lines 2021--2022
-\TU/lmr/m/n/10 certainement adapter les entrées \TU/lmtt/m/n/10 config: toc: before:\TU/lmr/m/n/10 , \TU/lmtt/m/n/10 config: toc: after:\TU/lmr/m/n/10 ,
- []
-
-[95]
-Overfull \hbox (52.72905pt too wide) in paragraph at lines 2034--2036
-\TU/lmtt/m/n/10 nom_bookdown\TU/lmr/m/n/10 . Dans l’exemple, il s’agit de []\TU/lmtt/m/n/10 https\://wp.sciviews.org/sdd-umons3-2020/[]\TU/lmr/m/n/10 . 
- []
-
-[96]
+File: images/wordpress/non-enregistre.png Graphic file (type bmp)
+<images/wordpress/non-enregistre.png>
+[102] [103]
+File: images/wordpress/enregistre.png Graphic file (type bmp)
+<images/wordpress/enregistre.png>
+[104] [105]
 File: images/block-warning.png Graphic file (type bmp)
 <images/block-warning.png>
 
-Underfull \hbox (badness 1137) in paragraph at lines 2062--2063
-[]\TU/lmr/m/n/10 Nous vons conseillons dans un premier temps de \TU/lmr/m/it/10 ne pas \TU/lmr/m/n/10 modifier la page
+Overfull \hbox (60.12907pt too wide) in paragraph at lines 1928--1929
+[]\TU/lmr/m/n/10 L’adresse mail utilisée est celle renseignée par Moodle, soit \TU/lmtt/m/n/10 prénom.nom@[student.]umons.ac.be\TU/lmr/m/n/10 .
  []
 
-[97]
-File: images/bookdown/bookdown-add-page1.png Graphic file (type bmp)
-<images/bookdown/bookdown-add-page1.png>
-
-Overfull \hbox (101.57704pt too wide) in paragraph at lines 2108--2108
-[]\TU/lmtt/m/n/10 [advanced_iframe  id="bookdown" name="bookdown" src="https://wp.sciviews.org/sdd-umons3-2020"[] 
+[106] [107]
+Underfull \hbox (badness 10000) in paragraph at lines 1973--1975
+\TU/lmtt/m/n/10 lamp0/web/vhosts/wp.sciviews.org/htdocs/wp-content/updraft\TU/lmr/m/n/10 , mais il
  []
 
-
-Overfull \hbox (17.57704pt too wide) in paragraph at lines 2108--2108
-[]\TU/lmtt/m/n/10 width="100%" height="calc(100vh - 50px)" use_shortcode_attributes_only="true"[] 
+[108] [109] [110]
+Overfull \hbox (12.32704pt too wide) in paragraph at lines 2087--2087
+[]\TU/lmtt/m/n/10 # Rendre le dossier partagé VirtualBox accessible pour l'utilisateur oxboxes[] 
  []
 
-
-Overfull \hbox (64.82704pt too wide) in paragraph at lines 2108--2108
-[]\TU/lmtt/m/n/10 map_parameter_to_url="iframe" add_iframe_url_as_param="same" show_iframe_loader="true"[] 
+[111]
+Overfull \hbox (28.07704pt too wide) in paragraph at lines 2120--2120
+[]\TU/lmtt/m/n/10 composer require mongodb/mongodb # Warnings about deprecated composer 1 ignored[] 
  []
 
+[112] [113]
+File: images/wordpress/dashboard-user-h5p.png Graphic file (type bmp)
+<images/wordpress/dashboard-user-h5p.png>
+[114]
+File: images/wordpress/h5pxapi.png Graphic file (type bmp)
+<images/wordpress/h5pxapi.png>
 
-Overfull \hbox (38.57704pt too wide) in paragraph at lines 2108--2108
-[]\TU/lmtt/m/n/10 enable_responsive_iframe="true" hide_elements=".tg-site-footer-bar,.entry-footer"[] 
- []
+Underfull \vbox (badness 1248) has occurred while \output is active []
 
-
-Overfull \hbox (22.82704pt too wide) in paragraph at lines 2108--2108
-[]\TU/lmtt/m/n/10 additional_height="100" multi_domain_enabled="false" use_post_message="false"][] 
- []
-
-File: images/bookdown/bookdown-add-page2.png Graphic file (type bmp)
-<images/bookdown/bookdown-add-page2.png>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[98]
-File: images/bookdown/bookdown-add-page3.png Graphic file (type bmp)
-<images/bookdown/bookdown-add-page3.png>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[99] [100]
-File: images/wordpress/h5p-content.png Graphic file (type bmp)
-<images/wordpress/h5p-content.png>
-[101] [102] [103] [104
+[115] [116]
+File: images/block-note.png Graphic file (type bmp)
+<images/block-note.png>
+[117] [118]
+Chapter 12.
+[119
 
 ]
-Chapter 8.
-[105] [106
-
-]
-Chapter 9.
-[107] [108
-
-]
-Chapter 10.
-[109]
 File: images/moodle/sdd1-02visualisation1.png Graphic file (type bmp)
 <images/moodle/sdd1-02visualisation1.png>
-[110]
-Chapter 11.
-[111
-
-] [112
-
-]
-Chapter 12.
-[113] [114
-
-]
+[120]
 Chapter 13.
-[115]
-Overfull \hbox (17.57704pt too wide) in paragraph at lines 2299--2299
+[121
+
+]
+Overfull \hbox (17.57704pt too wide) in paragraph at lines 2364--2364
 []\TU/lmtt/m/n/10 curl -O https://cdn.rstudio.com/r/ubuntu-1804/pkgs/r-${R_VERSION}_1_amd64.deb[] 
  []
 
 
-Underfull \hbox (badness 1052) in paragraph at lines 2304--2305
+Underfull \hbox (badness 1052) in paragraph at lines 2369--2370
 []\TU/lmr/m/n/10 Installation de R 3.5.3 et 3.4.4, respectivement équivalents à svbox2019 et
  []
 
 
-Overfull \hbox (190.82704pt too wide) in paragraph at lines 2354--2354
+Overfull \hbox (190.82704pt too wide) in paragraph at lines 2419--2419
 []\TU/lmtt/m/n/10 sudo apt install build-essential libcurl4-gnutls-dev openjdk-7-* libxml2-dev libssl-dev texlive-full libev-dev[] 
  []
 
 
-Overfull \hbox (243.32704pt too wide) in paragraph at lines 2354--2354
+Overfull \hbox (243.32704pt too wide) in paragraph at lines 2419--2419
 []\TU/lmtt/m/n/10 sudo apt install libgmp10-dev libgsl0-dev libnetcdf6 libnetcdf-dev netcdf-bin libdigest-hmac-perl libgmp-dev libgmp3-dev[] 
  []
 
 
-Overfull \hbox (180.32704pt too wide) in paragraph at lines 2354--2354
+Overfull \hbox (180.32704pt too wide) in paragraph at lines 2419--2419
 []\TU/lmtt/m/n/10 sudo apt install libgl1-mesa-dev libglu1-mesa-dev libglpk-dev tdsodbc freetds-bin freetds-common freetds-dev[] 
  []
 
 
-Overfull \hbox (348.32704pt too wide) in paragraph at lines 2354--2354
+Overfull \hbox (348.32704pt too wide) in paragraph at lines 2419--2419
 []\TU/lmtt/m/n/10 sudo apt install odbc-postgresql libtiff-dev libsndfile1 libsndfile1-dev libtiff-dev tk8.5 tk8.5-dev tcl8.5 tcl8.5-dev libgsl0-dev libv8-dev[] 
  []
 
 
-Overfull \hbox (80.57704pt too wide) in paragraph at lines 2378--2378
+Overfull \hbox (80.57704pt too wide) in paragraph at lines 2443--2443
 []\TU/lmtt/m/n/10 sudo /opt/rstudio-connect/bin/license-manager activate YAG3-B2H5-MXQB-6HJS-E7WH-4G9Y-JITA[] 
  []
 
-[116]
-Overfull \hbox (7.07704pt too wide) in paragraph at lines 2462--2462
+[122]
+Overfull \hbox (7.07704pt too wide) in paragraph at lines 2527--2527
 []\TU/lmtt/m/n/10 sudo apt install libffi-dev libgdm-dev libsqlite3-dev libssl-dev zlib1g-dev[] 
  []
 
-[117]
-Underfull \hbox (badness 2653) in paragraph at lines 2487--2488
+[123]
+Underfull \hbox (badness 2653) in paragraph at lines 2552--2553
 []\TU/lmr/m/n/10 Installation du certificat SSL. Copie des fichiers \TU/lmtt/m/n/10 sdd_umons_ac_be.* \TU/lmr/m/n/10 vers
  []
 
 
-Overfull \hbox (280.07704pt too wide) in paragraph at lines 2503--2503
+Overfull \hbox (280.07704pt too wide) in paragraph at lines 2568--2568
 []\TU/lmtt/m/n/10 sudo openssl pkcs7 -print_certs -in /etc/ssl/private/sdd_umons_ac_be.crt -out /etc/ssl/private/sdd_umons_ac_be.pem -outform PEM[] 
  []
 
-[118]
-Overfull \hbox (12.32704pt too wide) in paragraph at lines 2550--2550
+[124]
+Overfull \hbox (12.32704pt too wide) in paragraph at lines 2615--2615
 []\TU/lmtt/m/n/10 45 * * * * /usr/bin/rsync -av --delete /data1/ /data2/ &> /data/datasync.log[] 
  []
 
 
-Underfull \hbox (badness 2189) in paragraph at lines 2564--2565
+Underfull \hbox (badness 2189) in paragraph at lines 2629--2630
 []\TU/lmr/m/n/10 Éditer à nouveau le fichier de configuration de RStudio Connect (DataDir =
  []
 
 
-Overfull \hbox (169.82704pt too wide) in paragraph at lines 2594--2594
+Overfull \hbox (169.82704pt too wide) in paragraph at lines 2659--2659
 []\TU/lmtt/m/n/10 sudo rear format /dev/sdX # In case of error rear format -- --efi /dev/sdX (in the server, it is /dev/sdc)[] 
  []
 
-[119]
-Overfull \hbox (22.82704pt too wide) in paragraph at lines 2666--2666
+[125]
+Overfull \hbox (22.82704pt too wide) in paragraph at lines 2731--2731
 []\TU/lmtt/m/n/10 sudo /opt/rstudio-connect/scripts/run-diagnostics.sh /path/to/output/directory[] 
  []
 
 
-Underfull \hbox (badness 4144) in paragraph at lines 2671--2672
+Underfull \hbox (badness 4144) in paragraph at lines 2736--2737
 []\TU/lmr/m/n/10 Installation du serveur MongoDB, voir []$[][][][][] [] [] [] [][][][] [] [][][][][][][] [] [][][] [] [][][][][][] []
  []
 
 
-Overfull \hbox (38.57704pt too wide) in paragraph at lines 2741--2741
+Overfull \hbox (38.57704pt too wide) in paragraph at lines 2806--2806
 []\TU/lmtt/m/n/10 wget -qO - https://www.mongodb.org/static/pgp/server-4.4.asc | sudo apt-key add -[] 
  []
 
 
-Overfull \hbox (437.57704pt too wide) in paragraph at lines 2741--2741
+Overfull \hbox (437.57704pt too wide) in paragraph at lines 2806--2806
 []\TU/lmtt/m/n/10 echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.4.list[] 
  []
 
 
-Overfull \hbox (348.32704pt too wide) in paragraph at lines 2741--2741
+Overfull \hbox (348.32704pt too wide) in paragraph at lines 2806--2806
 []\TU/lmtt/m/n/10 #sudo apt-get install -y mongodb-org=4.4.0 mongodb-org-server=4.4.0 mongodb-org-shell=4.4.0 mongodb-org-mongos=4.4.0 mongodb-org-tools=4.4.0[] 
  []
 
-[120]
-Overfull \hbox (1.82704pt too wide) in paragraph at lines 2741--2741
+[126]
+Overfull \hbox (1.82704pt too wide) in paragraph at lines 2806--2806
 []\TU/lmtt/m/n/10 # By default, MongoDB only accept clients from same machine (what we want)[] 
  []
 
 
-Overfull \hbox (17.57704pt too wide) in paragraph at lines 2741--2741
+Overfull \hbox (17.57704pt too wide) in paragraph at lines 2806--2806
 []\TU/lmtt/m/n/10 # Create a program supervisor for common environment variables (not done yet)[] 
  []
 
 
-Overfull \hbox (841.82704pt too wide) in paragraph at lines 2741--2741
+Overfull \hbox (841.82704pt too wide) in paragraph at lines 2806--2806
 []\TU/lmtt/m/n/10 export MONGO_URL=“mongodb://sdd:sdd@sdd-umons-shard-00-00-umnnw.mongodb.net:27017,sdd-umons-shard-00-01-umnnw.mongodb.net:27017,sdd-umons-shard-00-02-umnnw.mongodb.net:27017/test?ssl=true&replicaSet=sdd-umons-shard-0&authSource=admin”[] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[121]
-Overfull \hbox (59.57704pt too wide) in paragraph at lines 2779--2779
+[127]
+Overfull \hbox (59.57704pt too wide) in paragraph at lines 2844--2844
 []\TU/lmtt/m/n/10 # Place sdd_umons_ac_be.cer|key in /etc/ssl/private. It seems both keys do not match:[] 
  []
 
 
-Overfull \hbox (75.32704pt too wide) in paragraph at lines 2779--2779
+Overfull \hbox (75.32704pt too wide) in paragraph at lines 2844--2844
 []\TU/lmtt/m/n/10 sudo openssl x509 -noout -modulus -in /etc/ssl/private/sdd_umons_ac_be.cer | openssl md5[] 
  []
 
 
-Overfull \hbox (70.07704pt too wide) in paragraph at lines 2779--2779
+Overfull \hbox (70.07704pt too wide) in paragraph at lines 2844--2844
 []\TU/lmtt/m/n/10 sudo openssl rsa -noout -modulus -in /etc/ssl/private/sdd_umons_ac_be.key | openssl md5[] 
  []
 
 
-Overfull \hbox (106.82704pt too wide) in paragraph at lines 2779--2779
+Overfull \hbox (106.82704pt too wide) in paragraph at lines 2844--2844
 []\TU/lmtt/m/n/10 # Maybe the PKCS#7 format is correct? So, the .crt with that format can be converted this way:[] 
  []
 
 
-Overfull \hbox (280.07704pt too wide) in paragraph at lines 2779--2779
+Overfull \hbox (280.07704pt too wide) in paragraph at lines 2844--2844
 []\TU/lmtt/m/n/10 sudo openssl pkcs7 -print_certs -in /etc/ssl/private/sdd_umons_ac_be.crt -out /etc/ssl/private/sdd_umons_ac_be.pem -outform PEM[] 
  []
 
 
-Overfull \hbox (75.32704pt too wide) in paragraph at lines 2779--2779
+Overfull \hbox (75.32704pt too wide) in paragraph at lines 2844--2844
 []\TU/lmtt/m/n/10 sudo openssl x509 -noout -modulus -in /etc/ssl/private/sdd_umons_ac_be.pem | openssl md5[] 
  []
 
 
-Overfull \hbox (148.82704pt too wide) in paragraph at lines 2779--2779
+Overfull \hbox (148.82704pt too wide) in paragraph at lines 2844--2844
 []\TU/lmtt/m/n/10 # Update the certificate: I receive a .zip file with both sdd_umons_ac_be.key and sdd_umons_ac_be.cer.[] 
  []
 
 
-Overfull \hbox (12.32704pt too wide) in paragraph at lines 2779--2779
+Overfull \hbox (12.32704pt too wide) in paragraph at lines 2844--2844
 []\TU/lmtt/m/n/10 scp ~/Desktop/sdd_certs_2021.zip econum@sdd.umons.ac.be:/data1/dump/cert.zip[] 
  []
 
 
-Overfull \hbox (85.82704pt too wide) in paragraph at lines 2779--2779
+Overfull \hbox (85.82704pt too wide) in paragraph at lines 2844--2844
 []\TU/lmtt/m/n/10 # Create .pem file that invert the order of the 4 certificates from the .cer file, then...[] 
  []
 
 
-Overfull \hbox (75.32704pt too wide) in paragraph at lines 2779--2779
+Overfull \hbox (75.32704pt too wide) in paragraph at lines 2844--2844
 []\TU/lmtt/m/n/10 scp ~/Desktop/sdd_umons_ac_be.pem econum@sdd.umons.ac.be:/data1/dump/sdd_umons_ac_be.pem[] 
  []
 
 
-Overfull \hbox (59.57704pt too wide) in paragraph at lines 2779--2779
+Overfull \hbox (59.57704pt too wide) in paragraph at lines 2844--2844
 []\TU/lmtt/m/n/10 sudo mv /etc/ssl/private/sdd_umons_ac_be.cer /etc/ssl/private/sdd_umons_ac_be.cer.old[] 
  []
 
 
-Overfull \hbox (59.57704pt too wide) in paragraph at lines 2779--2779
+Overfull \hbox (59.57704pt too wide) in paragraph at lines 2844--2844
 []\TU/lmtt/m/n/10 sudo mv /etc/ssl/private/sdd_umons_ac_be.key /etc/ssl/private/sdd_umons_ac_be.key.old[] 
  []
 
 
-Overfull \hbox (12.32704pt too wide) in paragraph at lines 2779--2779
+Overfull \hbox (12.32704pt too wide) in paragraph at lines 2844--2844
 []\TU/lmtt/m/n/10 sudo mv /data1/dump/sdd_umons_ac_be.pem /etc/ssl/private/sdd_umons_ac_be.pem[] 
  []
 
 
-Overfull \hbox (22.82704pt too wide) in paragraph at lines 2810--2810
+Overfull \hbox (22.82704pt too wide) in paragraph at lines 2875--2875
 []\TU/lmtt/m/n/10 # Completely reconfigure the video driver if it gets stuck with Nvidia driver:[] 
  []
 
 
-Overfull \hbox (43.82704pt too wide) in paragraph at lines 2810--2810
+Overfull \hbox (43.82704pt too wide) in paragraph at lines 2875--2875
 []\TU/lmtt/m/n/10 # Solved temporarily => could boot in X11, then, remove Nvidia drivers completely.[] 
  []
 
 
-Overfull \hbox (175.07704pt too wide) in paragraph at lines 2810--2810
+Overfull \hbox (175.07704pt too wide) in paragraph at lines 2875--2875
 []\TU/lmtt/m/n/10 sudo apt-get install --reinstall xserver-xorg-video-intel libgl1-mesa-glx libgl1-mesa-dri xserver-xorg-core[] 
  []
 
 
-Overfull \hbox (12.32704pt too wide) in paragraph at lines 2810--2810
+Overfull \hbox (12.32704pt too wide) in paragraph at lines 2875--2875
 []\TU/lmtt/m/n/10 sudo update-alternatives --remove gl_conf /usr/lib/nvidia-current/ld.so.conf[] 
  []
 
-[122]
-Overfull \hbox (17.57704pt too wide) in paragraph at lines 2893--2893
+[128]
+Overfull \hbox (17.57704pt too wide) in paragraph at lines 2958--2958
 []\TU/lmtt/m/n/10 curl -O https://cdn.rstudio.com/r/ubuntu-1804/pkgs/r-${R_VERSION}_1_amd64.deb[] 
  []
 
 
-Overfull \hbox (1.82704pt too wide) in paragraph at lines 2893--2893
+Overfull \hbox (1.82704pt too wide) in paragraph at lines 2958--2958
 []\TU/lmtt/m/n/10 install.packages(c("tidyverse", "shiny", "bookdown", "data.table", "glue",[] 
  []
 
 
-Overfull \hbox (12.32704pt too wide) in paragraph at lines 2893--2893
+Overfull \hbox (12.32704pt too wide) in paragraph at lines 2958--2958
 []\TU/lmtt/m/n/10 "here", "mongolite", "keras", "pastecs", "mlearning", "usethis", "testthat",[] 
  []
 
 
-Overfull \hbox (33.32704pt too wide) in paragraph at lines 2893--2893
+Overfull \hbox (33.32704pt too wide) in paragraph at lines 2958--2958
 []\TU/lmtt/m/n/10 "ggpubr", "GGally", "ggplotify", "ggrepel", "cowplot", "fs", "forcats", "purrr",[] 
  []
 
 
-Overfull \hbox (17.57704pt too wide) in paragraph at lines 2893--2893
+Overfull \hbox (17.57704pt too wide) in paragraph at lines 2958--2958
 []\TU/lmtt/m/n/10 "R6", "RColorBrewer", "Rcpp", "anytime", "zoo", "assertthat", "bench", "hms",[] 
  []
 
 
-Overfull \hbox (12.32704pt too wide) in paragraph at lines 2893--2893
+Overfull \hbox (12.32704pt too wide) in paragraph at lines 2958--2958
 []\TU/lmtt/m/n/10 "viridisLite", "withr", "xts", "igraph", "pryr", "proto", "renv", "tsibble",[] 
  []
 
 
-Overfull \hbox (33.32704pt too wide) in paragraph at lines 2893--2893
+Overfull \hbox (33.32704pt too wide) in paragraph at lines 2958--2958
 []\TU/lmtt/m/n/10 "SciViews", "svMisc", "svGUI", "svDialogs", "extraDistr", "SuppDists", "lobstr",[] 
  []
 
-[123]
-Overfull \hbox (33.32704pt too wide) in paragraph at lines 2893--2893
+[129]
+Overfull \hbox (33.32704pt too wide) in paragraph at lines 2958--2958
 []\TU/lmtt/m/n/10 # Warning in svbox2021, we don't use learndown anymore, but learnitdown instead![] 
  []
 
 
-Overfull \hbox (80.57704pt too wide) in paragraph at lines 2893--2893
+Overfull \hbox (80.57704pt too wide) in paragraph at lines 2958--2958
 []\TU/lmtt/m/n/10 sudo /opt/rstudio-connect/bin/license-manager activate YAG3-B2H5-MXQB-6HJS-E7WH-4G9Y-JITA[] 
  []
 
 
-Overfull \hbox (70.07704pt too wide) in paragraph at lines 2893--2893
+Overfull \hbox (70.07704pt too wide) in paragraph at lines 2958--2958
 []\TU/lmtt/m/n/10 curl -Lo rsc-installer.sh https://cdn.rstudio.com/connect/installer/installer-v1.9.1.sh[] 
  []
 
 
-Overfull \hbox (206.57704pt too wide) in paragraph at lines 2916--2916
+Overfull \hbox (206.57704pt too wide) in paragraph at lines 2981--2981
 []\TU/lmtt/m/n/10 sudo curl -fsSL -o /opt/python/miniconda.sh https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh[] 
  []
 
 
-Overfull \hbox (75.32704pt too wide) in paragraph at lines 2939--2939
+Overfull \hbox (75.32704pt too wide) in paragraph at lines 3004--3004
 []\TU/lmtt/m/n/10 sudo /opt/python/"${PYTHON_VERSION}"/bin/pip install altair beautifulsoup4 cloudpickle \[] 
  []
 
 
-Overfull \hbox (12.32704pt too wide) in paragraph at lines 2939--2939
+Overfull \hbox (12.32704pt too wide) in paragraph at lines 3004--3004
 []  \TU/lmtt/m/n/10 requests scipy scikit-image scikit-learn scrapy seaborn spacy sqlalchemy \[] 
  []
 
-[124]
-Overfull \hbox (33.32704pt too wide) in paragraph at lines 2939--2939
+[130]
+Overfull \hbox (33.32704pt too wide) in paragraph at lines 3004--3004
 []\TU/lmtt/m/n/10 # add PATH=/opt/python/"${PYTHON_VERSION}"/bin:$PATH in /etc/profile.d/python.sh[] 
  []
 
 
-Overfull \hbox (327.32704pt too wide) in paragraph at lines 2939--2939
+Overfull \hbox (327.32704pt too wide) in paragraph at lines 3004--3004
 []\TU/lmtt/m/n/10 #sudo /opt/python/${PYTHON_VERSION}/bin/python -m ipykernel install --name py${PYTHON_VERSION} --display-name "Python ${PYTHON_VERSION}"[] 
  []
 
 
-Overfull \hbox (59.57704pt too wide) in paragraph at lines 2939--2939
+Overfull \hbox (59.57704pt too wide) in paragraph at lines 3004--3004
 []\TU/lmtt/m/n/10 nano ~/.Rprofile # Add Sys.setenv(RETICULATE_PYTHON = "/opt/python/3.8.5/bin/python")[] 
  []
 
 
-Overfull \hbox (95.07704pt too wide) in paragraph at lines 2944--2945
+Overfull \hbox (95.07704pt too wide) in paragraph at lines 3009--3010
 \TU/lmtt/m/n/10 Assertion cnt < (sizeof (_nl_value_type_LC_TIME) / sizeof (_nl_value_type_LC_TIME[0]))[]
  []
 
 
-Overfull \hbox (211.82704pt too wide) in paragraph at lines 2978--2978
+Overfull \hbox (211.82704pt too wide) in paragraph at lines 3043--3043
 []\TU/lmtt/m/n/10 # This does not work => reedit rstudio-connect.gcfg and comment out Supervisor= with ; and restart RStudio Connect[] 
  []
 
 
-Overfull \hbox (1.82704pt too wide) in paragraph at lines 2978--2978
+Overfull \hbox (1.82704pt too wide) in paragraph at lines 3043--3043
 []\TU/lmtt/m/n/10 sudo mv /usr/lib/locale/locale-archive /usr/lib/locale/locale-archive.save[] 
  []
 
-[125] [126]
-Overfull \hbox (54.32704pt too wide) in paragraph at lines 3108--3108
+[131] [132]
+Overfull \hbox (54.32704pt too wide) in paragraph at lines 3173--3173
 []        \TU/lmtt/m/n/10 /opt/rstudio-connect/mnt/app/packrat/lib/x86_64-pc-linux-gnu/4.0.5/** mrwix,[] 
  []
 
-[127]
-Overfull \hbox (79.90598pt too wide) in paragraph at lines 3123--3125
+[133]
+Overfull \hbox (79.90598pt too wide) in paragraph at lines 3188--3190
 []\TU/lmr/m/n/10 Note : ceci doit être fait sur le PC où les learnrs sont développés : \TU/lmtt/m/n/10 install.packages(c("RAppArmor",
  []
 
 
-Overfull \hbox (59.57704pt too wide) in paragraph at lines 3155--3155
+Overfull \hbox (59.57704pt too wide) in paragraph at lines 3220--3220
 []\TU/lmtt/m/n/10 wget https://github.com/jgm/pandoc/releases/download/2.11.4/pandoc-2.11.4-1-amd64.deb[] 
  []
 
 
-Overfull \hbox (33.32704pt too wide) in paragraph at lines 3155--3155
+Overfull \hbox (33.32704pt too wide) in paragraph at lines 3220--3220
 []\TU/lmtt/m/n/10 /opt/rstudio-connect/ext/pandoc/2.11/pandoc --version # 2.11.2 with same options[] 
  []
 
 
-Overfull \hbox (33.32704pt too wide) in paragraph at lines 3155--3155
+Overfull \hbox (33.32704pt too wide) in paragraph at lines 3220--3220
 []\TU/lmtt/m/n/10 /usr/lib/rstudio/bin/pandoc/pandoc --version # Same 1.17.2 than pandoc --version[] 
  []
 
 
-Overfull \hbox (117.32704pt too wide) in paragraph at lines 3155--3155
+Overfull \hbox (117.32704pt too wide) in paragraph at lines 3220--3220
 []\TU/lmtt/m/n/10 #Sys.setenv(PATH = paste("/opt/rstudio-connect/ext/pandoc/2.11", Sys.getenv("PATH"), sep = ":"))[] 
  []
 
 
-Overfull \hbox (80.57704pt too wide) in paragraph at lines 3155--3155
+Overfull \hbox (80.57704pt too wide) in paragraph at lines 3220--3220
 []\TU/lmtt/m/n/10 res <- system("which pandoc", intern = TRUE,ignore.stderr = FALSE, ignore.stdout = FALSE)[] 
  []
 
 
-Overfull \hbox (201.32704pt too wide) in paragraph at lines 3155--3155
+Overfull \hbox (201.32704pt too wide) in paragraph at lines 3220--3220
 []\TU/lmtt/m/n/10 sudo cp /opt/rstudio-connect/ext/pandoc/2.9/pandoc-citeproc /opt/rstudio-connect/ext/pandoc/2.11/pandoc-citeproc[] 
  []
 
 
-Overfull \hbox (138.32704pt too wide) in paragraph at lines 3155--3155
+Overfull \hbox (138.32704pt too wide) in paragraph at lines 3220--3220
 []\TU/lmtt/m/n/10 sudo cp /opt/rstudio-connect/ext/pandoc/2.11/pandoc /opt/rstudio-connect/ext/pandoc/2.11/pandoc-orig[] 
  []
 
 
-Overfull \hbox (1.82704pt too wide) in paragraph at lines 3218--3218
+Overfull \hbox (1.82704pt too wide) in paragraph at lines 3283--3283
 []\TU/lmtt/m/n/10 # First check that major versions of MongoDB servers (ATLAS vs local, x.y)[] 
  []
 
 
-Overfull \hbox (96.32704pt too wide) in paragraph at lines 3218--3218
+Overfull \hbox (96.32704pt too wide) in paragraph at lines 3283--3283
 []\TU/lmtt/m/n/10 mongo_local_version=`mongo --quiet --eval "db.version()" | awk -F "." \'{print $1 "." $2}\'`[] 
  []
 
 
-Overfull \hbox (1314.32704pt too wide) in paragraph at lines 3218--3218
+Overfull \hbox (1314.32704pt too wide) in paragraph at lines 3283--3283
 []\TU/lmtt/m/n/10 mongo_atlas_version=`mongo --quiet --eval "db.version()" "mongodb://sdd-teacher:<PASSWORD>@sdd-umons-shard-00-00-umnnw.mongodb.net:27017,sdd-umons-shard-00-01-umnnw.mongodb.net:27017,sdd-umons-shard-00-02-umnnw.mongodb.net:27017/sdd?ssl=true&replicaSet=sdd-umons-shard-0&authSource=admin" | awk -F "." \'{print $1 "." $2}\'`[] 
  []
 
 
-Overfull \hbox (227.57704pt too wide) in paragraph at lines 3218--3218
+Overfull \hbox (227.57704pt too wide) in paragraph at lines 3283--3283
 []  \TU/lmtt/m/n/10 echo "MongoDB versions mismatch: local=$mongo_local_version, ATLAS=$mongo_atlas_version" > /data1/VERSIONS_MISMATCH[] 
  []
 
-[128]
-Overfull \hbox (1466.57704pt too wide) in paragraph at lines 3218--3218
+[134]
+Overfull \hbox (1466.57704pt too wide) in paragraph at lines 3283--3283
 []  \TU/lmtt/m/n/10 mongodump --quiet --uri="mongodb://sdd-teacher:<PASSWORD>@sdd-umons-shard-00-00-umnnw.mongodb.net:27017,sdd-umons-shard-00-01-umnnw.mongodb.net:27017,sdd-umons-shard-00-02-umnnw.mongodb.net:27017/sdd?ssl=true&replicaSet=sdd-umons-shard-0&authSource=admin" --db="sdd" --collection="h5p" --query="{\\\"date\\\":{\\\"\$gte\\\":\\\"$(cat last_date)\\\"}}"[] 
  []
 
 
-Overfull \hbox (1477.07704pt too wide) in paragraph at lines 3218--3218
+Overfull \hbox (1477.07704pt too wide) in paragraph at lines 3283--3283
 []  \TU/lmtt/m/n/10 mongodump --quiet --uri="mongodb://sdd-teacher:<PASSWORD>@sdd-umons-shard-00-00-umnnw.mongodb.net:27017,sdd-umons-shard-00-01-umnnw.mongodb.net:27017,sdd-umons-shard-00-02-umnnw.mongodb.net:27017/sdd?ssl=true&replicaSet=sdd-umons-shard-0&authSource=admin" --db="sdd" --collection="shiny" --query="{\\\"date\\\":{\\\"\$gte\\\":\\\"$(cat last_date)\\\"}}"[] 
  []
 
 
-Overfull \hbox (1482.32704pt too wide) in paragraph at lines 3218--3218
+Overfull \hbox (1482.32704pt too wide) in paragraph at lines 3283--3283
 []  \TU/lmtt/m/n/10 mongodump --quiet --uri="mongodb://sdd-teacher:<PASSWORD>@sdd-umons-shard-00-00-umnnw.mongodb.net:27017,sdd-umons-shard-00-01-umnnw.mongodb.net:27017,sdd-umons-shard-00-02-umnnw.mongodb.net:27017/sdd?ssl=true&replicaSet=sdd-umons-shard-0&authSource=admin" --db="sdd" --collection="learnr" --query="{\\\"date\\\":{\\\"\$gte\\\":\\\"$(cat last_date)\\\"}}"[] 
  []
 
 
-Overfull \hbox (1020.32704pt too wide) in paragraph at lines 3218--3218
+Overfull \hbox (1020.32704pt too wide) in paragraph at lines 3283--3283
 []  \TU/lmtt/m/n/10 mongodump --quiet --uri="mongodb://sdd-teacher:<PASSWORD>@sdd-umons-shard-00-00-umnnw.mongodb.net:27017,sdd-umons-shard-00-01-umnnw.mongodb.net:27017,sdd-umons-shard-00-02-umnnw.mongodb.net:27017/sdd?ssl=true&replicaSet=sdd-umons-shard-0&authSource=admin" --db="sdd"[] 
  []
 
-[129]
-Overfull \hbox (12.32704pt too wide) in paragraph at lines 3269--3269
+[135]
+Overfull \hbox (12.32704pt too wide) in paragraph at lines 3334--3334
 []\TU/lmtt/m/n/10 47 * * * * /usr/bin/rsync -av --delete /data1/ /data2/ &> /data/datasync.log[] 
  []
 
 
-Overfull \hbox (22.82704pt too wide) in paragraph at lines 3269--3269
+Overfull \hbox (22.82704pt too wide) in paragraph at lines 3334--3334
 []\TU/lmtt/m/n/10 # Create a daily (except saterday) and a weekly backup of the MongoDB database[] 
  []
 
-[130]
+[136]
 Chapter 14.
 File: images/block-warning.png Graphic file (type bmp)
 <images/block-warning.png>
@@ -1530,100 +1531,114 @@ File: 14-Progression_files/figure-latex/unnamed-chunk-2-1.pdf Graphic file (type
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[131
+[137
 
-] [132] [133] [134]
-Underfull \hbox (badness 2158) in paragraph at lines 3393--3394
+] [138] [139] [140]
+Underfull \hbox (badness 2158) in paragraph at lines 3458--3459
 []\TU/lmr/m/n/10 La récupération des données des utilisateurs est détaillée dans le dépôt privé
  []
 
-[135] [136]
-Overfull \hbox (2.12517pt too wide) in paragraph at lines 3496--3497
+[141] [142]
+Overfull \hbox (2.12517pt too wide) in paragraph at lines 3561--3562
 []|\TU/lmr/m/n/10 L’utilisateur 
  []
 
 
-Overfull \hbox (2.12517pt too wide) in paragraph at lines 3497--3498
+Overfull \hbox (2.12517pt too wide) in paragraph at lines 3562--3563
 []|\TU/lmr/m/n/10 L’utilisateur 
  []
 
 
-Overfull \hbox (2.12517pt too wide) in paragraph at lines 3498--3499
+Overfull \hbox (2.12517pt too wide) in paragraph at lines 3563--3564
 []|\TU/lmr/m/n/10 L’utilisateur 
  []
 
 
-Overfull \hbox (5.93517pt too wide) in paragraph at lines 3499--3500
+Overfull \hbox (5.93517pt too wide) in paragraph at lines 3564--3565
 []|\TU/lmr/m/n/10 L’application 
  []
 
 
-Overfull \hbox (2.12517pt too wide) in paragraph at lines 3500--3501
+Overfull \hbox (2.12517pt too wide) in paragraph at lines 3565--3566
 []|\TU/lmr/m/n/10 L’utilisateur 
  []
 
 
-Overfull \hbox (2.12517pt too wide) in paragraph at lines 3501--3502
+Overfull \hbox (2.12517pt too wide) in paragraph at lines 3566--3567
 []|\TU/lmr/m/n/10 L’utilisateur 
  []
 
 
-Overfull \hbox (3.71265pt too wide) in paragraph at lines 3505--3505
+Overfull \hbox (3.71265pt too wide) in paragraph at lines 3570--3570
 []|\TU/lmr/m/n/10 reset_question_submission|  
  []
 
-[137] [138] [139] [140
+[143] [144] [145] [146
+
+]
+Chapter 15.
+[147] [148
+
+] [149] [150]
+Chapter 16.
+[151
+
+] [152
+
+]
+Chapter 17.
+[153] [154
 
 ]
 Appendix A.
-[141] [142
+[155] [156
 
 ]
 Appendix B.
 
-Underfull \hbox (badness 4279) in paragraph at lines 3565--3567
+Underfull \hbox (badness 4279) in paragraph at lines 3636--3638
 []\TU/lmr/m/n/10 Vérification de la synchronisation entre MongoDB ATLAS et MongoDB
  []
 
 
-Overfull \hbox (14.56206pt too wide) in paragraph at lines 3567--3569
+Overfull \hbox (14.56206pt too wide) in paragraph at lines 3638--3640
 \TU/lmr/m/n/10 deux dates seulement : \TU/lmtt/m/n/10 mongodump --query "{\"ts\":{\"\$gt\":{\"\$date\":\TU/lmr/m/n/10 date
  []
 
-[143]
-Underfull \hbox (badness 1365) in paragraph at lines 3569--3571
+[157]
+Underfull \hbox (badness 1365) in paragraph at lines 3640--3642
 \TU/lmr/m/n/10 de chaque année académique. \TU/lmtt/m/n/10 sudo tar -czvf backup/challenges.tar.gz
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3569--3571
+Underfull \hbox (badness 10000) in paragraph at lines 3640--3642
 \TU/lmtt/m/n/10 A04_challenge B04_challenge C03_challenge\TU/lmr/m/n/10 , then from a local ma-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3569--3571
+Underfull \hbox (badness 10000) in paragraph at lines 3640--3642
 \TU/lmr/m/n/10 chine : \TU/lmtt/m/n/10 scp econum@sdd.umons.ac.be:/data1/backup/challenges.tar.gz
  []
 
-[144]
+[158]
 Appendix C.
-[145
+[159
 
-] [146
+] [160
 
-] [147] (./LearnItR.aux)
+] [161] (./LearnItR.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-05-08>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 18371 strings out of 476648
- 345432 string characters out of 5798764
+ 18389 strings out of 476648
+ 345591 string characters out of 5798764
  1978556 words of memory out of 5000000
- 40220 multiletter control sequences out of 15000+600000
+ 40238 multiletter control sequences out of 15000+600000
  564600 words of font info for 99 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  90i,8n,123p,30783b,497s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on LearnItR.pdf (147 pages).
+Output written on LearnItR.pdf (161 pages).
