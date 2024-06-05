@@ -21,7 +21,7 @@ TODO: expliquer les différentes façons d'avoir un système opérationnel avec 
 
 - Avantage et inconvénients des différentes solutions
 
-(texte à modifier relatif à VirtualBox et la SciView Box)
+(la suite est un très ancien et texte à modifier relatif à VirtualBox et la SciView Box)
 
 - La [SciViews Box](https://www.sciviews.org/software/svbox/) est une machine virtuelle sous [VirtualBox](https://www.virtualbox.org) totalement préconfigurée. Nous créons une SciViews Box chaque année avec tous les logiciels nécessaires aux étudiants mais pas seulement : il s'agit aussi d'une machine virtuelle permettant de réaliser de nombreuses analyses de façon parfaitement reproductible. Faire installer tous les logiciels nécessaires par les étudiants n'est pas possible. Plusieurs solutions s'offrent à nous pour proposer un environnement logiciel préconfiguré pour les cours :
     * Utiliser [RStudio cloud](https://rstudio.cloud) serait la solution la plus simple au départ car l'étudiant n'a qu'à se connecter et c'est parti. Même avec un Chromebook, il peut travailler sur sa session RStudio Cloud. Cependant, la session n'est disponible *que* pour le cours et l'étudiant doit tout installer sur son ordinateur ensuite s'il veut continuer à utiliser R, RStudio et Git/GitHub (par exemple, dans le cadre de son mémoire). Or précisément, il n'a jamais appris à installer ces outils. Cela nous parait être une barrière importante à l'adoption de ces outils logiciels au-delà du cours, même si beaucoup de (grandes) universités ont choisi cette voie.

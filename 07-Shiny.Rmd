@@ -5,4 +5,4 @@ knitr::opts_chunk$set(comment = '#', fig.align = "center")
 #SciViews::R
 ```
 
-...
+TODO: expliquer les extensions {learnitdown} pour les apps Shiny permetant d'authetifier l'utilisateur et d'enregistrer sa progression.

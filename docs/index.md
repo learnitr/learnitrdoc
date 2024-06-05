@@ -1,7 +1,7 @@
 --- 
 title: "LearnIt::R plateforme pédagogique pour l'apprentissage de R"
 author: "Philippe Grosjean & Guyliann Engels"
-date: "2024-06-01"
+date: "2024-06-05"
 site: bookdown::bookdown_site
 output:
   bookdown::gitbook:
@@ -36,12 +36,12 @@ cover-image: "images/learnitr_800.png"
 
 
 \BeginKnitrBlock{warning}<div class="warning">
-**Cet ouvrage est en cours d'écriture. Plusieurs chapitres doivent encore être écrits ou remaniés. Un version anglaise doit également être rédigée.** Cependant, les informations qu'il contient sont déjà utilisables pour mettre en place certains des outils documentés ici. N'hésitez pas à nous contacter ([Philippe Grosjean](mailto:Philippe.Grosjean@umons.ac.be) ou [Guyliann Engels](mailto:Guyliann.Engels@umons.ac.be)) pour plus d'information ou pour discuter de l'intégration de tel ou tel outil dans vos propres cours.
+**Cet ouvrage est en cours d'écriture. Plusieurs chapitres doivent encore être écrits ou remaniés. Une version anglaise doit également être rédigée.** Cependant, les informations qu'il contient sont déjà utilisables pour mettre en place certains des outils documentés ici. N'hésitez pas à nous contacter ([Philippe Grosjean](mailto:Philippe.Grosjean@umons.ac.be) ou [Guyliann Engels](mailto:Guyliann.Engels@umons.ac.be)) pour plus d'information ou pour discuter de l'intégration de tel ou tel outil pédagogique dans vos propres cours.
 </div>\EndKnitrBlock{warning}
 
 ![](images/learnitr_800.png)
 
-Cet ouvrage détaille les outils qui composent la **plateforme pédagogique LearnIt::R** spécifique pour l'apprentissage de R, des statistiques et de la science des données en général. Il est dérivé de notes relatives au développement, à la maintenance et à la création de contenu sur notre plateforme autour du package R {learnitdown} que nous avons créé à l'Université de Mons en Belgique pour nos [cours de Science des Données Biologiques](https://wp.sciviews.org). Désolé, donc, si vous y lirez de temps en temps des informations qui ne sont utiles **que** dans le cadre spécifiquement de ces cours. Notre objectif, en cours de réalisation, est de migrer progressivement cet ouvrage et les outils qu'il décrit vers un usage plus large pour permettre de déployer une plateforme pédagogique similaire dans un autre contexte...
+Cet ouvrage présente en détails la **plateforme pédagogique LearnIt::R** spécifique pour l'apprentissage de R, des statistiques et de la science des données en général. Il est dérivé de notes relatives au développement, à la maintenance et à la création de contenu sur notre plateforme autour du package R {learnitdown} que nous avons créé à l'Université de Mons en Belgique pour nos [cours de Science des Données Biologiques](https://wp.sciviews.org). Désolé, donc, si vous y lirez de temps en temps des informations qui ne sont utiles **que** dans le cadre spécifiquement de ces cours-là. Notre objectif à terme est de migrer progressivement cet ouvrage et les outils qu'il décrit vers un usage plus large pour permettre de déployer une plateforme pédagogique similaire dans un autre contexte...
 
 ![](images/front-cover.png)
 
@@ -68,7 +68,7 @@ sessioninfo::session_info()
 #  collate  en_US.UTF-8
 #  ctype    en_US.UTF-8
 #  tz       Europe/Brussels
-#  date     2024-06-01
+#  date     2024-06-05
 #  pandoc   3.1.11 @ /Applications/RStudio.app/Contents/Resources/app/quarto/bin/tools/aarch64/ (via rmarkdown)
 # 
 # ─ Packages ───────────────────────────────────────────────────────────────────

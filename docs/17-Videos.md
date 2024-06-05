@@ -1,0 +1,9 @@
+# (PART) Outils supplémentaires {.unnumbered}
+
+# Vidéos {#videos}
+
+
+
+Ce chapitre entame la section dédiée à des **outils complémentaires** utiles plus généralement dans le cadre de l'eseignement, mais qui ne trouvent pas leur place dans la plateforme LernIt::R parce qu'ils ne sont pas spécifiques à R. Nous abordons ici les outils pour la création de vidéos. L'utilisation d'un logiciel qui permet de réaliser des sondages ou des quiz en présentiel (Wooclap) sera détaillée dans le chapitre suivant (voir \@ref(wooclap)).
+
+TODO: expliquer ici les outils pour la création de vidéos et l'intégration à la plateforme LearnIt::R.

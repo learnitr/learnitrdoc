@@ -2,4 +2,20 @@
 
 
 
-TODO: décrire ici la gestion des projets GitHub et {learnitgrid}.
+TODO: décrire ici la gestion des projets GitHub Classroom et {learnitgrid}.
+
+## GitHub Classroom
+
+[GitHub Classroom](https://classroom.github.com) a été créé pour gérer les nombreux dépôts GitHub relatifs aux projets dans le cadre de cours. Pour un projet individuel, nous aurons un dépôt pour le "template" plus un projet séparé par étudiant. Le template est public et les dépôts des étudiants sont privés et accessibles uniquement par l'étudiant et les enseignants. Au début d'un exercice nécessitant de tels projets sur GitHub, il faut donc gérer la distribution des travaux aux étudiants sous forme d'autant de nouveaux dépôts GitHub correctements paramétrés. GitHub Classroom se lie à l'organisation GitHub de votre cours. Il permet de gérer différentes classes afin d'organiser les cohortes d'étudiants.
+
+Au sein de chaque classe, il est possible de créer des exercices individuels ou par groupe que l'on nomme ici des "assignations" (*assignments* en anglais). Veuillez débuter le nom de chaque assignation par le code de la classe, le numéro du module (ou chapitre) concerné dans le cours et l'année et éventuellement une lettre si le cours est donné en plusieurs sessions. Cette nomenclature permet une gestion simplifiée de l'organisation sur GitHub. Par exemple, l'assignation `Cl08_23A_...` porte sur un exercice ciblé pour la classe **Cl** sur le module **8** pour l'année académique **2023-2024** et pour la session **A**. Ensuite, utiliser un nom court pour identifier l'assignation, par exemple "ttest" si l'exercice porte sur les tests de Student ou "penguins" si il porte sur le jeu de données **penguins**.
+
+Les exercices se basent sur un dépôt modèle (*template* en anglais) contenant un certain nombre de fichiers préreplis pour guider les étudiants : des consignes dans un `README.md`, peut-être un jeu de données dans le dossier `data`, un document Quarto contenant quelques consigners supplémentaires sous forme de commentaires, etc. Vous devez toujours fournir un dépôt template pour les assignations GitHub Classroom. Un dépôt template est un dépôt GitHub reconnu comme *Template repository* (ce paramètre est sélectionnable dans la configuration du dépôt).
+
+Parmi les paramètres de l'exercice, il est important de spécifier si le dépôt est privé ou public. Par défaut, les dépôts reprenant les exercices des étudiants sont privés, mais chaque étudiant est libre de basculer n'importe lequel de ses dépôt en public afin d'offrir une visibilité à ce qu'il a réalisé dans R (peut être important en matériel complémentaire à un C.V. pour des profils plus typés science de données). Vous avec la possibilité des GitHub Classroom de décider si l'étudiant peut ou non changer la visibilité de son dépôt après sa création.
+
+Un lien URL est fourni pour chaque exercice afin d'inviter les étudiants à rejoindre l'exercice. Classroom va créer le dépôt pour chaque utilisateur en lui donnant le nom de l'assignation suivi du login de l'étudiant séparé par un trait d'union (signe "-"). Les travaux de groupe portent le nom de l'assignation suivi du nom du groupe (*team* dans GitHub) que le premier étudiant qui aura créé ce team choisira. Bien sûr, il est possible de réutiliser ou non des teams créés antérieurement.
+
+GitHub Classroom est en évolution constante. De nouvelles fonctionnalités apparaissent régulièrement afin d'améliorer la gestion des classes et des exercices. Par exemple l'[intégration de GitHub Classroom avec Moodle](https://classroom.github.com/help/setup-moodle) est disponible, à caudition que votre administrateur Moodle ait configuré ce dernier pour l'accepter. GitHub Classroom propose également l'application [GitHub Classroom CLI](https://docs.github.com/en/education/manage-coursework-with-github-classroom/teach-with-github-classroom/using-github-classroom-with-github-cli) pour gérer vos assignations et télécharger l'ensemble des dépôts lié à une assignation dans un dossier de notre choix. Cela est bien pratique pour les enseignants au moment d'évaluer les travaux des étudiants.
+
+\BeginKnitrBlock{note}<div class="note">Une autre ressource intéressante dans le contexte de l'utilisation de GitHub/GitHub Classroom pour l'enseignement est [GitHub Education](https://education.github.com).</div>\EndKnitrBlock{note}

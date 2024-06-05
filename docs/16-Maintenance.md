@@ -1,0 +1,46 @@
+# Maintenance {#maintenance}
+
+Le système dans son ensemble est complexe et nécessite évidemment un minimum de maintenance. Les différentes opérations sont listées ici.
+
+TODO: ce chapitre doit être encore comp:lété et remanié. Il s'agit, pour l'instant, essentiellement de notes prises pour se rémémorer les opérations nécessaires. Elles doivent encore être édétaillées et explicitées.
+
+## Maintenance régulière
+
+TODO...
+
+## Nettoyage à la fin de chaque cours
+
+En août et en janvier, une maintenance supplémentaire est nécessaire pour préparer respectivement au premier quadrimestre de l'année académique suivante et au second quadrimestre de la même année. Les opérations suivantes sont à réaliser\ :
+
+- Vérifier le bon fonctionnement et la mise à jour de toutes les composantes.
+
+- Contrôle de la table des utilisateurs dans WordPress + dernière exportation et importation dans p-Cloud et dans la base de données MongoDB de sdd.umons.ac.be
+
+- Élimination des comptes d'utilisateurs arrivés en fin de cursus
+
+- Nettoyage et pesudonymisation des dépots GitHub relatifs aux étudiants arrivés en fin de cursus dans l'organisation GitHub du cours, ou archivage des dépôts.
+
+- Backup de données H5PxApiKatchu éventuelles et nettoyage de ces données
+
+- Backup complet du site WordPress avec UpdraftPlus
+
+- Récupération d'un snapshot de WordPress
+
+- Récupération d'un backup de la base de données MySQL. Aller dans phpMyAdmin, exporter au format .sql (quick) dans /srv/data/tmp. Ensuite, récupérer le fichier, le zipper et l'archiver
+
+- Update éventuel WordPress après ces backups (PHP et/ou MySQL)
+
+- Vérification de la synchronisation entre MongoDB ATLAS et le serveur MongoDB dédié au cours et nettoyage des tables h5p, shiny et learnr sur MongoDB ATLAS
+
+- Récupération et nettoyages des backups MongoDB depuis le serveur dédié et réalisation d'un snapshot local archivé. Pour récupérer les données entre deux dates seulement : `mongodump --query "{\"ts\":{\"\$gt\":{\"\$date\":`date -d 2011-08-10 +%s`000},\"\$lte\":{\"\$date\":`date -d 2011-08-11 +%s`000}}}"`
+
+- Récupération d'une copie des différentes bases de données SQLite liées aux challenges, et élimination de ces bases de données sur le serveur dédié (péparation du challenge pour l'année suivante) à la fin de chaque année académique. `sudo tar -czvf backup/challenges.tar.gz A04_challenge B04_challenge C03_challenge`, ensuite depuis une machine locale : `scp utilisateur@serveur:/data1/backup/challenges.tar.gz challenges.tar.gz`
+
+- Mise à jour et vérification logicielle et matérielle du serveur dédié
+
+- Changement de tous les mots de passe et génération de nouveaux fichiers cryptés avec les informations de connexion (en début d'année académique uniquement)
+
+- Remise à zéro de tous les flags d'utilisateurs dans WordPress
+
+- Il est utile d'enregistrer le matériel pédagogique tel qu'il se présente chaque année, d'une part à des fins d'archivage, et d'autre part afin que plus tard les étudiants puissent éventuellement retrouver ce matériel tel qu'il était lorsqu'il a suivi le cours. Différentes stratégies sont possibles : utilisation de branches, de releases... Cependant pour les bookdowns il n'est possible de présenter le site correspondant que de la dernière version pour un dépôt GitHub donné. Dans ce cas, il est plus intéressant d'archiver le bookdown relatif à une année académique sous forme d'un dépôt séparé, permettant ainsi d'accéder au site web correspondant depuis GitHub Pages. Pour cela, il ne faut pas forker le dépôt, mais en faire une copie miroir. La procédure pour réaliser cela est expliquée [ici](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/duplicating-a-repository). En pratique, nous ajoutons l'année de chaque version au nom du dépôt (par exemple, `cours-2018`, `cours-2019`, ...). La version correspondant à l'année académique 2018-2019 est `cours-2018`. Ensuite, il faut bien entendu éditer le dépôt ainsi copié en miroir pour indiquer dans le préambule que c'est une ancienne version, et aussi remplacer les liens vers des assignations GitHub Classroom obsolètes vers des suggestions de forker les dépôts templates correspondants afin que les anciens exercices puissent toujours être accédés, mais cette fois-ci, en dehors du contexte de GitHub Classroom.
+

@@ -5,4 +5,4 @@ knitr::opts_chunk$set(comment = '#', fig.align = "center")
 #SciViews::R
 ```
 
-TODO: place learnr stuff here...
+TODO: tout ce chapitre consacré aux tutoriels learnr doit être écrit.
