@@ -1,5 +1,5 @@
 # TODO for LearnIt::R doc
 
--   Rework introduction, Wordpress.
+-   Rework introduction and write missing chapters.
 
 -   English version.

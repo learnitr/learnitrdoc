@@ -1,7 +1,7 @@
 --- 
 title: "LearnIt::R plateforme pédagogique pour l'apprentissage de R"
 author: "Philippe Grosjean & Guyliann Engels"
-date: "2024-06-05"
+date: "2024-06-10"
 site: bookdown::bookdown_site
 output:
   bookdown::gitbook:
@@ -68,12 +68,12 @@ sessioninfo::session_info()
 #  collate  en_US.UTF-8
 #  ctype    en_US.UTF-8
 #  tz       Europe/Brussels
-#  date     2024-06-05
+#  date     2024-06-10
 #  pandoc   3.1.11 @ /Applications/RStudio.app/Contents/Resources/app/quarto/bin/tools/aarch64/ (via rmarkdown)
 # 
 # ─ Packages ───────────────────────────────────────────────────────────────────
 #  package     * version date (UTC) lib source
-#  bookdown      0.33    2023-03-06 [2] RSPM (R 4.2.3)
+#  bookdown      0.39    2024-04-15 [1] CRAN (R 4.2.3)
 #  cli           3.6.1   2023-03-23 [2] RSPM (R 4.2.0)
 #  digest        0.6.31  2022-12-11 [2] RSPM (R 4.2.0)
 #  evaluate      0.20    2023-01-17 [2] RSPM (R 4.2.3)
@@ -84,8 +84,8 @@ sessioninfo::session_info()
 #  rlang         1.1.1   2024-01-06 [2] Github (r-lib/rlang@564f176)
 #  rmarkdown     2.21    2023-03-26 [2] RSPM (R 4.2.3)
 #  rstudioapi    0.14    2022-08-22 [2] RSPM (R 4.2.0)
-#  sessioninfo   1.2.2   2021-12-06 [2] RSPM (R 4.2.0)
-#  xfun          0.38    2023-03-24 [2] RSPM (R 4.2.3)
+#  sessioninfo   1.2.2   2021-12-06 [1] CRAN (R 4.2.0)
+#  xfun          0.44    2024-05-15 [1] CRAN (R 4.2.3)
 #  yaml          2.3.7   2023-01-23 [2] RSPM (R 4.2.0)
 # 
 #  [1] /Users/phgrosjean/Library/R/arm64/4.2/library

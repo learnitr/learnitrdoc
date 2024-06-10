@@ -1,5 +1,0 @@
-# Applications interactive Shiny {#shiny}
-
-
-
-...
