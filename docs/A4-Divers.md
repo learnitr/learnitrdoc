@@ -59,7 +59,7 @@ Cette section reprend différents éléments important qui émergent des constat
 
 -   Marcel Lebrun de l'Université Catholique de Louvain présente les différents types de classes inversées dans la vidéo suivante :
 
-[![](A4-Divers_files/figure-epub3/unnamed-chunk-6-1.png)](https://www.youtube.com/embed/U8J24T-eY0U)<!-- -->
+<iframe src="https://www.youtube.com/embed/U8J24T-eY0U" width="672" height="400px" data-external="1"></iframe>
 
 À côté de l'approche traditionnelle cours ex cathedras qui présentent la théorie suivis de séances d'exercices ou TP qui mettent en pratique, il y a :
 
@@ -90,7 +90,7 @@ L'esprit humain part d'un contexte pour ensuite généraliser (décontextualiser
 
 L'approche sous forme de classe renversée est donc la forme la plus extrême. Jean-Charles Cailliez de l'Université de Lille présente ce concept dans la vidéo TEDx suivante :
 
-[![](A4-Divers_files/figure-epub3/unnamed-chunk-9-1.png)](https://www.youtube.com/embed/KMAONv3BPhs)<!-- -->
+<iframe src="https://www.youtube.com/embed/KMAONv3BPhs" width="672" height="400px" data-external="1"></iframe>
 
 Il ne faut pas copier son système, mais en reprendre des éléments et l'adapter au cours à la personnalité de l'enseignant, ...En tous cas, lui va très loin puisque ce sont les étudiants qui font tout (définir la matière, préparer le cours, l'exposer au professeur, préparer les questions de devoirs et d'examens). Le professeur fait les devoirs que les étudiants lui donne et offre ainsi un feedback sur la qualité du travail par cet intermédiaire. Il utilise notamment les QCM (questionnaires à choix multiple) inversés : les étudiants produisent les question, le prof répond, les étudiants corrigent. Si la question est bien posée, le professeur répond bien. Si elle est mal posée, le professeur fait semblant de répondre n'importe quoi pour bien faire comprendre que la question est mal posée. Il utilise aussi le QCM "intelligent" : il ne suffit pas de dire quelles sont les bonnes réponses, mais il faut aussi justifier pourquoi les autres sont fausses pour avoir des points. Au début du cours, chaque équipe crée un tel QCM (cinq questions). Ensuite les QCM passent à l'équipe suivante qui y répond. Enfin, les réponses sont données à une troisième équipe qui corrige (3min à chaque fois, suivi d'une petite discussion).
 
@@ -98,21 +98,21 @@ Cette approche permet aussi de mettre en œuvre le principe suivant : "enseigne
 
 -   Intervention de Jean-Jacques Cailliez.
 
-[![](A4-Divers_files/figure-epub3/unnamed-chunk-10-1.png)](https://www.youtube.com/embed/FtesVo3U4v0)<!-- -->
+<iframe src="https://www.youtube.com/embed/FtesVo3U4v0" width="672" height="400px" data-external="1"></iframe>
 
 -   Intervention de Sébastien Bette.
 
-[![](A4-Divers_files/figure-epub3/unnamed-chunk-11-1.png)](https://www.youtube.com/embed/CAXfg7PbRdY)<!-- -->
+<iframe src="https://www.youtube.com/embed/CAXfg7PbRdY" width="672" height="400px" data-external="1"></iframe>
 
 Questions croisées aux deux intervenants.
 
-[![](A4-Divers_files/figure-epub3/unnamed-chunk-12-1.png)](https://www.youtube.com/embed/DIhp6P4HuB8)<!-- -->
+<iframe src="https://www.youtube.com/embed/DIhp6P4HuB8" width="672" height="400px" data-external="1"></iframe>
 
 #### Intelligence collective
 
 François Taddei parle de la mobilisation de l'intelligence collective au service de nouvelles formes d'apprentissage ici :
 
-[![](A4-Divers_files/figure-epub3/unnamed-chunk-13-1.png)](https://www.youtube.com/embed/Ckp4AvvhZ_A)<!-- -->
+<iframe src="https://www.youtube.com/embed/Ckp4AvvhZ_A" width="672" height="400px" data-external="1"></iframe>
 
 Parmi les points importants de l'innovation pédagogique est l'utilisation de l'intelligence collective. Jean-Jacques Cailliez (voir ci-dessus) fait travailler les étudiants par groupes de six (considéré comme la meilleure taille de groupe). Par contre, c'est lui qui crée les groupes. Après un test d'évaluation qui lui permet de déterminer qui est fort, moyen ou faible, il mets un fort, et un faible systématiquement dans chaque groupe. Ensuite, il demande que les étudiants s'attribuent à chacun un rôle au sein du groupe pour éviter que certains ne fassent rien. Au fil du temps, les responsabilités changent, mais ceci est important pour impliquer tout le monde dès le début. Si un ou plusieurs étudiants ne font rien au sein du groupe, cela plombe l'ambiance puisqu'il y a une partie de la note qui est commune à tout le groupe et ceux qui travaillent se sentent lésés.
 
@@ -154,7 +154,7 @@ Douglas Andrews dans [the big mistake: teaching stat as though it were math](htt
 
 La vidéo suivante caricature les interactions entre un biologiste et un statisticien. Ceci montre l'importance de former des personnes capables de faire le lien entre les deux disciplines : les scientifiques des données ayant un "background" en biologie.
 
-[![](A4-Divers_files/figure-epub3/unnamed-chunk-15-1.png)](https://www.youtube.com/embed/Hz1fyhVOjr4)<!-- -->
+<iframe src="https://www.youtube.com/embed/Hz1fyhVOjr4" width="672" height="400px" data-external="1"></iframe>
 
 
 ### Attention à la formulation
@@ -165,7 +165,7 @@ On a tous tendance à utiliser des tournure comme "il suffit de ...", "cela se f
 
 Les enseignants doivent tenir compte également de la psychologie, et en particulier de tout ce qui peut accroître, ou au contraire, impacter la motivation des étudiants. Dans une présentation TEDx, Mark Rober introduit ce qu'il appelle l'"effet Super Mario".
 
-[![](A4-Divers_files/figure-epub3/unnamed-chunk-16-1.png)](https://www.youtube.com/embed/9vJRopau0g0)<!-- -->
+<iframe src="https://www.youtube.com/embed/9vJRopau0g0" width="672" height="400px" data-external="1"></iframe>
 
 Le jeu Super Mario est très addictif, parce que le joueur est focalisé sur l'objectif à atteindre (terminer le jeu et sauver la princesse). Cela le détourne des nombreuses embûches qui parsèment le jeu. Au final, l'utilisateur ne fait qu'appuyer successivement sur une série de six boutons (sur la manette de jeu), et présenté autrement, on réalise à quel point la même action peut être perçue négativement. Mark présente six boutons et explique qu'il faudra les appuyer selon une séquence précise... très longue et pendant plus d'une heure pour passer un test. Vu comme cela, cela parait infaisable et totalement rébarbatif... pourtant c'est exactement ce qu'on fait dans le jeu Super Mario qui est, au contraire, addictif.
 
@@ -198,15 +198,15 @@ Il y a énormément plus de choses intéressantes dans cet ouvrage, et il faudra
 
 La présentation de type PowerPoint est partout et les enseignants ne peuvent plus s'en passer. Cependant, c'est un outil à double tranchant et une mauvaise utilisation de cet outil peut être désastreuse. C'est ce qu'on appelle la "mort par PowerPoint".
 
-[![](A4-Divers_files/figure-epub3/unnamed-chunk-18-1.png)](https://www.youtube.com/embed/Iwpi1Lm6dFo)<!-- -->
+<iframe src="https://www.youtube.com/embed/Iwpi1Lm6dFo" width="672" height="400px" data-external="1"></iframe>
 
 Quelques conseils pour améliorer sa présentation PowerPoint ici :
 
-[![](A4-Divers_files/figure-epub3/unnamed-chunk-19-1.png)](https://www.youtube.com/embed/-U_HN7H8n8E)<!-- -->
+<iframe src="https://www.youtube.com/embed/-U_HN7H8n8E" width="672" height="400px" data-external="1"></iframe>
 
 Don McMillan est un humoriste qui réussit à faire passer le message d'une manière hilarante ici :
 
-[![](A4-Divers_files/figure-epub3/unnamed-chunk-20-1.png)](https://www.youtube.com/embed/KbSPPFYxx3o)<!-- -->
+<iframe src="https://www.youtube.com/embed/KbSPPFYxx3o" width="672" height="400px" data-external="1"></iframe>
 
 
 ### Ludification de l'enseignement
@@ -256,3 +256,11 @@ Cependant, il ne faut pas négliger non plus de la documentation complémentaire
 La scénarisation du cours est importante, mais également la scénarisation du matériel pédagogique. Un point de vue qui paraît essentiel ici est de bien définir le type de documentation pour chaque partie d'un chapitre *avant* de l'écrire et ensuite de se tenir au style et aux objectifs relatifs à ce type de documentation. L'illustration suivante est une tentative de scénarisation d'un module en fonction de quatre **types de documents**, présentés ici en couleurs différentes. Ceci semble complémentaire à la définition du contenu en terme de **notions à enseigner** et d'**acquis d'apprentissage** visés par le module qui définissent *quoi* enseigner, alors que la présentation par types de documents indique *comment* l'enseigner.
 
 ![](images/introduction/doctypes_scenario.png)
+
+### Six niveaux de pensée
+
+En 1956, Benjamin Bloom et ses collaborateurs ont défini six niveaux de pensée dans leur ouvrage Bloom, B. S.; Engelhart, M. D.; Furst, E. J.; Hill, W. H.; Krathwohl, D. R. (1956). Taxonomy of educational objectives: The classification of educational goals. Vol. Handbook I: Cognitive domain. New York: David McKay Company.
+
+Cette taxonomie reste d'application aujourd'hui. Il est important de bien identifier le niveau requis dans la taxonomie de Bloom pour toute activité d'apprentissage. Il faut aussi être conscient que la plupart des étudiants abordent leur matière dans l'un des trois premiers niveaux (1 = retenir, 2 = comprendre, 3 = appliquer) et bien souvent, les cours et les examens, même universitaires, sont conçus pour pouvoir réussir lorsque l'on étudie selon l'un de ces trois premiers niveaux. En effet, les trois niveaux supérieurs sont plus difficiles à atteindre et nécessitent une énergie mentale bien plus importante que beaucoup d'étudiants ne sont pas prêts à investir. Cependant, les niveaux quatre et plus particulièrement cinq, sont les plus utiles dans les carrières qui demandent du leadership et/ou des prises de décision, ce qui correspond à la plupart des postes pour des travailleurs ayant obtenu un diplôme universitaire. Ainsi, nous devons stimuler autant que possible ces deux niveaux, sachant que ce n'est pas facile et que cela va engendrer une forme de résistance de la part des apprenants. Les trois niveaux supérieurs sont les plus difficiles à atteindre. Le niveau six, création de nouvelles idées, est le plus difficile à atteindre et n'est heureusement pas nécessaire dans beaucoup d'emplois. C'est cependant le niveau à atteindre pour pouvoir prétendre à l'étiquette de "Scientifique des Données", comme quelqu'un capable de créer de nouvelles méthodes d'analyse statistique en fonction des problèmes rencontrés.
+
+Il existe une abondante littérature sur le sujet. La vidéo de Justin Sung intitulée "[6 levels of thinking every student MUST master](https://www.youtube.com/watch?v=1xqerXscTsE)" est originale en ce sens qu'elle prend le point de vue non pas de l'enseignant, mais de l'apprenant. Il y explique que l'étudiant a tendance à étudier selon un niveau inférieur à celui requis. Ce qu'il explique est bien [résumé ici](https://summarize.ing/video-40246-6-Levels-of-Thinking-Every-Student-MUST-Master#). Il est fort probable que les étudiants qui ratent ou produisent des résultats décevants en science des données alors qu'ils passent énormément de temps à travailler la matière (ce qui est évidemment extrêmement frustrant) étudient au niveau un. Il faudrait arriver à leur faire prendre conscience de cela et leur offrir les moyens de changer pour aborder la matière à un niveau plus élevé dans la taxonomie de Bloom, bien entendu, en rapport avec l'objectif d'apprentissage.
